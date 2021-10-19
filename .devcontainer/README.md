@@ -26,6 +26,6 @@ Los archivos `.devcontainer/devcontainer.json` y `.devcontainer/Dockerfile` son 
 
 ## Actualización de `recommended-devcontainer.json` y `recommended-Dockerfile`
 
-Puedes actualizar y confirmar los archivos de configuración recomendados (que la gente usa como base para tus configuraciones locales), si encuentras que algo está roto, desactualizado o se puede mejorar.
+Puedes actualizar y confirmar los archivos de configuración recomendados (que la gente usa como base para sus configuraciones locales), si encuentras que algo está roto, desactualizado o se puede mejorar.
 
-Por favor, ten en cuenta que los cambios que realices serán potencialmente utilizados por muchas personas en diferentes entornos. Intenta mantener estos archivos de configuración compatibles entre plataformas y libres de preferencias personales.
+Por favor, ten en cuenta que los cambios que realices potencialmente serán utilizados por muchas personas en diferentes entornos. Intenta mantener estos archivos de configuración compatibles entre plataformas y libres de preferencias personales.

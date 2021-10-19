@@ -85,12 +85,12 @@ New Angular projects use strict mode by default. If this is not desired you can 
 
 {@a app-src}
 
-Inside the `src/` folder, the `app/` folder contains your project's logic and data.
-Angular components, templates, and styles go here.
+Dentro del directorio `src /`, el directorio `app/` contiene la lógica y los datos de tu proyecto.
+Los componentes *Angular*, las plantillas y los estilos van aquí.
 
-| `src/app/` FILES | PURPOSE |
+| `src/app/` ARCHIVOS | PROPÓSITO |
 | :-------------------------- | :------------------------------------------|
-| `app/app.component.ts`      | Defines the logic for the application's root component, named `AppComponent`. The view associated with this root component becomes the root of the [view hierarchy](guide/glossary#view-hierarchy) as you add components and services to your application. |
+| `app/app.component.ts` | Define la lógica del componente raíz de la aplicación, denominado `AppComponent`. La vista asociada con este componente raíz se convierte en la raíz de la [jerarquía de vistas](guide/glossary#jerarquia-de-vistas) a medida que agregas componentes y servicios a tu aplicación. |
 | `app/app.component.html`    | Defines the HTML template associated with the root `AppComponent`. |
 | `app/app.component.css`     | Defines the base CSS stylesheet for the root `AppComponent`. |
 | `app/app.component.spec.ts` | Defines a unit test for the root `AppComponent`. |

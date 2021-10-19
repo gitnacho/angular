@@ -38,7 +38,7 @@ To report an issue with the Profiler, export the Profiler recording by clicking 
 
 > Make sure that the Profiler recording does not contain any confidential information.
 
-{@a components}
+{@a componentes}
 
 ## Debug your application
 

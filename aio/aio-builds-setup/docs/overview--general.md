@@ -103,6 +103,6 @@ que no corresponden a una *SE* abierta.
 
 
 ### Chequeo de salud
-El servicio *Docker* ejecuta una verificación de estado periódica que verifica las condiciones de ejecución del
+El servicio *Docker* ejecuta una comprobación de estado periódica que verifica las condiciones de ejecución del
 contenedor. Esto incluye verificar el estado de servicios específicos del sistema, la capacidad de respuesta de
-`nginx` y el servidor de vista previa y la conectividad a Internet.
+`nginx`, el servidor de vista previa y la conectividad a Internet.

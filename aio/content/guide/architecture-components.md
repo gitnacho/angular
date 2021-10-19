@@ -59,13 +59,13 @@ A view hierarchy can include views from components in the same NgModule, but it 
 
 ## Sintaxis de plantillas
 
-A template looks like regular HTML, except that it also contains Angular [template syntax](guide/template-syntax), which alters the HTML based on your application's logic and the state of application and DOM data. Your template can use *data binding* to coordinate the application and DOM data, *pipes* to transform data before it is displayed, and *directives* to apply application logic to what gets displayed.
+Una plantilla se ve como *HTML* normal, excepto que también contiene [sintaxis de plantilla *Angular*](guide/template-syntax), que altera el *HTML* según la lógica de tu aplicación, el estado de la aplicación y los datos del *DOM*. Tu plantilla puede usar *enlace de datos* para coordinar la aplicación y los datos del *DOM*, *pipes* para transformar los datos antes de que se muestren, y *directivas* para aplicar la lógica de la aplicación a lo que se muestra.
 
-For example, here is a template for the Tutorial's `HeroListComponent`.
+Por ejemplo, aquí hay una plantilla para el `HeroListComponent` del tutorial.
 
 <code-example path="architecture/src/app/hero-list.component.html" header="src/app/hero-list.component.html"></code-example>
 
-This template uses typical HTML elements like `<h2>` and  `<p>`, and also includes Angular template-syntax elements,  `*ngFor`, `{{hero.name}}`, `(click)`, `[hero]`, and `<app-hero-detail>`. The template-syntax elements tell Angular how to render the HTML to the screen, using program logic and data.
+Esta plantilla usa elementos *HTML* típicos como `<h2>` y `<p>`, y también incluye elementos de sintaxis de plantilla *Angular*, `*ngFor`, `{{ hero.name }}`,`(click)`, `[hero]` y `<app-hero-detail>`. Los elementos de sintaxis de plantilla le dicen a *Angular* cómo representar el *HTML* en la pantalla, utilizando la lógica y los datos del programa.
 
 * The `*ngFor` directive tells Angular to iterate over a list.
 * `{{hero.name}}`, `(click)`, and `[hero]` bind program data to and from the DOM, responding to user input. See more about [data binding](#data-binding) below.
