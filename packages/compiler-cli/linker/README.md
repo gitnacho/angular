@@ -7,11 +7,11 @@ The partial declaration format allows library packages to be published to npm wi
 The tooling here allows application build tools (e.g. CLI) to produce fully compiled components, directives, etc at the point when the application is bundled.
 These linked files can be cached outside `node_modules` so it does not suffer from problems of mutating packages in `node_modules`.
 
-Generally this tooling will be wrapped in a transpiler specific plugin, such as the provided [Babel plugin](./babel).
+Generalmente, estas herramientas se incluirán en un complemento específico del transpilador, como el [complemento *Babel*](./babel) proporcionado.
 
 ## Pruebas unitarias
 
-The unit tests are built and run using Bazel:
+Las pruebas unitarias se crean y ejecutan utilizando *Bazel*:
 
 ```bash
 yarn bazel test //packages/compiler-cli/linker/test

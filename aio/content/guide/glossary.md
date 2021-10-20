@@ -55,10 +55,10 @@ This can improve the user experience by quickly launching a static rendered page
 See also [Service Worker and PWA](guide/service-worker-intro).
 {@a architect}
 
-## Architect
+## *Architect*
 
-The tool that the CLI uses to perform complex tasks such as compilation and test running, according to a provided configuration.
-Architect is a shell that runs a [builder](#builder) (defined in an [npm package](#npm-package)) with a given [target configuration](#target).
+La herramienta que utiliza la *CLI* para realizar tareas complejas, como la compilación y ejecución de pruebas, de acuerdo con una configuración proporcionada.
+*Architect* es un intérprete de comandos que ejecuta un [constructor](#constructor) (definido en un [paquete `npm`](#paquete-npm)) con una [configuración de destino](#destino) dada.
 
 In the [workspace configuration file](guide/workspace-config#project-tool-configuration-options), an "architect" section provides configuration options for Architect builders.
 
@@ -89,8 +89,8 @@ Learn more in [Attribute Directives](guide/attribute-directives).
 ## binding
 
 Generally, the practice of setting a variable or property to a data value.
-Within Angular, typically refers to [data binding](#data-binding),
-which coordinates DOM object properties with data object properties.
+Dentro de *Angular*, normalmente se refiere a la [vinculación de datos](#vinculacion-de-datos),
+que coordina las propiedades del objeto *DOM* con las propiedades del objeto de datos.
 
 Sometimes refers to a [dependency-injection](#dependency-injection) binding
 between a [token](#token) and a dependency [provider](#provider).
@@ -112,7 +112,7 @@ Learn more in [Bootstrapping](guide/bootstrapping).
 ## builder
 
 A function that uses the [Architect](#architect) API to perform a complex process such as "build" or "test".
-The builder code is defined in an [npm package](#npm-package).
+El código del constructor se define en un [paquete `npm`](#paquete-npm).
 
 For example, [BrowserBuilder](https://github.com/angular/angular-cli/tree/master/packages/angular_devkit/build_angular/src/browser) runs a [webpack](https://webpack.js.org/) build for a browser target and [KarmaBuilder](https://github.com/angular/angular-cli/tree/master/packages/angular_devkit/build_angular/src/karma) starts the Karma server and runs a webpack build for unit tests.
 
@@ -156,7 +156,7 @@ The change detector is responsible for updating the view to reflect the current 
 Similarly, the user can interact with the UI, causing events that change the state of the data model.
 These events can trigger change detection.
 
-Using the default change-detection strategy, the change detector goes through the [view hierarchy](#view-tree) on each VM turn to check every [data-bound property](#data-binding) in the template. In the first phase, it compares the current state of the dependent data with the previous state, and collects changes.
+Usando la estrategia de detección de cambios predeterminada, el detector de cambios pasa por la [jerarquía de vistas](#arbol-de-vistas) en cada turno de *VM* para verificar cada [propiedad vinculada a datos](#vinculacion-de-datos) en la plantilla. In the first phase, it compares the current state of the dependent data with the previous state, and collects changes.
 In the second phase, it updates the page DOM to reflect any new data values.
 
 If you set the `OnPush` change-detection strategy, the change detector runs only when [explicitly invoked] (api/core/ChangeDetectorRef), or when it is triggered by an `Input` reference change or event handler. This typically improves performance. For more information, see [Optimize Angular's change detection](https://web.dev/faster-angular-change-detection/).
@@ -179,19 +179,19 @@ The following decorators can declare Angular class types:
 
 ## class field decorator
 
-A [decorator](#decorator) statement immediately before a field in a class definition that declares the type of that field. Some examples are `@Input` and `@Output`.
+A [decorator](#decorator) statement immediately before a field in a class definition that declares the type of that field. Algunos ejemplos son `@Input` y `@Output`.
 
 {@a collection}
 
-## collection
+## `collection`
 
-In Angular, a set of related [schematics](#schematic) collected in an [npm package](#npm-package).
+En *Angular*, un conjunto de [esquemas](#esquema) relacionados recopilados en un [paquete `npm`](#paquete-npm).
 
 {@a cli}
 
-## command-line interface (CLI)
+## interfaz de línea de comandos (*CLI*)
 
-The [Angular CLI](cli) is a command-line tool for managing the Angular development cycle. Use it to create the initial filesystem scaffolding for a [workspace](#workspace) or [project](#project), and to run [schematics](#schematic) that add and modify code for initial generic versions of various elements. The CLI supports all stages of the development cycle, including building, testing, bundling, and deployment.
+[La *CLI* de *Angular*](cli) es una herramienta de línea de comandos para administrar el ciclo de desarrollo *Angular*. Úsalo para crear el andamiaje inicial del sistema de archivos para un [espacio de trabajo](#espacio-de-trabajo) o [proyecto] (# proyecto), y para ejecutar [esquemas] (# esquema) que agregan y modifican código para versiones iniciales genéricas de varios elementos. The CLI supports all stages of the development cycle, including building, testing, bundling, and deployment.
 
 * To begin using the CLI for a new project, see [Local Environment Setup](guide/setup-local "Setting up for Local Development").
 * To learn more about the full capabilities of the CLI, see the [CLI command reference](cli).
@@ -206,12 +206,12 @@ A class with the `@Component()` [decorator](#decorator) that associates it with 
 A component is a special type of [directive](#directive).
 The `@Component()` decorator extends the `@Directive()` decorator with template-oriented features.
 
-An Angular component class is responsible for exposing data and handling most of the view's display and user-interaction logic through [data binding](#data-binding).
+Una clase de componente *Angular* es responsable de exponer datos y manejar la mayor parte de la visualización de la vista y la lógica de interacción del usuario a través de la [vinculacion de datos](#vinculacion-de-datos).
 
-Read more about component classes, templates, and views in [Introduction to Angular concepts](guide/architecture).
+Obtén más información sobre las clases `Component`, las plantillas y las vistas en [Introducción a los conceptos *Angular*](guide/architecture).
 
 
-## configuration
+## Configuración
 
 See  [workspace configuration](#cli-config)
 
@@ -231,21 +231,21 @@ A web platform feature, currently supported by most browsers and available in ot
 
 The custom element feature extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. A custom element (also called a *web component*) is recognized by a browser when it's added to the [CustomElementRegistry](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry).
 
-You can use the API to transform an Angular component so that it can be registered with the browser and used in any HTML that you add directly to the DOM within an Angular application. The custom element tag inserts the component's view, with change-detection and data-binding functionality, into content that would otherwise be displayed without Angular processing.
+You can use the API to transform an Angular component so that it can be registered with the browser and used in any HTML that you add directly to the DOM within an Angular application. La etiqueta de elemento personalizado inserta la vista del componente, con la función de detección de cambios y vinculación de datos, en el contenido que de otro modo se mostraría sin el procesamiento *Angular*.
 
-See [Angular element](#angular-element).
+Consulta [Elemento *Angular*](#elemento-angular).
 
 See also [dynamic component loading](#dynamic-components).
 
 
 {@a D}
 
-{@a data-binding}
+{@a vinculacion-de-datos}
 
-## data binding
+## Vinculación de datos
 
-A process that allows applications to display data values to a user and respond to user
-actions (such as clicks, touches, and keystrokes).
+Un proceso que permite que las aplicaciones muestren valores de datos a un usuario y respondan a las acciones del usuario
+(como clics, toques y pulsaciones de teclas).
 
 In data binding, you declare the relationship between an HTML widget and a data source
 and let the framework handle the details.
@@ -370,44 +370,44 @@ See [lazy loading](#lazy-load).
 
 The [official JavaScript language specification](https://en.wikipedia.org/wiki/ECMAScript).
 
-Not all browsers support the latest ECMAScript standard, but you can use a [transpiler](#transpile) (like [TypeScript](#typescript)) to write code using the latest features, which will then be transpiled to code that runs on versions that are supported by browsers.
+No todos los navegadores son compatibles con el último estándar *ECMAScript*, pero puedes usar un [transpilador](#transpilar) (como [*TypeScript*](#typecript)) para escribir código con las funciones más recientes, que luego se transpilará al código que se ejecuta en las versiones que son compatibles con los navegadores.
 
-To learn more, see [Browser Support](guide/browser-support).
+Para obtener más información, consulta [Soporte del navegador](guide/browser-support).
 
 
-{@a element}
+{@a elemento}
 
-## element
+## elemento
 
-Angular defines an `ElementRef` class to wrap render-specific native UI elements.
-In most cases, this allows you to use Angular templates and data binding to access DOM elements
-without reference to the native element.
+*Angular* define una clase `ElementRef` para envolver elementos de la *IU* nativos específicos de renderizado.
+En la mayoría de los casos, esto te permite usar plantillas *Angular* y vinculación de datos para acceder a elementos del *DOM*
+sin referencia al elemento nativo.
 
-The documentation generally refers to *elements* (`ElementRef` instances), as distinct from  *DOM elements*
+La documentación generalmente se refiere a *elementos* (`ElementRef` instances), as distinct from  *DOM elements*
 (which can be accessed directly if necessary).
 
 Compare to [custom element](#custom-element).
 
-{@a entry-point}
+{@a punto-de-entrada}
 
-## entry point
+## punto de entrada
 
-A [JavaScript module](#module) that is intended to be imported by a user of [an
-npm package](guide/npm-packages). An entry-point module typically re-exports
-symbols from other internal modules. A package can contain multiple
-entry points. For example, the `@angular/core` package has two entry-point
-modules, which can be imported using the module names `@angular/core` and
+Un [módulo *JavaScript*](#modulo) que está destinado a ser importado por un usuario de [un
+paquete `npm`](guide/npm-packages). Un punto de entrada de módulo normalmente reexporta
+símbolos de otros módulos internos. Un paquete puede contener varios
+puntos de entrada. Por ejemplo, el paquete `@angular/core` tiene dos puntos de entrada
+de módulos, que se pueden importar utilizando los nombres de módulo `@angular/core` y
 `@angular/core/testing`.
 
 {@a F}
 
 {@a form-control}
 
-## form control
+## `form control`
 
-A instance of `FormControl`, which is a fundamental building block for Angular forms. Together with `FormGroup` and `FormArray`, tracks the value, validation, and status of a form input element.
+Una instancia de `FormControl`, que es un bloque de construcción fundamental para los formularios *Angular*. Junto con `FormGroup` y `FormArray`, rastrea el valor, la validación y el estado de un elemento de entrada de formulario.
 
-Read more forms in the [Introduction to forms in Angular](guide/forms-overview).
+Lee más formularios en [Introducción a los formularios en *Angular*](guide/forms-overview).
 
 {@a form-model}
 
@@ -439,13 +439,13 @@ To learn more, see [Form Validation](guide/form-validation).
 ## immutability
 
 The ability to alter the state of a value after its creation. [Reactive forms](#reactive-forms) perform immutable changes in that
-each change to the data model produces a new data model rather than modifying the existing one. [Template-driven forms](#template-driven-forms) perform mutable changes with `NgModel` and [two-way data binding](#data-binding) to modify the existing data model in place.
+each change to the data model produces a new data model rather than modifying the existing one. [Formularios controlados por plantillas](#formularios-controlados-por-plantillas) realizan cambios mutables con `NgModel` y [vinculación de datos bidireccional](#vinculacion-de-datos) para modificar el modelo de datos existente en su lugar.
 
-{@a injectable}
+{@a inyectable}
 
-## injectable
+## Inyectable
 
-An Angular class or other definition that provides a dependency using the [dependency injection](#di) mechanism. An injectable [service](#service) class must be marked by the `@Injectable()` [decorator](#decorator). Other items, such as constant values, can also be injectable.
+Una clase *Angular* u otra definición que proporciona una dependencia mediante el mecanismo de [inyección de dependencia](#idd). Una clase de [servicio](#servicio) inyectable debe estar marcada con el [decorador `@Injectable()`](#decorador). Other items, such as constant values, can also be injectable.
 
 {@a injector}
 
@@ -616,19 +616,19 @@ Every Angular application has a root module. By convention, the class is called 
 
 To learn more, see [NgModules](guide/ngmodules).
 
-{@a npm-package}
+{@a paquete-npm}
 
-## npm package
+## paquete `npm`
 
-The [npm package manager](https://docs.npmjs.com/getting-started/what-is-npm) is used to distribute and load Angular modules and libraries.
+El [administrador de paquetes `npm`](https://docs.npmjs.com/getting-started/what-is-npm) se usa para distribuir y cargar bibliotecas y módulos *Angular*.
 
-Learn more about how Angular uses [Npm Packages](guide/npm-packages).
+Obtén más información sobre cómo usa *Angular* los [Paquetes `npm`](guide/npm-packages).
 
 {@a ngc}
 
-## ngc
-`ngc` is a Typescript-to-Javascript transpiler that processes Angular decorators, metadata, and templates, and emits JavaScript code.
-The most recent implementation is internally referred to as `ngtsc` because it's a minimalistic wrapper around the TypeScript compiler `tsc` that adds a transform for processing Angular code.
+## `ngc`
+`ngc` es un transpilador de *TypeScript* a *JavaScript* que procesa decoradores *Angular*, metadatos y plantillas, y emite código *JavaScript*.
+La implementación más reciente se conoce internamente como `ngtsc` porque es una envoltura minimalista alrededor del compilador `tsc` de *TypeScript* que agrega una transformación para procesar código *Angular*.
 
 {@a O}
 
@@ -690,7 +690,7 @@ Support for the various Angular run-time platforms is provided by the `@angular/
 
 ## polyfill
 
-An [npm package](guide/npm-packages) that plugs gaps in a browser's JavaScript implementation.
+Un [paquete `npm`](guide/npm-packages) que cubre las lagunas en la implementación de *JavaScript* de un navegador.
 See [Browser Support](guide/browser-support) for polyfills that support particular functionality for particular platforms.
 
 {@a project}
@@ -830,10 +830,10 @@ This installs the `schematics` executable, which you can use to create a new sch
 
 ## scoped package
 
-A way to group related [npm packages](guide/npm-packages).
-NgModules are delivered within scoped packages whose names begin with the Angular *scope name* `@angular`. For example, `@angular/core`, `@angular/common`, `@angular/forms`, and `@angular/router`.
+Una forma de agrupar [paquetes `npm`](guide/npm-packages) relacionados.
+Los `NgModules` se entregan dentro de paquetes con ámbito cuyos nombres comienzan con *Angular nombre de ámbito* `@angular`. Por ejemplo, `@angular/core`, `@angular/common`, `@angular/forms` y `@angular/router`.
 
-Import a scoped package in the same way that you import a normal package.
+Importa un paquete con ámbito de la misma manera que importas un paquete normal.
 
 <code-example path="architecture/src/app/app.component.ts" header="architecture/src/app/app.component.ts (import)" region="import">
 
@@ -982,11 +982,11 @@ Read and learn more about [template input variables](guide/template-reference-va
 
 An opaque identifier used for efficient table lookup. In Angular, a [DI token](#di-token) is used to find [providers](#provider) of dependencies in the [dependency injection](#di) system.
 
-{@a transpile}
+{@a transpilar}
 
-## transpile
+## transpilar
 
-The translation process that transforms one version of JavaScript to another version; for example, down-leveling ES2015 to the older ES5 version.
+El proceso de traducción que transforma una versión de *JavaScript* en otra versión; por ejemplo, rebajar el nivel *ES2015* a la versión anterior *ES5*.
 
 {@a file-tree}
 
@@ -1086,25 +1086,25 @@ See [custom element](#custom-element).
 A collection of Angular [projects](#project) (that is, applications and libraries) powered by the [Angular CLI](#cli) that are typically co-located in a single source-control repository (such as [git](https://git-scm.com/)).
 
 The [CLI](#cli) [`ng new` command](cli/new) creates a file system directory (the "workspace root").
-In the workspace root, it also creates the workspace [configuration file](#configuration) (`angular.json`) and, by default, an initial application project with the same name.
+En la raíz del espacio de trabajo, también crea el espacio de trabajo [archivo de configuración](#configuracion) (`angular.json`) y, de manera predeterminada, un proyecto de aplicación inicial con el mismo nombre.
 
-Commands that create or operate on applications and libraries (such as `add` and `generate`) must be executed from within a workspace folder.
+Los comandos que crean u operan en aplicaciones y bibliotecas (como `add` y `generate`) se deben ejecutar desde un directorio del espacio de trabajo.
 
-For more information, see [Workspace Configuration](guide/workspace-config).
+Para obtener más información, consulta [Configuración del espacio de trabajo](guide/workpace-config).
 
 {@a cli-config}
 
 {@a config}
 
-## workspace configuration
+## configuración del espacio de trabajo
 
 A file named `angular.json` at the root level of an Angular [workspace](#workspace) provides workspace-wide and project-specific configuration defaults for build and development tools that are provided by or integrated with the [Angular CLI](#cli).
 
-For more information, see [Workspace Configuration](guide/workspace-config).
+Para obtener más información, consulta [Configuración del espacio de trabajo](guide/workpace-config).
 
-Additional project-specific configuration files are used by tools, such as `package.json` for the [npm package manager](#npm-package), `tsconfig.json` for [TypeScript transpilation](#transpile), and `tslint.json` for [TSLint](https://palantir.github.io/tslint/).
+Las herramientas utilizan archivos de configuración adicionales específicos del proyecto, como `package.json` para el [administrador de paquetes `npm`](#paquete-npm), `tsconfig.json` para la [transpilación de *TypeScript*](#transpilar) y `tslint .json` para [`TSLint`](https://palantir.github.io/tslint/).
 
-For more information, see [Workspace and Project File Structure](guide/file-structure).
+Para obtener más información, consulta [Espacio de trabajo y estructura de archivos del proyecto](guide/file-structure).
 
 {@a X}
 
@@ -1113,15 +1113,15 @@ For more information, see [Workspace and Project File Structure](guide/file-stru
 
 
 {@a Z}
-{@a zone}
+{@a zona}
 
-## zone
+## zona
 
-An execution context for a set of asynchronous tasks. Useful for debugging, profiling, and testing applications that include asynchronous operations such as event processing, promises, and calls to remote servers.
+Un contexto de ejecución para un conjunto de tareas asincrónicas. Útil para depurar, perfilar y probar aplicaciones que incluyen operaciones asincrónicas como procesamiento de eventos, promesas y llamadas a servidores remotos.
 
-An Angular application runs in a zone where it can respond to asynchronous events by checking for data changes and updating the information it displays by resolving [data bindings](#data-binding).
+Una aplicación *Angular* se ejecuta en una zona donde puede responder a eventos asincrónicos comprobando cambios en los datos y actualizando la información que muestra resolviendo [vinculación de datos](#vinculacion-de-datos).
 
-A zone client can take action before and after an async operation completes.
+Un cliente de zona puede tomar medidas antes y después de que se complete una operación asíncrona.
 
-Learn more about zones in this
-[Brian Ford video](https://www.youtube.com/watch?v=3IqtmUscE_U).
+Obtén más información sobre las zonas en este
+[Video de Brian Ford](https://www.youtube.com/watch?v=3IqtmUscE_U).

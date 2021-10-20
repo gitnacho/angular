@@ -154,7 +154,7 @@ import 'zone.js/dist/zone';
 
 * implement Symbol.specics of Promise ([#34162](https://github.com/angular/angular/issues/34162)) ([539d8f0](https://github.com/angular/angular/commit/539d8f09e01fb4c577bc8a289d2e124360d4c6b1)), closes [#34105](https://github.com/angular/angular/issues/34105) [#33989](https://github.com/angular/angular/issues/33989)
 * define all zone.js configurations to typescript interfaces ([#35329](https://github.com/angular/angular/issues/35329)) ([03d88c7](https://github.com/angular/angular/commit/03d88c7965eb8b1310a1b50675fee66986a9ebac))
-* add a temp solution to support passive event listeners. ([#34503](https://github.com/angular/angular/issues/34503)) ([f9d483e](https://github.com/angular/angular/commit/f9d483e76ea9992e3fe3e2b7c8c415c264de4679))
+* agrega una solución temporal para admitir oyentes de eventos pasivos. ([#34503](https://github.com/angular/angular/issues/34503)) ([f9d483e](https://github.com/angular/angular/commit/f9d483e76ea9992e3fe3e2b7c8c415c264de4679))
 * add an tickOptions parameter with property processNewMacroTasksSynchronously. ([#33838](https://github.com/angular/angular/issues/33838)) ([17b862c](https://github.com/angular/angular/commit/17b862cf82a18490329d88b37d3e86e3245d5759)), closes [#33799](https://github.com/angular/angular/issues/33799)
 * add interface definitions which zone extends EventTarget ([#35304](https://github.com/angular/angular/issues/35304)) ([4acb676](https://github.com/angular/angular/commit/4acb676f2e9ba3a9ea33dd020e23534d702f988b)), closes [#35173](https://github.com/angular/angular/issues/35173)
 * make jasmine patch as zone module ([#34676](https://github.com/angular/angular/issues/34676)) ([e1160f1](https://github.com/angular/angular/commit/e1160f19beb2399581ae36aa498ec0dc23dfed53))
@@ -268,7 +268,7 @@ import 'zone.js/dist/zone';
 
 ### Corrección de errores
 
-* **core:** fix for tests in angular repo ([fd069db](https://github.com/angular/zone.js/commit/fd069db))
+* **core**: fix for tests in angular repo ([fd069db](https://github.com/angular/zone.js/commit/fd069db))
 
 
 <a name="0.8.28"></a>
@@ -287,10 +287,10 @@ import 'zone.js/dist/zone';
 ### Corrección de errores
 
 * **bluebird:** fix [#1112](https://github.com/angular/zone.js/issues/1112), bluebird chained callback should return a Bluebird Promise ([#1114](https://github.com/angular/zone.js/issues/1114)) ([6ba3169](https://github.com/angular/zone.js/commit/6ba3169))
-* **core:** fix [#1108](https://github.com/angular/zone.js/issues/1108), window.onerror should have (message, source, lineno, colno, error) signiture ([#1109](https://github.com/angular/zone.js/issues/1109)) ([49e0548](https://github.com/angular/zone.js/commit/49e0548))
-* **core:** fix [#1153](https://github.com/angular/zone.js/issues/1153), ZoneTask.toString should always be a string ([#1166](https://github.com/angular/zone.js/issues/1166)) ([afa1363](https://github.com/angular/zone.js/commit/afa1363))
-* **core:** fix interval will still run after cancelled error ([#1156](https://github.com/angular/zone.js/issues/1156)) ([eb72ff4](https://github.com/angular/zone.js/commit/eb72ff4))
-* **core:** use then directly when promise is not patchable ([#1079](https://github.com/angular/zone.js/issues/1079)) ([d7e0a31](https://github.com/angular/zone.js/commit/d7e0a31))
+* **core**: fix [#1108](https://github.com/angular/zone.js/issues/1108), window.onerror should have (message, source, lineno, colno, error) signiture ([#1109](https://github.com/angular/zone.js/issues/1109)) ([49e0548](https://github.com/angular/zone.js/commit/49e0548))
+* **core**: fix [#1153](https://github.com/angular/zone.js/issues/1153), ZoneTask.toString should always be a string ([#1166](https://github.com/angular/zone.js/issues/1166)) ([afa1363](https://github.com/angular/zone.js/commit/afa1363))
+* **core**: fix interval will still run after cancelled error ([#1156](https://github.com/angular/zone.js/issues/1156)) ([eb72ff4](https://github.com/angular/zone.js/commit/eb72ff4))
+* **core**: use then directly when promise is not patchable ([#1079](https://github.com/angular/zone.js/issues/1079)) ([d7e0a31](https://github.com/angular/zone.js/commit/d7e0a31))
 * **duplicate:** fix [#1081](https://github.com/angular/zone.js/issues/1081), load patch should also check the duplicate flag ([#1121](https://github.com/angular/zone.js/issues/1121)) ([8ce5e33](https://github.com/angular/zone.js/commit/8ce5e33))
 * **event:** fix [#1110](https://github.com/angular/zone.js/issues/1110), nodejs EventEmitter should support Symbol eventName ([#1113](https://github.com/angular/zone.js/issues/1113)) ([96420d6](https://github.com/angular/zone.js/commit/96420d6))
 * **event:** should pass boolean to addEventListener if not support passive ([#1053](https://github.com/angular/zone.js/issues/1053)) ([e9536ec](https://github.com/angular/zone.js/commit/e9536ec))
@@ -308,7 +308,7 @@ import 'zone.js/dist/zone';
 ### Características
 
 * **build:** Upgrade to TypeScript 2.9 and rxjs6 ([#1122](https://github.com/angular/zone.js/issues/1122)) ([31fc127](https://github.com/angular/zone.js/commit/31fc127))
-* **core:** upgrade to typescript 3.0.3 ([#1132](https://github.com/angular/zone.js/issues/1132)) ([60adc9c](https://github.com/angular/zone.js/commit/60adc9c))
+* **core**: upgrade to typescript 3.0.3 ([#1132](https://github.com/angular/zone.js/issues/1132)) ([60adc9c](https://github.com/angular/zone.js/commit/60adc9c))
 * **Core:** fix [#910](https://github.com/angular/zone.js/issues/910), add a flag to allow user to ignore duplicate Zone error ([#1093](https://github.com/angular/zone.js/issues/1093)) ([a86c6d5](https://github.com/angular/zone.js/commit/a86c6d5))
 * **custom-element:** patch customElement v1 APIs ([#1133](https://github.com/angular/zone.js/issues/1133)) ([427705f](https://github.com/angular/zone.js/commit/427705f))
 * **error:** fix [#975](https://github.com/angular/zone.js/issues/975), can config how to load blacklist zone stack frames ([#1045](https://github.com/angular/zone.js/issues/1045)) ([ff3d545](https://github.com/angular/zone.js/commit/ff3d545))
@@ -384,8 +384,8 @@ import 'zone.js/dist/zone';
 ### Corrección de errores
 
 * add OriginalDelegate prop to Function::toString ([#993](https://github.com/angular/zone.js/issues/993)) ([2dc7e5c](https://github.com/angular/zone.js/commit/2dc7e5c))
-* **core:** fix [#1000](https://github.com/angular/zone.js/issues/1000), check target is null or not when patchOnProperty ([#1004](https://github.com/angular/zone.js/issues/1004)) ([5c139e5](https://github.com/angular/zone.js/commit/5c139e5))
-* **core:** fix [#946](https://github.com/angular/zone.js/issues/946), don't patch promise if it is not writable ([#1041](https://github.com/angular/zone.js/issues/1041)) ([c8c5990](https://github.com/angular/zone.js/commit/c8c5990))
+* **core**: fix [#1000](https://github.com/angular/zone.js/issues/1000), check target is null or not when patchOnProperty ([#1004](https://github.com/angular/zone.js/issues/1004)) ([5c139e5](https://github.com/angular/zone.js/commit/5c139e5))
+* **core**: fix [#946](https://github.com/angular/zone.js/issues/946), don't patch promise if it is not writable ([#1041](https://github.com/angular/zone.js/issues/1041)) ([c8c5990](https://github.com/angular/zone.js/commit/c8c5990))
 * **event:** fix [#1021](https://github.com/angular/zone.js/issues/1021), removeListener/removeAllListeners should return eventEmitter ([#1022](https://github.com/angular/zone.js/issues/1022)) ([ab72df6](https://github.com/angular/zone.js/commit/ab72df6))
 * **fakeAsync:** fix [#1056](https://github.com/angular/zone.js/issues/1056), fakeAsync timerId should not be zero ([#1057](https://github.com/angular/zone.js/issues/1057)) ([68682cd](https://github.com/angular/zone.js/commit/68682cd))
 * **jasmine:** fix [#1015](https://github.com/angular/zone.js/issues/1015), make jasmine patch compatible to jasmine 3.x ([#1016](https://github.com/angular/zone.js/issues/1016)) ([e1df4bc](https://github.com/angular/zone.js/commit/e1df4bc))
@@ -399,7 +399,7 @@ import 'zone.js/dist/zone';
 
 * **bluebird:** fix [#921](https://github.com/angular/zone.js/issues/921), [#977](https://github.com/angular/zone.js/issues/977), support bluebird ([#1039](https://github.com/angular/zone.js/issues/1039)) ([438210c](https://github.com/angular/zone.js/commit/438210c))
 * **build:** use yarn instead of npm ([#1025](https://github.com/angular/zone.js/issues/1025)) ([ebd348c](https://github.com/angular/zone.js/commit/ebd348c))
-* **core:** fix [#996](https://github.com/angular/zone.js/issues/996), expose UncaughtPromiseError ([#1040](https://github.com/angular/zone.js/issues/1040)) ([7f178b1](https://github.com/angular/zone.js/commit/7f178b1))
+* **core**: fix [#996](https://github.com/angular/zone.js/issues/996), expose UncaughtPromiseError ([#1040](https://github.com/angular/zone.js/issues/1040)) ([7f178b1](https://github.com/angular/zone.js/commit/7f178b1))
 * **jasmine:** support Date.now in fakeAsyncTest ([#1009](https://github.com/angular/zone.js/issues/1009)) ([f22065e](https://github.com/angular/zone.js/commit/f22065e))
 * **jsonp:** provide a help method to patch jsonp ([#997](https://github.com/angular/zone.js/issues/997)) ([008fd43](https://github.com/angular/zone.js/commit/008fd43))
 * **patch:** fix [#1011](https://github.com/angular/zone.js/issues/1011), patch ResizeObserver ([#1012](https://github.com/angular/zone.js/issues/1012)) ([8ee88da](https://github.com/angular/zone.js/commit/8ee88da))
@@ -418,13 +418,13 @@ import 'zone.js/dist/zone';
 
 ### Corrección de errores
 
-* **core:** add comment for shorter var/function name ([67e8178](https://github.com/angular/zone.js/commit/67e8178))
-* **core:** add file check script in travis build ([615a6c1](https://github.com/angular/zone.js/commit/615a6c1))
-* **core:** add helper method in util.ts to shorter zone.wrap/scehduleMacroTask ([8293c37](https://github.com/angular/zone.js/commit/8293c37))
-* **core:** add rxjs test ([31832a7](https://github.com/angular/zone.js/commit/31832a7))
-* **core:** fix [#989](https://github.com/angular/zone.js/issues/989), remove unuse code, use shorter name to reduce bundle size ([73b0061](https://github.com/angular/zone.js/commit/73b0061))
-* **core:** fix shorter name closure conflict ([00a4e31](https://github.com/angular/zone.js/commit/00a4e31))
-* **core:** remove unreadable short names ([957351e](https://github.com/angular/zone.js/commit/957351e))
+* **core**: add comment for shorter var/function name ([67e8178](https://github.com/angular/zone.js/commit/67e8178))
+* **core**: add file check script in travis build ([615a6c1](https://github.com/angular/zone.js/commit/615a6c1))
+* **core**: add helper method in util.ts to shorter zone.wrap/scehduleMacroTask ([8293c37](https://github.com/angular/zone.js/commit/8293c37))
+* **core**: add rxjs test ([31832a7](https://github.com/angular/zone.js/commit/31832a7))
+* **core**: fix [#989](https://github.com/angular/zone.js/issues/989), remove unuse code, use shorter name to reduce bundle size ([73b0061](https://github.com/angular/zone.js/commit/73b0061))
+* **core**: fix shorter name closure conflict ([00a4e31](https://github.com/angular/zone.js/commit/00a4e31))
+* **core**: remove unreadable short names ([957351e](https://github.com/angular/zone.js/commit/957351e))
 
 
 
@@ -743,7 +743,7 @@ import 'zone.js/dist/zone';
 
 ### Corrección de errores
 
-* **core:** remove debugger ([#639](https://github.com/angular/zone.js/issues/639)) ([0534b19](https://github.com/angular/zone.js/commit/0534b19))
+* **core**: remove debugger ([#639](https://github.com/angular/zone.js/issues/639)) ([0534b19](https://github.com/angular/zone.js/commit/0534b19))
 * **error:** fix [#618](https://github.com/angular/zone.js/issues/618), ZoneAwareError should copy Error's static propeties ([#647](https://github.com/angular/zone.js/issues/647)) ([2d30914](https://github.com/angular/zone.js/commit/2d30914))
 * **jasmine:** support "pending" `it` clauses with no test body ([96cb3d0](https://github.com/angular/zone.js/commit/96cb3d0)), closes [#659](https://github.com/angular/zone.js/issues/659)
 * **minification:** fix [#607](https://github.com/angular/zone.js/issues/607) to change catch variable name to error/err ([#609](https://github.com/angular/zone.js/issues/609)) ([33d0d8d](https://github.com/angular/zone.js/commit/33d0d8d))

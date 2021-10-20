@@ -101,7 +101,7 @@ is available to <code>declarations</code> of this module.</p>
 <td><code>&lt;video <b>#movieplayer</b> ...&gt;&lt;/video&gt;
 &lt;button <b>(click)</b>="movieplayer.play()"&gt;Play&lt;/button&gt;
 </code></td>
-<td><p>Creates a local variable <code>movieplayer</code> that provides access to the <code>video</code> element instance in data-binding and event-binding expressions in the current template.</p>
+<td><p>Crea una variable <code>movieplayer</code> local que proporciona acceso a la instancia del elemento <code>video</code> en expresiones de vinculación de datos y vinculación de eventos en la plantilla actual.</p>
 </td>
 </tr><tr>
 <td><code>&lt;p <b>*myUnless</b>="myExpression"&gt;...&lt;/p&gt;</code></td>
@@ -177,14 +177,14 @@ is available to <code>declarations</code> of this module.</p>
 </tr>
 <tr>
 <td><code>&lt;input <b>[(ngModel)]</b>="userName"&gt;</code></td>
-<td><p>Provides two-way data-binding, parsing, and validation for form controls.</p>
+<td><p>Proporciona vinculación de datos bidireccional, análisis y validación para controles de formulario.</p>
 </td>
 </tr>
 </tbody></table>
 
 <table class="is-full-width is-fixed-layout">
 <tbody><tr>
-<th>Class decorators</th>
+<th>Decoradores de clase</th>
 <th><p><code>import { Directive, ... } from '@angular/core';</code>
 </p>
 </th>
@@ -193,52 +193,52 @@ is available to <code>declarations</code> of this module.</p>
 <td><code><b>@Component({...})</b>
 class MyComponent() {}
 </code></td>
-<td><p>Declares that a class is a component and provides metadata about the component.</p>
+<td><p>Declara que una clase es un componente y proporciona metadatos relacionados al componente.</p>
 </td>
 </tr><tr>
 <td><code><b>@Directive({...})</b>
 class MyDirective() {}
 </code></td>
-<td><p>Declares that a class is a directive and provides metadata about the directive.</p>
+<td><p>Declara que una clase es una directiva y proporciona metadatos relacionados a la directiva.</p>
 </td>
 </tr><tr>
 <td><code><b>@Pipe({...})</b>
 class MyPipe() {}
 </code></td>
-<td><p>Declares that a class is a pipe and provides metadata about the pipe.</p>
+<td><p>Declara que una clase es un <code>pipe</code> y proporciona metadatos sobre la tubería.</p>
 </td>
 </tr><tr>
 <td><code><b>@Injectable()</b>
 class MyService() {}
 </code></td>
-<td><p>Declares that a class can be provided and injected by other classes. Without this decorator, the compiler won't generate enough metadata to allow the class to be created properly when it's injected somewhere.</p>
+<td><p>Declara que una clase puede ser proporcionada e inyectada por otras clases. Sin este decorador, el compilador no generará suficientes metadatos para permitir que la clase se cree correctamente cuando se inyecta en algún lugar. </p>
 </td>
 </tr>
 </tbody></table>
 
 <table class="is-full-width is-fixed-layout">
 <tbody><tr>
-<th>Directive configuration</th>
+<th>Configuración de directiva</th>
 <th><p><code>@Directive({ property1: value1, ... })</code>
 </p>
 </th>
 </tr>
 <tr>
 <td><code><b>selector:</b> '.cool-button:not(a)'</code></td>
-<td><p>Specifies a CSS selector that identifies this directive within a template. Supported selectors include <code>element</code>,
-<code>[attribute]</code>, <code>.class</code>, and <code>:not()</code>.</p>
-<p>Does not support parent-child relationship selectors.</p>
+<td><p>Especifica un selector de <em>CSS</em> que identifica esta directiva dentro de una plantilla. Los selectores admitidos incluyen <code>element</code>,
+<code>[attribute]</code>, <code>.class</code> y <code>:not()</code>.</p>
+<p>No admite selectores de relaciones entre padres e hijos.</p>
 </td>
 </tr><tr>
 <td><code><b>providers:</b> [MyService, { provide: ... }]</code></td>
-<td><p>List of dependency injection providers for this directive and its children.</p>
+<td><p>Lista de proveedores de inyección de dependencias para esta directiva y sus hijos.</p>
 </td>
 </tr>
 </tbody></table>
 
 <table class="is-full-width is-fixed-layout">
 <tbody><tr>
-<th>Component configuration</th>
+<th>Configuración de componentes</th>
 <th><p>
 <code>@Component</code> extends <code>@Directive</code>,
 so the <code>@Directive</code> configuration applies to components as well</p>

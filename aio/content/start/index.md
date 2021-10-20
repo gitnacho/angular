@@ -130,7 +130,7 @@ Esta sección te guía a través de la edición del *HTML*, también conocido co
     </div>
 
 1. Agrega un botón para que los usuarios puedan compartir un producto.
-  Vincula el evento `click` del botón al método `share()` en `product-list.component.ts`. El enlace de eventos usa un conjunto de paréntesis, `( )`, alrededor del evento, como en el evento `(clic)` en el elemento `<button>`.
+  Vincula el evento `click` del botón al método `share()` en `product-list.component.ts`. La vinculación de eventos usa un conjunto de paréntesis, `( )`, alrededor del evento, como en el evento `(clic)` en el elemento `<button>`.
 
     <code-example path="getting-started/src/app/product-list/product-list.component.4.html" header="src/app/product-list/product-list.component.html">
     </code-example>

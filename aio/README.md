@@ -1,137 +1,137 @@
-# Angular documentation project (https://angular.io)
+# Proyecto de documentación *Angular* (https://angular.io)
 
-Everything in this folder is part of the documentation project. Esto incluye
+Todo en este directorio es parte del proyecto de documentación. Esto incluye
 
-* the web site for displaying the documentation
-* the dgeni configuration for converting source files to rendered files that can be viewed in the web site.
-* the tooling for setting up examples for development; and generating live-example and zip files from the examples.
+* el sitio web para mostrar la documentación
+* la configuración de `dgeni` para convertir los archivos fuente en archivos renderizados que se pueden ver en el sitio web.
+* las herramientas para establecer ejemplos para el desarrollo; y generar archivos `zip` y de ejemplo en vivo a partir de los ejemplos.
 
-<a name="developer-tasks"></a>
-## Developer tasks
+<a name="tareas-del-desarrollador"></a>
+## Tareas del desarrollador
 
-We use [Yarn](https://yarnpkg.com) to manage the dependencies and to run build tasks.
-You should run all these tasks from the `angular/aio` folder.
-Here are the most important tasks you might need to use:
+Usamos [`Yarn`](https://yarnpkg.com) para administrar las dependencias y ejecutar tareas de compilación.
+Debes ejecutar todas estas tareas desde el directorio `angular/aio`.
+Estas son las tareas más importantes que necesitas utilizar:
 
-* `yarn` - install all the dependencies.
-* `yarn setup` - install all the dependencies, boilerplate, stackblitz, zips and run dgeni on the docs.
-* `yarn setup-local` - same as `setup`, but build the Angular packages from the source code and use these locally built versions (instead of the ones fetched from npm) for aio and docs examples boilerplate.
+* `yarn` ⏤ instala todas las dependencias.
+* `yarn setup` ⏤ instala todas las dependencias, `boilerplate`, `stackblitz`, `zips` y ejecuta `dgeni` en los documentos.
+* `yarn setup-local` ⏤ Igual que `setup`, pero compila los paquetes *Angular* a partir del código fuente y usa estas versiones construidas localmente (en lugar de las obtenidas de `npm`) para los ejemplos repetitivos de `aio` y `docs`.
 
-* `yarn build` - create a production build of the application (after installing dependencies, boilerplate, etc).
-* `yarn build-local` - same as `build`, but use `setup-local` instead of `setup`.
-* `yarn start` - run a development web server that watches the files; then builds the doc-viewer and reloads the page, as necessary.
-* `yarn serve-and-sync` - run both the `docs-watch` and `start` in the same console.
-* `yarn lint` - check that the doc-viewer code follows our style rules.
-* `yarn test` - watch all the source files, for the doc-viewer, and run all the unit tests when any change.
-* `yarn test --watch=false` - run all the unit tests once.
-* `yarn e2e` - run all the e2e tests for the doc-viewer.
+* `yarn build` ⏤ crea una compilación de producción de la aplicación (después de instalar dependencias, plantilla, etc.).
+* `yarn build-local` ⏤ igual que `build`, pero usa `setup-local` en lugar de `setup`.
+* `yarn start` ⏤ ejecuta un servidor web de desarrollo que observa los archivos; luego crea el visor de documentos y vuelve a cargar la página, según sea necesario.
+* `yarn serve-and-sync` ⏤ ejecuta `docs-watch` y `start` en la misma consola.
+* `yarn lint` ⏤ comprueba que el código del visor de documentos sigue nuestras reglas de estilo.
+* `yarn test` ⏤ observa todos los archivos fuente, para el visor de documentos, y ejecuta todas las pruebas unitarias cuando haya algún cambio.
+* `yarn test --watch=false` ⏤ ejecuta todas las pruebas unitarias una vez.
+* `yarn e2e` ⏤ ejecuta todas las pruebas `e2e` para el visor de documentos.
 
-* `yarn docs` - generate all the docs from the source files.
-* `yarn docs-watch` - watch the Angular source and the docs files and run a short-circuited doc-gen for the docs that changed.
-* `yarn docs-lint` - check that the doc gen code follows our style rules.
-* `yarn docs-test` - run the unit tests for the doc generation code.
+* `yarn docs` ⏤ genera todos los documentos a partir de los archivos fuente.
+* `yarn docs-watch` ⏤ mira la fuente *Angular* y los archivos *docs* y ejecute un *doc-gen* en cortocircuito para los documentos que cambiaron.
+* `yarn docs-lint` ⏤ comprueba que el código `doc gen` sigue nuestras reglas de estilo.
+* `yarn docs-test` ⏤ ejecuta las pruebas unitarias para el código de generación de documentos.
 
-* `yarn boilerplate:add` - generate all the boilerplate code for the examples, so that they can be run locally.
-* `yarn boilerplate:remove` - remove all the boilerplate code that was added via `yarn boilerplate:add`.
-* `yarn create-example` - create a new example directory containing initial source files.
+* `yarn boilerplate:add` ⏤ genera todo el código repetitivo para los ejemplos, para que se puedan ejecutar localmente.
+* `yarn boilerplate:remove` ⏤ elimina todo el código repetitivo que se agregó a través de `yarn boilerplate:add`.
+* `yarn create-example` ⏤ crea un nuevo directorio de ejemplo que contiene los archivos fuente iniciales.
 
-* `yarn generate-stackblitz` - generate the stackblitz files that are used by the `live-example` tags in the docs.
-* `yarn generate-zips` - generate the zip files from the examples. Zip available via the `live-example` tags in the docs.
+* `yarn generate-stackblitz` ⏤ genera los archivos *stackblitz* que utilizan las etiquetas `live-example` en los documentos.
+* `yarn generate-zips` ⏤ genera los archivos `zip` a partir de los ejemplos. `Zip` disponible a través de las etiquetas `live-example` en los documentos.
 
-* `yarn example-e2e` - run all e2e tests for examples. Available options:
-  - `--setup` ⏤ generate boilerplate, force webdriver update & other setup, then run tests.
-  - `--local` ⏤ run e2e tests with the local version of Angular contained in the "dist" folder.
-               _Requires `--setup` in order to take effect._
-  - `--filter=foo` ⏤ limita las pruebas e2e a aquellas que contengan la palabra "foo".
+* `yarn example-e2e` ⏤ ejecuta todas las pruebas `e2e` para obtener ejemplos. Opciones disponibles:
+  - `--setup` ⏤ genera un texto estándar, fuerza la actualización del controlador web y otras configuraciones, luego ejecuta las pruebas.
+  - `--local` ⏤ ejecuta pruebas `e2e` con la versión local de *Angular* contenida en el directorio `dist`.
+               *Requiere `--setup` para que surta efecto*.
+  - `--filter=foo` ⏤ limita las pruebas `e2e` a aquellas que contengan la palabra "foo".
 
 > **Nota para usuarios de Windows**
 >
-> La configuración de los ejemplos implica la creación de algunos [enlaces simbólicos](https://en.wikipedia.org/wiki/Symbolic_link) (consulta [aquí](./tools/examples/README.md#symlinked-node_modules) para obtener más detalles) . On Windows, this requires to either have [Developer Mode enabled](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10) (supported on Windows 10 or newer) or run the setup commands as administrator.
+> La configuración de los ejemplos implica la creación de algunos [enlaces simbólicos](https://en.wikipedia.org/wiki/Symbolic_link) (consulta [aquí](./tools/examples/README.md#symlinked-node_modules) para obtener más detalles) . En *Windows*, esto requiere tener el [modo de desarrollador habilitado](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10) (compatible con *Windows 10* o más reciente) o ejecuta los comandos de configuración como administrador.
 >
-> The affected commands are:
+> Los comandos afectados son:
 > - `yarn setup` / `yarn setup-*`
 > - `yarn build` / `yarn build-*`
 > - `yarn boilerplate:add`
 > - `yarn example-e2e --setup`
 
-## Using ServiceWorker locally
+## Usar `ServiceWorker` localmente
 
-Running `yarn start` (even when explicitly targeting production mode) does not set up the
-ServiceWorker. If you want to test the ServiceWorker locally, you can use `yarn build` and then
-serve the files in `dist/` with `yarn http-server dist -p 4200`.
+Ejecutar `yarn start` (incluso cuando se dirige explícitamente al modo de producción) no configura el
+`ServiceWorker`. Si deseas probar el `ServiceWorker` localmente, puedes usar `yarn build` y luego
+servir los archivos en `dist/` con `yarn http-server dist -p 4200`.
 
 
-## Guide to authoring
+## Guía de autoría
 
-There are two types of content in the documentation:
+Hay dos tipos de contenido en la documentación:
 
-* **API docs**: descriptions of the modules, classes, interfaces, decorators, etc that make up the Angular platform.
-API docs are generated directly from the source code.
-The source code is contained in TypeScript files, located in the `angular/packages` folder.
-Each API item may have a preceding comment, which contains JSDoc style tags and content.
-The content is written in markdown.
+* **Documentos de la API**: descripción de módulos, clases, interfaces, decoradores, etc., que componen la plataforma *Angular*.
+Los documentos de la *API* se generan directamente a partir del código fuente.
+El código fuente está contenido en archivos *TypeScript*, ubicados en el directorio `angular/packages`.
+Cada elemento de la *API* puede tener un comentario anterior, el cual tiene etiquetas al estilo *JSDoc* y contenido.
+El contenido está escrito en `markdown`.
 
-* **Other content**: guides, tutorials, and other marketing material.
-All other content is written using markdown in text files, located in the `angular/aio/content` folder.
-More specifically, there are sub-folders that contain particular types of content: guides, tutorial and marketing.
+* **Otro contenido**: guías, tutoriales y otro material de marketing.
+El resto del contenido se escribe usando `markdown` en archivos de texto, ubicados en el directorio `angular/aio/content`.
+Específicamente, hay subdirectorios que contienen tipos particulares de contenido: guías, tutoriales y marketing.
 
-* **Code examples**: code examples need to be testable to ensure their accuracy.
-Also, our examples have a specific look and feel and allow the user to copy the source code. For larger
-examples they are rendered in a tabbed interface (e.g. template, HTML, and TypeScript on separate
-tabs). Additionally, some are live examples, which provide links where the code can be edited, executed, and/or downloaded. For details on working with code examples, please read the [Code snippets](https://angular.io/guide/docs-style-guide#code-snippets), [Source code markup](https://angular.io/guide/docs-style-guide#source-code-markup), and [Live examples](https://angular.io/guide/docs-style-guide#live-examples) pages of the [Authors Style Guide](https://angular.io/guide/docs-style-guide).
+* **Código de ejemplo**: El código de los ejemplos debe ser comprobables para garantizar su exactitud.
+Además, nuestros ejemplos tienen una apariencia específica y permiten al usuario copiar el código fuente. Los ejemplos
+muy grandes, se representan en una interfaz con pestañas (por ejemplo, plantilla, *HTML* y *TypeScript* en
+pestañas). Además, algún código de ejemplo es en vivo, el cual proporcionan enlaces a donde se pueden editar, ejecutar y/o descargar. Para obtener detalles sobre cómo trabajar con código de ejemplo, lee los [Fragmentos de código](https://angular.io/guide/docs-style-guide#fragmentos-de-codigo), [Marcado de código fuente](https://angular.io/guide/docs-style-guide#marcado-de-codigo-fuente) y las páginas de [ejemplos en vivo](https://angular.io/guide/docs-style-guide#ejemplos-en-vivo) de la [Guía de estilo para autores](https://angular.io/guide/docs-style-guide).
 
-We use the [dgeni](https://github.com/angular/dgeni) tool to convert these files into docs that can be viewed in the doc-viewer.
+Usamos la herramienta [`dgeni`](https://github.com/angular/dgeni) para convertir estos archivos en documentos que se pueden ver en el visor de documentos.
 
-The [Authors Style Guide](https://angular.io/guide/docs-style-guide) prescribes guidelines for
-writing guide pages, explains how to use the documentation classes and components, and how to markup sample source code to produce code snippets.
+La [Guía de estilo para autores](https://angular.io/guide/docs-style-guide) prescribe pautas para
+escribir páginas de guía, explica cómo usar las clases y componentes de documentación, y cómo marcar el código fuente de ejemplo para producir fragmentos de código.
 
-### Generating the complete docs
+### Generar los documentos completos
 
-The main task for generating the docs is `yarn docs`. This will process all the source files (API and other),
-extracting the documentation and generating JSON files that can be consumed by the doc-viewer.
+La tarea principal para generar los documentos es `yarn docs`. Esto procesará todos los archivos fuente (*API* y otros),
+extrayendo la documentación y generando archivos *JSON* que pueden ser consumidos por el visor de documentos.
 
-### Partial doc generation for editors
+### Generación parcial de documentos para editores
 
-Full doc generation can take up to one minute. That's too slow for efficient document creation and editing.
+La generación de documentos completa puede tardar hasta un minuto. Eso es demasiado lento para la creación y edición de documentos eficientes.
 
-You can make small changes in a smart editor that displays formatted markdown:
->In VS Code, _Cmd-K, V_ opens markdown preview in side pane; _Cmd-B_ toggles left sidebar
+Puedes realizar pequeños cambios en un editor inteligente que muestre `markdown` formateado:
+> En VS Code, *Cmd-K, V* abre la vista previa de `markdown` en el panel lateral; *Cmd-B* alterna la barra lateral izquierda
 
-You also want to see those changes displayed properly in the doc viewer
-with a quick, edit/view cycle time.
+También deseas que esos cambios se muestren correctamente en el visor de documentos.
+con un tiempo de ciclo rápido de edición/visualización.
 
-For this purpose, use the `yarn docs-watch` task, which watches for changes to source files and only
-re-processes the files necessary to generate the docs that are related to the file that has changed.
-Since this task takes shortcuts, it is much faster (often less than 1 second) but it won't produce full
-fidelity content. For example, links to other docs and code examples may not render correctly. Este es
-most particularly noticed in links to other docs and in the embedded examples, which may not always render
-correctly.
+Para este propósito, usa la tarea `yarn docs-watch`, que busca cambios en los archivos fuente y solo
+vuelve a procesar los archivos necesarios para generar los documentos relacionados con el archivo que ha cambiado.
+Dado que esta tarea toma atajos, es mucho más rápida (a menudo menos de 1 segundo) pero no producirá
+contenido fiel. Por ejemplo, es posible que los enlaces a otros documentos y código de ejemplo no se muestren correctamente. Este es
+particularmente notado en los enlaces a otros documentos y en los ejemplos incrustados, que no siempre se pueden representar
+perfectamente.
 
-The general setup is as follows:
+La configuración general es la siguiente:
 
-* Open a terminal, ensure the dependencies are installed; run an initial doc generation; then start the doc-viewer:
+* Abre una terminal, asegúrate de que las dependencias estén instaladas; ejecuta una generación de documentos inicial; luego inicia el visor de documentos:
 
 ```bash
 yarn setup
 yarn start
 ```
 
-* Open a second terminal and start watching the docs
+* Abre una segunda terminal y comienza a vigilar los documentos
 
 ```bash
 yarn docs-watch
 ```
 
->Alternatively, try the consolidated `serve-and-sync` command that builds, watches and serves in the same terminal window
+> Alternativamente, prueba el comando consolidado `serve-and-sync` que crea, observa y sirve en la misma ventana de terminal
 ```bash
 yarn serve-and-sync
 ```
 
-* Open a browser at https://localhost:4200/ and navigate to the document on which you want to work.
-You can automatically open the browser by using `yarn start -o` in the first terminal.
+* Abre un navegador en https://localhost:4200/ y navega hasta el documento en el que deseas trabajar.
+Puedes abrir automáticamente el navegador usando `yarn start -o` en la primera terminal.
 
-* Make changes to the page's associated doc or example files. Every time a file is saved, the doc will
-be regenerated, the app will rebuild and the page will reload.
+* Realiza cambios en los archivos de ejemplo o documentos asociados a la página. Cada vez que se guarda un archivo, el documento
+se regenerará, la aplicación se reconstruirá y la página se volverá a cargar.
 
-* If you get a build error complaining about examples or any other odd behavior, be sure to consult
-the [Authors Style Guide](https://angular.io/guide/docs-style-guide).
+* Si recibes un error de compilación quejándose de ejemplos o cualquier otro comportamiento extraño, asegúrate de consultar
+la [Guía de estilo para autores](https://angular.io/guide/docs-style-guide).

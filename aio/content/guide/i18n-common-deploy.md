@@ -46,7 +46,7 @@ The following example displays an Apache configuration.
 
 [AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

@@ -201,7 +201,7 @@ The following figure shows the final form.
 
    This tutorial shows how to build a questionaire, which is just one kind of dynamic form.
    The example uses `FormGroup` to collect a set of controls.
-   For an example of a different type of dynamic form, see the section [Creating dynamic forms](guide/reactive-forms#creating-dynamic-forms "Create dynamic forms with arrays") in the Reactive Forms guide.
+   Para ver un ejemplo de un tipo diferente de formulario dinámico, consulta la sección [Creación de formularios dinámicos](guide/reactive-forms#crear-formularios-dinamicos "Crear formularios dinámicos con arreglos") en la guía de Formularios reactivos.
    That example also shows how to use `FormArray` instead of `FormGroup` to collect a set of controls.
 
 * **Validating user input**

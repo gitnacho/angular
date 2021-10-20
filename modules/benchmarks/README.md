@@ -21,8 +21,8 @@ yarn bazel test modules/benchmarks/...
 
 ## Use of *_aot.ts files
 
-The `*_aot.ts` files are used as entry-points within Google to run the benchmark
-tests. These are still built as part of the corresponding `ng_module` rule.
+Los archivos `*_aot.ts` se utilizan como puntos de entrada dentro de *Google* para ejecutar el punto de referencia
+`tests`. Estos todavía se construyen como parte de la regla correspondiente `ng_module`.
 
 ## Specifying benchmark options
 

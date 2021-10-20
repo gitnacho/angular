@@ -91,9 +91,9 @@ whose API your `NewsComponent` understands.
 
 
 Looking for components that implement an interface would be better.
-That's not possible because TypeScript interfaces disappear
-from the transpiled JavaScript, which doesn't support interfaces.
-There's no artifact to look for.
+Eso no es posible porque las interfaces *TypeScript* desaparecen
+del *JavaScript* transpilado, que no admite interfaces.
+No hay ningún artefacto que buscar.
 
 </div>
 

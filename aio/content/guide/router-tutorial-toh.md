@@ -233,8 +233,8 @@ A wildcard route can navigate to a custom "404 Not Found" component or [redirect
 
 <div class="alert is-helpful">
 
-The router selects the route with a [_first match wins_](/guide/router-reference#example-config) strategy.
-Because a wildcard route is the least specific route, place it last in the route configuration.
+El enrutador selecciona la ruta con una estrategia [*primera coincidencia gana*](/guide/router-reference#configuracion-de-ejemplo).
+Debido a que una ruta comodín es la ruta menos específica, colócala en último lugar en la configuración de la ruta.
 
 </div>
 

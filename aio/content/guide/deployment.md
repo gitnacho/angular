@@ -436,10 +436,10 @@ The following example displays the graph for the _main_ bundle.
 The `source-map-explorer` analyzes the source map generated with the bundle and draws a map of all dependencies,
 showing exactly which classes are included in the bundle.
 
-Here's the output for the _main_ bundle of an example application called `cli-quickstart`.
+Aquí está el resultado del paquete `main` de una aplicación de ejemplo llamada `cli-quickstart`.
 
 <div class="lightbox">
-  <img src="generated/images/guide/deployment/quickstart-sourcemap-explorer.png" alt="quickstart sourcemap explorer">
+  <img src="generated/images/guide/deployment/quickstart-sourcemap-explorer.png" alt="inicio rápido en el explorador de mapas fuente">
 </div>
 
 {@a base-tag}

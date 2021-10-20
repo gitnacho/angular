@@ -1,37 +1,37 @@
 # Descripción general
 
-Many of the documentation pages contain snippets of code examples.
-These snippets are extracted from real working example applications, which are stored in sub-folders of the [aio/content/examples/](.) folder.
-Each example can be built and run independently.
-Each example also provides tests (mostly e2e and occasionally unit tests), which are run as part of our CircleCI `test_docs_examples*` jobs, to verify that the examples continue to work as expected, as changes are made to the core Angular libraries.
+Muchas de las páginas de documentación contienen fragmentos de código de ejemplo.
+Estos fragmentos se extraen de aplicaciones de ejemplo que realmente funcionan, y se almacenan en subdirectorios del directorio [`aio/content/examples/`](.).
+Cada ejemplo se puede construir y ejecutar de forma independiente.
+Cada ejemplo también proporciona pruebas (principalmente `e2e` y ocasionalmente pruebas unitarias), que se ejecutan como parte de nuestros trabajos `CircleCI` de `test_docs_examples*`, para comprobar que los ejemplos continúan funcionando como se esperaba, a medida que se realizan cambios en las bibliotecas principales de *Angular*.
 
-In order to build, run and test these examples independently, you need to install dependencies into their sub-folder.
-Also there are a number of common boilerplate files that are needed to configure each example's project.
-These common boilerplate files are maintained centrally to reduce the amount of effort if one of them needs to change.
+Para compilar, ejecutar y probar estos ejemplos de forma independiente, debes instalar las dependencias en su subdirectorio.
+También hay una serie de archivos repetitivos comunes que se necesitan para configurar el proyecto de cada ejemplo.
+Estos archivos repetitivos comunes se mantienen de forma centralizada para reducir la cantidad de esfuerzo si uno de ellos necesita cambios.
 
 > **Nota para usuarios de Windows**
 >
-> Setting up the examples involves creating some [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) (see [here](#symlinked-node_modules) for details).
-> On Windows, this requires to either have [Developer Mode enabled](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10) (supported on Windows 10 or newer) or run the setup commands as administrator.
+> La configuración de los ejemplos implica la creación de algunos [enlaces simbólicos](https://en.wikipedia.org/wiki/Symbolic_link) (consulta [este artículo](#symlinked-node_modules) para obtener más detalles).
+> En *Windows*, esto requiere tener el [modo de desarrollador habilitado](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10) (compatible con *Windows 10* o más reciente) o ejecutar los comandos de configuración como administrador.
 
 
-## Boilerplate overview
+## Descripción general redundante
 
-As mentioned above, many of the documentation pages contain snippets extracted from real example applications.
-To achieve that, all those applications need to contain some basic boilerplate, such as a `node_modules/` folder, a `package.json` file with scripts and dependencies, etc.
+Como se mencionó anteriormente, muchas de las páginas de documentación contienen fragmentos extraídos de aplicaciones de ejemplo reales.
+Para lograrlo, todas esas aplicaciones deben contener un texto repetitivo básico, como un directorio `node_modules/`, un archivo `package.json` con scripts y dependencias, etc.
 
-There are also different project types, each with its own boilerplate.
-For example, there are projects based on the Angular CLI, projects that use AngularJS, Custom Elements, i18n, server-side rendering, etc.
-(See the [example configuration section](#example-config) below for more info on how to specify the project type.)
+También hay diferentes tipos de proyectos, cada uno con su propia plantilla.
+Por ejemplo, hay proyectos basados ​​en *Angular CLI*, proyectos que usan *AngularJS*, elementos personalizados, i18n, renderización del lado del servidor, etc.
+(Consulta la [sección de configuración de ejemplo](#configuracion-de-ejemplo) a continuación para obtener más información sobre cómo especificar el tipo de proyecto).
 
-To avoid having to maintain the boilerplate in each example, we use the [example-boilerplate-js](./example-boilerplate.js) script to provide a set of files that works across all the examples of a specific type.
+Para evitar tener que mantener el texto estándar en cada ejemplo, usamos el script [`example-boilerplate-js`](./example-boilerplate.js) para proporcionar un conjunto de archivos que funciona con todos los ejemplos de un tipo específico.
 
 
-### Boilerplate files
+### Archivos repetitivos
 
-Inside [shared/boilerplate/](./shared/boilerplate) there is a sub-folder with boilerplate files for each of the different project types.
+Dentro de [`shared/boilerplate/`](./shared/boilerplate) hay un subdirectorio con archivos repetitivos para cada uno de los diferentes tipos de proyectos.
 
-Currently, the following project types are supported:
+Actualmente, se admiten los siguientes tipos de proyectos:
 
 - `cli` ⏤ Por ejemplo, aplicaciones basadas en *Angular CLI*. Este es el tipo predeterminado y se usa en la mayoría de los ejemplos.
 - `cli-ajs`: Para ejemplos basados ​​en *CLI* que también usan *AngularJS* (pero no a través de `@angular/upgrade`).
@@ -46,14 +46,14 @@ Currently, the following project types are supported:
 
 There are also the following special folders:
 - `common` ⏤ Contains files used in many examples.
-  (See the [next section](#example-config) for info on how to exclude common files in certain examples.)
+  (Consulta la [siguiente sección](#configuracion-de-ejemplo) para obtener información sobre cómo excluir archivos comunes en ciertos ejemplos).
 
 
-<a name="example-config"></a>
-### The `example-config.json`
+<a name="configuracion-de-ejemplo"></a>
+### El `example-config.json`
 
-Each example is identified by an `example-config.json` configuration file in its root folder.
-This configuration file indicates what type of boilerplate this example needs and how to test it.
+Cada ejemplo se identifica mediante un archivo de configuración `example-config.json` en su directorio raíz.
+Este archivo de configuración indica qué tipo de texto estándar necesita este ejemplo y cómo probarlo.
 Por ejemplo:
 
 ```json
@@ -62,25 +62,25 @@ Por ejemplo:
 }
 ```
 
-The file is expected to contain a JSON object with zero or more of the following properties:
+Se espera que el archivo contenga un objeto *JSON* con cero o más de las siguientes propiedades:
 
-- `projectType: string`: One of the supported project types (see above).
+- `projectType: string`: Uno de los tipos de proyectos admitidos (ve arriba).
   Predefinido: `"cli"`
-- `useCommonBoilerplate: boolean`: Whether to include common boilerplate from the [common/](./shared/boilerplate/common) folder.
+- `useCommonBoilerplate: boolean`: Si se debe incluir texto estándar común del directorio [`common/`](./shared/boilerplate/common).
   Predefinido: `true`
-- `"overrideBoilerplate": string[]`: A list of paths to boilerplate files that are overridden by custom files in this example.
-  Commonly this is used when a boilerplate file is referenced in a guide and so needs to have doc-regions added.
-  When adding such overrides, ensure that the file is "unignored" by adding an appropriate negation pattern to the `content/examples/.gitignore` file.
+- `"overrideBoilerplate": string[]`: Una lista de rutas a archivos repetitivos que son reemplazados por archivos personalizados en este ejemplo.
+  Por lo general, esto se usa cuando se hace referencia a un archivo repetitivo en una guía y, por lo tanto, es necesario agregar regiones de documentación.
+  Cuando agregues tales redefiniciones, asegúrate de que el archivo "no se ignore" agregando un patrón de negación apropiado al archivo `content/examples/.gitignore`.
 
-**SystemJS-only properties:**
-- `build: string`: The npm script to run in order to build the example app.
+**Propiedades SystemJS-only**:
+- `build: string`: El script `npm` que se ejecutará para crear la aplicación de ejemplo.
   Predefinido: `"build"`
-- `run: string`: The npm script to run in order to serve the example app (so that e2e test can be run against it).
-  Default `"serve:e2e"`
+- `run: string`: El script `npm` que se ejecutará para servir la aplicación de ejemplo (para que la prueba `e2e` se pueda ejecutar en ella).
+  Predeterminado `"serve:e2e"`
 
-**CLI-only properties:**
-- `tests: object[]`: An array of objects, each specifying a test command. This can be used to run multiple test commands in series (for example, to run unit and e2e tests).
-  The commands are specified as `{cmd: string, args: string[]}` and must be in a format that could be passed to Node.js' `child_process.spawn(cmd, args)`. You can use a special `{PORT}` placeholder, that will be replaced with the port on which the app is served during the actual test.
+**Propiedades CLI-only**:
+- `tests: object[]`: Un arreglo de objetos, cada uno de los cuales especifica un comando de prueba. Esto se puede utilizar para ejecutar varios comandos de prueba en serie (por ejemplo, para ejecutar pruebas unitarias y `e2e`).
+  Los comandos se especifican como `{cmd: string, args: string[]}`y deben estar en un formato que se pueda pasar a `Node.js`'`child_process.spawn(cmd, args)`. Puedes utilizar un marcador de posición especial `{PORT}`, que será reemplazado por el puerto en el que se sirve la aplicación durante la prueba real.
   Predefinido:
 
   ```json
@@ -98,26 +98,26 @@ The file is expected to contain a JSON object with zero or more of the following
   ]
   ```
 
-An empty `example-config.json` file is equivalent with `{"projectType": "cli"}`.
+Un archivo `example-config.json` vacío es equivalente a `{"projectType": "cli"}`.
 
 
 <a name="symlinked-node_modules"></a>
-### A `node_modules/` to share
+### Un `node_modules/` para compartir
 
-With all the boilerplate files in place, the only missing piece is the installed packages.
-For that we have [shared/package.json](./shared/package.json), which contains **all** the packages needed to run any example type.
+Con todos los archivos repetitivos en su lugar, la única pieza que falta son los paquetes instalados.
+Para eso tenemos [`shared/package.json`](./shared/package.json), que contiene **todos** los paquetes necesarios para ejecutar cualquier tipo de ejemplo.
 
-Upon installing these dependencies, a [shared/node_modules/](./shared/node_modules) folder is created.
-This folder will be **symlinked** into each example.
-So it is not a copy like the other boilerplate files.
+Al instalar estas dependencias, se crea un directorio [`shared/node_modules/`](./shared/node_modules).
+Este directorio tendrá un **enlace simbólico** en cada ejemplo.
+Por lo tanto, no es una copia como los otros archivos estándar.
 
 
-### End-to-end tests
+### Pruebas de principio-a-fin
 
-End-to-end infrastructure is slightly different between CLI- and SystemJS-based examples.
+La infraestructura de principio-a-fin es ligeramente diferente entre la *CLI*- y ejemplos basados ​​en *SystemJS*.
 
-For CLI-based examples, create an `app.e2e-spec.ts` file inside the `e2e/` folder.
-This will be picked up by the default testing command (see the [example configuration section](#example-config) above).
+Para ejemplos basados ​​en *CLI*, crea un archivo `app.e2e-spec.ts` dentro del directorio `e2e/`.
+Esto será recogido por el comando de prueba predeterminado (ve la [sección de configuración de ejemplo](#configuracion-de-ejemplo) arriba).
 If you are using a custom test command, make sure e2e specs are picked up (if applicable).
 
 For SystemJS-based examples, create an `e2e-spec.ts` file inside the example root folder.
@@ -142,13 +142,13 @@ The [example-boilerplate.js](./example-boilerplate.js) script manages the depend
 
 ### `run-example-e2e.mjs`
 
-The [run-example-e2e.mjs](./run-example-e2e.mjs) script will find and run the e2e tests for all examples.
-Although it only runs e2e tests by default, it can be configured to run any test command (for CLI-based examples) by using the `tests` property of the [example-config.json](#example-config) file.
-It is named `*-e2e` for historical reasons, but it is not limited to running e2e tests.
+El script [`run-example-e2e.mjs`](./run-example-e2e.mjs) buscará y ejecutará las pruebas `e2e` para todos los ejemplos.
+Aunque solo ejecuta pruebas `e2e` de forma predeterminada, se puede configurar para ejecutar cualquier comando de prueba (para ejemplos basados ​​en *CLI*) mediante la propiedad `tests` del archivo [`example-config.json`](#configuracion-de-ejemplo).
+Se llama `*-e2e` por razones históricas, pero no se limita a ejecutar pruebas `e2e`.
 
-See [aio/README.md](../../README.md#developer-tasks) for the available command-line options.
+Consulta [`aio/README.md`](../../README.md#tareas-del-desarrollador) para conocer las opciones disponibles de la línea de comandos.
 
-Running the script will create an `aio/protractor-results.txt` file with the results of the tests.
+La ejecución del script creará un archivo `aio/protractor-results.txt` con los resultados de las pruebas.
 
 ### `create-example.js`
 

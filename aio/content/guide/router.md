@@ -437,13 +437,13 @@ You could also redefine the `AppComponent` template with Crisis Center routes ex
 In summary, you can write applications with one, two or more levels of routing.
 The link parameters array affords the flexibility to represent any routing depth and any legal sequence of route paths, (required) router parameters, and (optional) route parameter objects.
 
-{@a browser-url-styles}
+{@a estilos-de-url-del-navegador}
 
 {@a location-strategy}
 
-## `LocationStrategy` and browser URL styles
+## `LocationStrategy` y estilos de *URL* del navegador
 
-When the router navigates to a new component view, it updates the browser's location and history with a URL for that view.
+Cuando el enrutador navega a una nueva vista del componente, actualiza la ubicación y el historial del navegador con una *URL* para esa vista.
 
 Modern HTML5 browsers support <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries" title="HTML5 browser history push-state">history.pushState</a>, a technique that changes a browser's location and history without triggering a server page request.
 The router can compose a "natural" URL that is indistinguishable from one that would otherwise require a page load.
@@ -500,8 +500,8 @@ Modern HTML5 browsers were the first to support `pushState` which is why many pe
 
 <div class="alert is-helpful">
 
-HTML5 style navigation is the router default.
-In the [LocationStrategy and browser URL styles](#browser-url-styles) section, learn why HTML5 style is preferable, how to adjust its behavior, and how to switch to the older hash (#) style, if necessary.
+La navegación de estilo *HTML5* es la predeterminada del enrutador.
+En la sección [`LocationStrategy` y estilos de *URL* del navegador](#estilos-de-url-del-navegador), aprende por qué es preferible el estilo *HTML5*, cómo ajustar su comportamiento y cómo cambiar al estilo *hash* (#) anterior, si es necesario.
 
 </div>
 
@@ -553,6 +553,6 @@ For more complete information on how `<base href>` is used to construct target U
 
 ### `HashLocationStrategy`
 
-Use `HashLocationStrategy` by providing the `useHash: true` in an object as the second argument of the `RouterModule.forRoot()` in the `AppModule`.
+Utiliza `HashLocationStrategy` proporcionando el `useHash: true` en un objeto como segundo argumento del `RouterModule.forRoot()` en el `AppModule`.
 
 <code-example path="router/src/app/app.module.6.ts" header="src/app/app.module.ts (hash URL strategy)"></code-example>

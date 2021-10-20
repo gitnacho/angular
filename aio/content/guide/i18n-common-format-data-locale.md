@@ -37,7 +37,7 @@ To force the currency to use American English (`en-US`), use the following forma
 
 <div class="alert is-helpful">
 
-**NOTE**: The language and locale you set for `LOCALE_ID` token is ignored for the `CurrencyPipe`.
+**NOTA**: The language and locale you set for `LOCALE_ID` token is ignored for the `CurrencyPipe`.
 
 </div>
 
@@ -57,7 +57,7 @@ To force the currency to use American English (`en-US`), use the following forma
 
 [AioGuideI18nCommonPrepare]: guide/i18n-common-prepare "Prepare templates for translations | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

@@ -74,11 +74,11 @@ For more information about distributing libraries with View Engine and Ivy, see 
   See [PR #20466](https://github.com/angular/angular-cli/pull/20466).
 * Critical CSS inlining is now enabled by default.
   To turn this off, set `inlineCritical` to false.
-  See [PR #20096](https://github.com/angular/angular-cli/pull/20096) and the [Style preprocessor options](guide/workspace-config#optimization-configuration) section of [Angular workspace configuration](guide/workspace-config).
-* `ng build` now produces production bundle by default.
-  See [PR #20128](https://github.com/angular/angular-cli/pull/20128).
-* Previously, the Forms module ignored `min` and `max` attributes defined on the `<input type="number">`.
-  Now these attributes trigger `min` and `max` validation logic in cases where `formControl`, `formControlName`, or `ngModel` directives are also present on a given input.
+  Consulta [*SE* #20096](https://github.com/angular/angular-cli/pull/20096) y la sección [Opciones de preprocesador de estilo](guide/workspace-config#configuracion-de-optimizacion) de [Configuración del espacio de trabajo *Angular*](guide/workspace-config).
+* `ng build` ahora produce un paquete de producción de forma predeterminada.
+  Ve la [*SE* #20128](https://github.com/angular/angular-cli/pull/20128).
+* Anteriormente, el módulo `Forms` ignoraba los atributos `min` y `max` definidos en el `<input type="number">`.
+  Ahora, estos atributos activan la lógica de validación `min` y `max` en los casos en que las directivas `formControl`, `formControlName` o `ngModel` también están presentes en una entrada determinada.
   See [PR #39063](https://github.com/angular/angular/pull/39063).
 
 

@@ -1,31 +1,31 @@
-# Upgrading from AngularJS to Angular
+# Actualizar de *AngularJS* a *Angular*
 
-_Angular_ is the name for the Angular of today and tomorrow.<br />
-_AngularJS_ is the name for all 1.x versions of Angular.
+*Angular* es el nombre del *Angular* de hoy y mañana.<br/>
+*AngularJS* es el nombre de todas las versiones v1.x de *Angular*.
 
-AngularJS applications are great.
-Always consider the business case before moving to Angular.
-An important part of that case is the time and effort to get there.
-This guide describes the built-in tools for efficiently migrating AngularJS projects over to the
-Angular platform, a piece at a time.
+Las aplicaciones de *AngularJS* son geniales.
+Considera siempre el caso de negocio antes de pasar a *Angular*.
+Una parte importante de ese caso es el tiempo y el esfuerzo para llegar allí.
+Esta guía describe las herramientas integradas para migrar eficientemente proyectos de *AngularJS* a la
+Plataforma *Angular*, pieza por pieza.
 
-Some applications will be easier to upgrade than others, and there are
-many ways to make it easier for yourself. It is possible to
-prepare and align AngularJS applications with Angular even before beginning
-the upgrade process. These preparation steps are all about making the code
-more decoupled, more maintainable, and better aligned with modern development
-tools. That means in addition to making the upgrade easier,
-you will also improve the existing AngularJS applications.
+Algunas aplicaciones serán más fáciles de actualizar que otras, y hay
+muchas formas de hacértelo más fácil. Es posible
+preparar y alinear aplicaciones *AngularJS* con *Angular* incluso antes de comenzar
+el proceso de actualización. Estos pasos de preparación se tratan de hacer el código
+más desacoplado, más mantenible y mejor alineado con las herramientas de desarrollo
+moderno. Eso significa que además de facilitar la actualización,
+también mejorarás las aplicaciones *AngularJS* existentes.
 
-One of the keys to a successful upgrade is to do it incrementally,
-by running the two frameworks side by side in the same application, and
-porting AngularJS components to Angular one by one. This makes it possible
-to upgrade even large and complex applications without disrupting other
-business, because the work can be done collaboratively and spread over
-a period of time. The `upgrade` module in Angular has been designed to
-make incremental upgrading seamless.
+Una de las claves para una actualización exitosa es hacerlo de forma incremental,
+ejecutando los dos `frameworks` uno al lado del otro en la misma aplicación, y
+portando componentes *AngularJS* a *Angular* uno por uno. Esto hace posible
+la actualización incluso de aplicaciones grandes y complejas sin interrumpir otros
+negocios, porque el trabajo se puede realizar de forma colaborativa y distribuida
+un período de tiempo. El módulo `upgrade` en *Angular* ha sido diseñado para
+hacer que la actualización incremental sea perfecta.
 
-## Preparation
+## Preparación
 
 There are many ways to structure AngularJS applications. When you begin
 to upgrade these applications to Angular, some will turn out to be
@@ -141,12 +141,12 @@ these attributes:
   from their surroundings, and you should do this in AngularJS too.
 * `bindToController: {}`. Component inputs and outputs should be bound
   to the controller instead of using the `$scope`.
-* `controller` and `controllerAs`. Components have their own controllers.
-* `template` or `templateUrl`. Components have their own templates.
+* `controller` y `controllerAs`. Components have their own controllers.
+* `template` o `templateUrl`. Los componentes tienen sus propias plantillas.
 
-Component directives may also use the following attributes:
+Las directivas de `Component` también pueden utilizar los siguientes atributos:
 
-* `transclude: true/{}`, if the component needs to transclude content from elsewhere.
+* `transclude: true /{}`, si el componente necesita transcluir contenido desde otro lugar.
 * `require`, if the component needs to communicate with some parent component's
   controller.
 
@@ -429,15 +429,15 @@ will result in the same thing:
 </code-example>
 
 To begin converting your AngularJS application to a hybrid, you need to load the Angular framework.
-You can see how this can be done with SystemJS by following the instructions in [Setup for Upgrading to AngularJS](guide/upgrade-setup) for selectively copying code from the [QuickStart github repository](https://github.com/angular/quickstart).
+Puedes ver cómo se puede hacer esto con `SystemJS` siguiendo las instrucciones en [Configuración para actualizar a `AngularJS`](guide/upgrade-setup) para copiar de forma selectiva el código del [Repositorio `QuickStart` de *github*](https://github.com/angular/quickstart).
 
-You also need to install the `@angular/upgrade` package using `npm install @angular/upgrade --save`
-and add a mapping for the `@angular/upgrade/static` package:
+También necesitas instalar el paquete `@angular/upgrade` usando `npm install @angular/upgrade --save`
+y agregar un mapeo para el paquete `@angular/upgrade/static`:
 
 <code-example path="upgrade-module/src/systemjs.config.1.js" region="upgrade-static-umd" header="systemjs.config.js (map)">
 </code-example>
 
-Next, create an `app.module.ts` file and add the following `NgModule` class:
+A continuación, crea un archivo `app.module.ts` y agrega la siguiente clase `NgModule`:
 
 <code-example path="upgrade-module/src/app/ajs-a-hybrid-bootstrap/app.module.ts" region="ngmodule" header="app.module.ts">
 </code-example>

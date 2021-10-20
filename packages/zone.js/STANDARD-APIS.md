@@ -125,7 +125,7 @@ ZoneAwareError makes sure that `this` is ZoneAwareError even without new.
 ## ZoneAwarePromise
 
 ZoneAwarePromise wraps the global Promise and makes it run in zones as a MicroTask.
-It also passes promise A+ tests.
+It also passes promise A+ `tests`.
 
 ## UnpatchedEvents
 

@@ -55,7 +55,7 @@ v13 -> v16
 | `@angular/upgrade`        | [`setAngularLib`](#upgrade-static)                                                            | <!--v8--> v11         |
 | template syntax           | [`<template>`](#template-tag)                                                                 | <!--v7--> v11         |
 | polyfills                 | [reflect-metadata](#reflect-metadata)                                                         | <!--v8--> v11         |
-| npm package format        | [`esm5` and `fesm5` entry-points in @angular/* npm packages](guide/deprecations#esm5-fesm5)   | <!-- v9 --> v11       |
+| formato de paquete `npm` | [Puntos de entrada `esm5` y `fesm5` en @angular/* paquetes `npm`](guide/deprecations#esm5-fesm5) | <!-- v9 --> v11 |
 | `@angular/compiler-cli`   | [Input setter coercion](#input-setter-coercion)                                               | <!--v13--> v15        |
 | `@angular/compiler-cli` | [`fullTemplateTypeCheck`](#full-template-type-check)                                          | <!--v13--> v15        |
 | `@angular/core`           | [`defineInjectable`](#core)                                                                   | <!--v8--> v11         |
@@ -450,7 +450,7 @@ Previously, the `entryComponents` array in the `NgModule` definition was used to
 With Ivy, this isn't a requirement anymore and the `entryComponents` array can be removed from existing module declarations.
 The same applies to the `ANALYZE_FOR_ENTRY_COMPONENTS` injection token.
 
-**NOTE**: You may still need to keep these if building a library that will be consumed by a View Engine application.
+**NOTA**: You may still need to keep these if building a library that will be consumed by a View Engine application.
 
 {@a moduleWithProviders}
 

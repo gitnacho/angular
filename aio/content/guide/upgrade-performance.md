@@ -2,8 +2,8 @@
 
 <div class="alert is-helpful">
 
-  _Angular_ is the name for the Angular of today and tomorrow.<br />
-  _AngularJS_ is the name for all 1.x versions of Angular.
+  *Angular* es el nombre del *Angular* de hoy y mañana.<br/>
+  *AngularJS* es el nombre de todas las versiones v1.x de *Angular*.
 
 </div>
 
@@ -18,7 +18,7 @@ process of upgrading.
 
 
 
-## Preparation
+## Preparación
 
 Before discussing how you can use `downgradeModule()` to create hybrid apps, there are things that
 you can do to ease the upgrade process even before you begin upgrading. Because the steps are the
@@ -217,16 +217,16 @@ the recipe.
 In order to start using any `upgrade/static` APIs, you still need to load the Angular framework as
 you would in a normal Angular application. You can see how this can be done with SystemJS by following the
 instructions in the [Upgrade Setup](guide/upgrade-setup "Setup for Upgrading from AngularJS") guide, selectively copying code from the
-[QuickStart github repository](https://github.com/angular/quickstart).
+[Repositorio de inicio rápido en *github*](https://github.com/angular/quickstart).
 
-You also need to install the `@angular/upgrade` package using `npm install @angular/upgrade --save`
-and add a mapping for the `@angular/upgrade/static` package:
+También necesitas instalar el paquete `@angular/upgrade` usando `npm install @angular/upgrade --save`
+y agregar un mapeo para el paquete `@angular/upgrade/static`:
 
 <code-example header="system.config.js">
 '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
 </code-example>
 
-Next, create an `app.module.ts` file and add the following `NgModule` class:
+A continuación, crea un archivo `app.module.ts` y agrega la siguiente clase `NgModule`:
 
 <code-example header="app.module.ts">
 import { NgModule } from '@angular/core';

@@ -294,7 +294,7 @@ Las siguientes son algunas de las directivas clave integradas de *AngularJS* y s
       Las directivas basadas en eventos de *AngularJS* no existen en *Angular*.
       Más bien, define el enlace unidireccional desde la vista de plantilla al componente utilizando **enlace de evento**.
 
-      Para el enlace de eventos, define el nombre del evento de destino entre paréntesis y
+      Para la vinculación de eventos, define el nombre del evento de destino entre paréntesis y
       especifica una declaración de plantilla, entre comillas, a la derecha de los iguales. *Angular* entonces
       configura un controlador de eventos para el evento destino. Cuando se genera el evento, el controlador
       ejecuta la declaración de plantilla.
@@ -306,7 +306,7 @@ Las siguientes son algunas de las directivas clave integradas de *AngularJS* y s
 
       Para obtener una lista de eventos *DOM*, consulta: https://developer.mozilla.org/en-US/docs/Web/Events.
 
-      Para obtener más información, consulta la página [Enlace de eventos](guide/event-binding).
+      Para obtener más información, consulta la página [Vinculación de eventos](guide/event-binding).
 
     </td>
 
@@ -479,7 +479,7 @@ Las siguientes son algunas de las directivas clave integradas de *AngularJS* y s
 
 
       En *Angular*, **enlace bidireccional** se denota con '[()]', descriptivamente referido como un "plátano en una caja". Esta sintaxis es un atajo para definir tanto el enlace de propiedad (desde el componente hasta la vista)
-      y enlace de eventos (desde la vista al componente), proporcionando así un enlace bidireccional.
+      y vinculación de eventos (desde la vista al componente), proporcionando así un enlace bidireccional.
 
       Para obtener más información sobre el enlace bidireccional con `ngModel`, consulta [`NgModel`&mdash;Enlace bidireccional para
       elementos de formulario con `[(ngModel)]`](../guide/built-in-directives#ngModel)

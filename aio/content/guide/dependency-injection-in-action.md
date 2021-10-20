@@ -460,11 +460,11 @@ Such a narrowing interface helps decouple the concrete class from its consumers.
 
 Using a class as an interface gives you the characteristics of an interface in a real JavaScript object.
 To minimize memory cost, however, the class should have *no implementation*.
-The `MinimalLogger` transpiles to this unoptimized, pre-minified JavaScript for a constructor function.
+El `MinimalLogger` se transpila a este *JavaScript* no optimizado y preminificado para una función constructora.
 
 <code-example path="dependency-injection-in-action/src/app/minimal-logger.service.ts" region="minimal-logger-transpiled" header="dependency-injection-in-action/src/app/minimal-logger.service.ts"></code-example>
 
-Notice that it doesn't have any members. It never grows no matter how many members you add to the class,
+Ten en cuenta que no tiene miembros. It never grows no matter how many members you add to the class,
 as long as those members are typed but not implemented.
 
 Look again at the TypeScript `MinimalLogger` class to confirm that it has no implementation.

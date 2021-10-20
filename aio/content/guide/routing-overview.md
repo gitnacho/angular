@@ -39,9 +39,9 @@ Before creating a route, you should be familiar with the following:
     <p>A tutorial that covers how to use custom matching strategy patterns with Angular routing.</p>
     <p class="card-footer">Custom route matches tutorial</p>
   </a>
-  <a href="guide/router-reference" class="docs-card" title="Router reference">
-    <section>Router reference</section>
-    <p>Describes some core router API concepts.</p>
-    <p class="card-footer">Router reference</p>
+  <a href="guide/router-reference" class="docs-card" title="Referencia del enrutador">
+    <section>Referencia del enrutador</section>
+    <p>Describe algunos conceptos básicos de la API del enrutador.</p>
+    <p class="card-footer">Referencia del enrutador</p>
   </a>
 </div>

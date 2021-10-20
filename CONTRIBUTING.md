@@ -15,7 +15,7 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="codigo-de-conducta"></a>Código de conducta
 
-Help us keep Angular open and inclusive.
+Ayúdanos a mantener *Angular* abierto e inclusivo.
 Please read and follow our [Code of Conduct][coc].
 
 

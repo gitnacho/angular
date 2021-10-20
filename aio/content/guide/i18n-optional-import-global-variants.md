@@ -24,7 +24,7 @@ The following example imports the global variants for French (`fr`).
 [AioCliMain]: cli "CLI Overview and Command Reference | Angular"
 [AioCliBuild]: cli/build "ng build | CLI | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [GithubAngularAngularTreeMasterPackagesCommonLocales]: https://github.com/angular/angular/tree/master/packages/common/locales "angular/packages/common/locales | angular/angular | GitHub"
 [GithubAngularAngularTreeMasterPackagesCommonLocalesGlobal]: https://github.com/angular/angular/tree/master/packages/common/locales/global "angular/packages/common/locales/global | angular/angular | GitHub"

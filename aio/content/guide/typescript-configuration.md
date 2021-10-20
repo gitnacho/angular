@@ -4,10 +4,10 @@ TypeScript is a primary language for Angular application development.
 It is a superset of JavaScript with design-time support for type safety and tooling.
 
 Browsers can't execute TypeScript directly.
-Typescript must be "transpiled" into JavaScript using the *tsc* compiler, which requires some configuration.
+El *TypeScript* se debe "transpilar" a *JavaScript* mediante el compilador `tsc`, que requiere alguna configuración.
 
-This page covers some aspects of TypeScript configuration and the TypeScript environment
-that are important to Angular developers, including details about the following files:
+Esta página cubre algunos aspectos de la configuración de *TypeScript* y el entorno de *TypeScript*
+que son importantes para los desarrolladores de *Angular*, incluidos los detalles sobre los siguientes archivos:
 
 * [tsconfig.json](guide/typescript-configuration#tsconfig)&mdash;TypeScript compiler configuration.
 * [typings](guide/typescript-configuration#typings)&mdash;TypesScript declaration files.
@@ -27,16 +27,16 @@ See the [Angular compiler options](guide/angular-compiler-options) guide for inf
 </div>
 
 The TypeScript and Angular have a wide range of options which can be used to configure type-checking features and generated output.
-For more information, see the [Configuration inheritance with extends](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#configuration-inheritance-with-extends) section of the TypeScript documentation.
+Para obtener más información, consulta la sección [Herencia de configuración con `extends`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#herencia-de-configuracion-con-extends) de la documentación de *TypeScript*.
 
 <div class="alert is-helpful">
 
 For more information TypeScript configuration files, see the official [TypeScript wiki](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-For details about configuration inheritance, see the [Configuration inheritance with extends](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#configuration-inheritance-with-extends) section.
+Para obtener detalles sobre la herencia de la configuración, consulta la sección [Herencia de configuración con `extends`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#herencia-de-configuracion-con-extends).
 
 </div>
 
-The initial `tsconfig.json` for an Angular workspace typically looks like the following example.
+El `tsconfig.json` inicial para un espacio de trabajo *Angular* generalmente se parece al siguiente ejemplo.
 
 <code-example lang="json" header="tsconfig.json" linenums="false">
 {
@@ -63,7 +63,7 @@ The initial `tsconfig.json` for an Angular workspace typically looks like the fo
 
 {@a noImplicitAny}
 
-### *noImplicitAny* and *suppressImplicitAnyIndexErrors*
+### *noImplicitAny* y *suppressImplicitAnyIndexErrors*
 
 TypeScript developers disagree about whether the `noImplicitAny` flag should be `true` or `false`.
 There is no correct answer and you can change the flag later.

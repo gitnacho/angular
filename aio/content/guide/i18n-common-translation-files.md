@@ -258,7 +258,7 @@ The following example displays both translation units after translating.
 
 [AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [GithubGoogleAppResourceBundleWikiApplicationresourcebundlespecification]: https://github.com/google/app-resource-bundle/wiki/ApplicationResourceBundleSpecification "ApplicationResourceBundleSpecification | google/app-resource-bundle | GitHub"
 

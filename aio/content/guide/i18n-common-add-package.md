@@ -26,9 +26,9 @@ If `@angular/localize` is not installed and you try to build a localized version
 
 [AioGuideI18nCommonLocaleId]: guide/i18n-common-locale-id "Refer to locales by ID | Angular"
 
-[AioGuideNpmPackages]: guide/npm-packages "Workspace npm dependencies | Angular"
+[AioGuideNpmPackages]: guide/npm-packages "Dependencias npm del espacio de trabajo | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

@@ -23,7 +23,7 @@ The following example sets the value of `LOCALE_ID` to `fr` for French.
 [AioCliMain]: cli "CLI Overview and Command Reference | Angular"
 [AioCliBuild]: cli/build "ng build | CLI | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [GithubAngularAngularTreeMasterPackagesCommonLocales]: https://github.com/angular/angular/tree/master/packages/common/locales "angular/packages/common/locales | angular/angular | GitHub"
 

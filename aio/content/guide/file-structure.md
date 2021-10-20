@@ -36,11 +36,11 @@ The top level of the workspace contains workspace-wide configuration files, conf
 | `.gitignore`           | Specifies intentionally untracked files that [Git](https://git-scm.com/) should ignore. |
 | `README.md`            | Introductory documentation for the root application. |
 | `angular.json`         | CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as [TSLint](https://palantir.github.io/tslint/), [Karma](https://karma-runner.github.io/), and [Protractor](https://www.protractortest.org/). For details, see [Angular Workspace Configuration](guide/workspace-config). |
-| `package.json`          | Configures [npm package dependencies](guide/npm-packages) that are available to all projects in the workspace. See [npm documentation](https://docs.npmjs.com/files/package.json) for the specific format and contents of this file. |
+| `package.json` | Configura [dependencias de paquetes `npm`](guide/npm-packages) que están disponibles para todos los proyectos en el espacio de trabajo. Consulta la [documentación de `npm`](https://docs.npmjs.com/files/package.json) para conocer el formato y el contenido específicos de este archivo. |
 | `package-lock.json`     | Provides version information for all packages installed into `node_modules` by the npm client. See [npm documentation](https://docs.npmjs.com/files/package-lock.json) for details. If you use the yarn client, this file will be [yarn.lock](https://yarnpkg.com/lang/en/docs/yarn-lock/) instead. |
 | `src/`                  | Source files for the root-level application project. |
-| `node_modules/`         | Provides [npm packages](guide/npm-packages) to the entire workspace. Workspace-wide `node_modules` dependencies are visible to all projects. |
-| `tsconfig.json`         | The base [TypeScript](https://www.typescriptlang.org/) configuration for projects in the workspace. All other configuration files inherit from this base file. For more information, see the [Configuration inheritance with extends](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#configuration-inheritance-with-extends) section of the TypeScript documentation.|
+| `node_modules/` | Proporciona [paquetes `npm`](guide/npm-packages) a todo el espacio de trabajo. Las dependencias de `node_modules` en todo el espacio de trabajo son visibles para todos los proyectos. |
+| `tsconfig.json`         | The base [TypeScript](https://www.typescriptlang.org/) configuration for projects in the workspace. All other configuration files inherit from this base file. Para obtener más información, consulta la sección [Herencia de configuración con `extends`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#herencia-de-configuracion-con-extends) de la documentación de *TypeScript*.
 | `tslint.json`           | Default [TSLint](https://palantir.github.io/tslint/) configuration for projects in the workspace. |
 
 
@@ -74,12 +74,12 @@ Files at the top level of `src/` support testing and running your application. S
 | `index.html`           | The main HTML page that is served when someone visits your site. The CLI automatically adds all JavaScript and CSS files when building your app, so you typically don't need to add any `<script>` or` <link>` tags here manually. |
 | `main.ts`              | The main entry point for your application. Compiles the application with the [JIT compiler](guide/glossary#jit) and bootstraps the application's root module (AppModule) to run in the browser. You can also use the [AOT compiler](guide/aot-compiler) without changing any code by appending the `--aot` flag to the CLI `build` and `serve` commands. |
 | `polyfills.ts`         | Provides polyfill scripts for browser support. |
-| `styles.sass`          | Lists CSS files that supply styles for a project. The extension reflects the style preprocessor you have configured for the project. |
-| `test.ts`              | The main entry point for your unit tests, with some Angular-specific configuration. You don't typically need to edit this file. |
+| `styles.sass` | Muestra una lista de archivos *CSS* que proporcionan estilos para un proyecto. La extensión refleja el preprocesador de estilo que has configurado para el proyecto. |
+| `test.ts` | El principal punto de entrada para tus pruebas unitarias, con alguna configuración específica de *Angular*. Por lo general, no es necesario editar este archivo. |
 
 <div class="alert is-helpful">
 
-New Angular projects use strict mode by default. If this is not desired you can opt-out when creating the project. For more information, see [Strict mode](/guide/strict-mode).
+Los nuevos proyectos *Angular*, de manera predeterminada, usan el modo estricto. Si no lo deseas, puedes optar por no participar al crear el proyecto. Para obtener más información, consulta [Modo estricto](/guide/strict-mode).
 
 </div>
 
@@ -163,11 +163,11 @@ Under the `projects/` folder, the `my-lib` folder contains your library code.
 | LIBRARY SOURCE FILES | PURPOSE                                                                      |
 | :------------------- | :----------------------------------------------------------------------------|
 | `src/lib`           |  Contains your library project's logic and data. Like an application project, a library project can contain components, services, modules, directives, and pipes.                                                            |
-| `src/test.ts`       | The main entry point for your unit tests, with some library-specific configuration. You don't typically need to edit this file.                                                                                            |
+| `src/test.ts`       | The main entry point for your unit tests, with some library-specific configuration. Por lo general, no es necesario editar este archivo.                                                                                            |
 | `src/public-api.ts`  | Specifies all files that are exported from your library.                                                                                                                                                                     |
 | `karma.conf.js`      | Library-specific [Karma](https://karma-runner.github.io/2.0/config/configuration-file.html) configuration.                                                                                                                   |
 | `ng-package.json`    | Configuration file used by [ng-packagr](https://github.com/ng-packagr/ng-packagr) for building your library.                                                                                                                 |
-| `package.json`       | Configures [npm package dependencies](guide/npm-packages) that are required for this library.                                                                                                                                |
+| `package.json` | Configura [dependencias de paquetes `npm`](guide/npm-packages) que son necesarios para esta biblioteca.                                                                                                                                |
 | `tsconfig.lib.json`  | Library-specific [TypeScript](https://www.typescriptlang.org/) configuration, including TypeScript and Angular template compiler options. See [TypeScript Configuration](guide/typescript-configuration).            |
 | `tsconfig.lib.prod.json`  | Library-specific [TypeScript](https://www.typescriptlang.org/) configuration that is used when building the library in production mode.              |
 | `tsconfig.spec.json` | [TypeScript](https://www.typescriptlang.org/) configuration for the library tests. See [TypeScript Configuration](guide/typescript-configuration).                                                                     |

@@ -189,9 +189,9 @@ Now, inject the configuration object into the constructor with `@Inject()` param
 Though the TypeScript `AppConfig` interface supports typing within the class, the `AppConfig` interface plays no role in dependency injection.
 In TypeScript, an interface is a design-time artifact, and doesn't have a runtime representation, or token, that the DI framework can use.
 
-When the transpiler changes TypeScript to JavaScript, the interface disappears because JavaScript doesn't have interfaces.
+Cuando el transpilador cambia *TypeScript* a *JavaScript*, la interfaz desaparece porque *JavaScript* no tiene interfaces.
 
-Because there is no interface for Angular to find at runtime, the interface cannot be a token, nor can you inject it.
+Debido a que no hay una interfaz para que *Angular* la encuentre en el entorno de ejecución, la interfaz no puede ser un *token*, ni la puede inyectar.
 
 <code-example path="dependency-injection/src/app/providers.component.ts" region="providers-9-interface"></code-example>
 

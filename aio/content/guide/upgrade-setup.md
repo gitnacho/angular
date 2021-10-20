@@ -1,35 +1,35 @@
 # Setup for upgrading from AngularJS
 
 <!--
-Question: Can we remove this file and instead direct readers to https://github.com/angular/quickstart/blob/master/README.md
+Pregunta: ¿Podemos eliminar este archivo y, en su lugar, dirigir a los lectores a https://github.com/angular/quickstart/blob/master/README.md?
 -->
 
 <div class="alert is-critical">
 
 **Audience:** Use this guide **only** in the context of  [Upgrading from AngularJS](guide/upgrade "Upgrading from AngularJS to Angular") or [Upgrading for Performance](guide/upgrade-performance "Upgrading for Performance").
-Those Upgrade guides refer to this Setup guide for information about using the [deprecated QuickStart GitHub repository](https://github.com/angular/quickstart "Deprecated Angular QuickStart GitHub repository"), which was created prior to the current Angular [CLI](cli "CLI Overview").
+Esas guías de actualización se refieren a esta guía de configuración para obtener información sobre el uso del [repositorio de inicio rápido en *GitHub* obsoleto](https://github.com/angular/quickstart "repositorio Angular de inicio rápido en GitHub obsoleto"), que se creó antes de la [*CLI* de *Angular* actual](cli "Descripción general de la CLI").
 
-**For all other scenarios,** see the current instructions in [Setting up the Local Environment and Workspace](guide/setup-local "Setting up for Local Development").
+**Para todos los demás escenarios,** consulta las instrucciones actuales en [Configuración del entorno local y el espacio de trabajo](guide/setup-local "Configuración para el desarrollo local").
 
 
 </div>
 
 <!--
-The <live-example name=quickstart>QuickStart live-coding</live-example> example is an Angular _playground_.
-There are also some differences from a local app, to simplify that live-coding experience.
-In particular, the QuickStart live-coding example shows just the AppComponent file; it creates the equivalent of app.module.ts and main.ts internally for the playground only.
+El ejemplo de <live-example name=quickstart>Inicio rápido de codificación en vivo</live-example> es un *playground Angular*.
+También hay algunas diferencias con una aplicación local, para simplificar esa experiencia de codificación en vivo.
+En particular, el ejemplo de inicio rápido de codificación en vivo muestra solo el archivo `AppComponent`; crea el equivalente de `app.module.ts` y `main.ts` internamente solo para el *playground*.
 -->
 
 This guide describes how to develop locally on your own machine.
-Setting up a new project on your machine is quick and easy with the [QuickStart seed on github](https://github.com/angular/quickstart "Install the github QuickStart repo").
+Configurar un nuevo proyecto en tu máquina es rápido y fácil con [la semilla de inicio rápido en *github*](https://github.com/angular/quickstart "Instala el repositorio de inicio rápido de github").
 
-**Prerequisite:** Make sure you have [Node.js® and npm installed](guide/setup-local#prerequisites "Angular prerequisites").
+**Requisito previo**: Asegúrate de tener [*Node.js®* y *npm* instalados](guide/setup-local#prerequisitos "Prerequisitos Angular").
 
 
-{@a clone}
-## Clone
+{@a clonar}
+## Clonar
 
-Perform the _clone-to-launch_ steps with these terminal commands.
+Realiza los pasos de *clonar-para-lanzar* con estos comandos de la terminal.
 
 <code-example language="sh">
   git clone https://github.com/angular/quickstart.git quickstart
@@ -45,19 +45,19 @@ Perform the _clone-to-launch_ steps with these terminal commands.
 
 
 
-`npm start` fails in _Bash for Windows_ in versions earlier than the Creator's Update (April 2017).
+`npm start` falla en *Bash* para *Windows* en versiones anteriores a *Creator's Update* (abril de 2017).
 
 
 </div>
 
 
 
-{@a download}
+{@a descargar}
 
 
-## Download
-<a href="https://github.com/angular/quickstart/archive/master.zip" title="Download the QuickStart seed repository">Download the QuickStart seed</a>
-and unzip it into your project folder. Then perform the remaining steps with these terminal commands.
+## Descargar
+<a href="https://github.com/angular/quickstart/archive/master.zip" title="Descarga el repositorio de semillas de inicio rápido">Descarga el repositorio de semillas de inicio rápido</a>
+y descomprímelo en el directorio de tu proyecto. Luego, realiza los pasos restantes con estos comandos en la terminal.
 
 <code-example language="sh">
   cd quickstart
@@ -72,7 +72,7 @@ and unzip it into your project folder. Then perform the remaining steps with the
 
 
 
-`npm start` fails in _Bash for Windows_ in versions earlier than the Creator's Update (April 2017).
+`npm start` falla en *Bash* para *Windows* en versiones anteriores a *Creator's Update* (abril de 2017).
 
 
 </div>
@@ -85,7 +85,7 @@ and unzip it into your project folder. Then perform the remaining steps with the
 
 ## Delete _non-essential_ files (optional)
 
-You can quickly delete the _non-essential_ files that concern testing and QuickStart repository maintenance
+Puedes eliminar rápidamente los archivos *no esenciales* relacionados con las pruebas y el mantenimiento del repositorio `QuickStart`
 (***including all git-related artifacts*** such as the `.git` folder and `.gitignore`!).
 
 
@@ -128,18 +128,18 @@ Open a terminal window in the project folder and enter the following commands fo
 
 
 
-## What's in the QuickStart seed?
+## ¿Qué hay en la semilla `QuickStart`?
 
 
 
-The **QuickStart seed** provides a basic QuickStart playground application and other files necessary for local development.
-Consequently, there are many files in the project folder on your machine,
-most of which you can [learn about later](guide/file-structure).
+La **semilla `QuickStart`** proporciona una aplicación de inicio rápido básica para *playground* y otros archivos necesarios para el desarrollo local.
+En consecuencia, hay muchos archivos en el directorio del proyecto de tu máquina,
+la mayoría de los cuales puedes [conocer más adelante](guide/file-structure).
 
 
 <div class="alert is-helpful">
 
-**Reminder:** The "QuickStart seed" example was created prior to the Angular CLI, so there are some differences between what is described here and an Angular CLI application.
+**Recuerda**: El ejemplo "QuickStart seed" se creó antes de *Angular CLI*, por lo que existen algunas diferencias entre lo que se describe aquí y una aplicación *Angular CLI*.
 
 </div>
 
@@ -251,9 +251,9 @@ The following are all in `src/`
     <td>
 
 
-      Defines the same `AppComponent` as the one in the QuickStart playground.
-      It is the **root** component of what will become a tree of nested components
-      as the application evolves.
+      Define el mismo `AppComponent` que el del *playground* `QuickStart`.
+      Es el componente **raíz** de lo que se convertirá en un árbol de componentes anidados
+      a medida que evoluciona la aplicación.
     </td>
 
   </tr>

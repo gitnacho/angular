@@ -64,7 +64,7 @@ To use your locale definition in the build configuration, use the `"localize"` o
 
 <div class="alert is-helpful">
 
-**NOTE**: [Ahead-of-time (AOT) compilation][AioGuideGlossaryAheadOfTimeAotCompilation] is required to localize component templates.
+**NOTA**: [Ahead-of-time (AOT) compilation][AioGuideGlossaryAheadOfTimeAotCompilation] is required to localize component templates.
 
 If you changed this setting, set `"aot"` to `true` in order to use AOT.
 
@@ -199,7 +199,7 @@ Compile once, then translate for each locale.
 
 [AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [AngularV8GuideI18nMergeWithTheJitCompiler]: https://v8.angular.io/guide/i18n-common#merge-translations-into-the-app-with-the-jit-compiler "Merge with the JIT compiler - Internationalization (i18n) | Angular v8"
 

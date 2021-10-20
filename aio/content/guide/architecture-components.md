@@ -59,7 +59,7 @@ A view hierarchy can include views from components in the same NgModule, but it 
 
 ## Sintaxis de plantillas
 
-Una plantilla se ve como *HTML* normal, excepto que también contiene [sintaxis de plantilla *Angular*](guide/template-syntax), que altera el *HTML* según la lógica de tu aplicación, el estado de la aplicación y los datos del *DOM*. Tu plantilla puede usar *enlace de datos* para coordinar la aplicación y los datos del *DOM*, *pipes* para transformar los datos antes de que se muestren, y *directivas* para aplicar la lógica de la aplicación a lo que se muestra.
+Una plantilla se ve como *HTML* normal, excepto que también contiene [sintaxis de plantilla *Angular*](guide/template-syntax), que altera el *HTML* según la lógica de tu aplicación, el estado de la aplicación y los datos del *DOM*. Tu plantilla puede usar *vinculación de datos* para coordinar la aplicación y los datos del *DOM*, *pipes* para transformar los datos antes de que se muestren, y *directivas* para aplicar la lógica de la aplicación a lo que se muestra.
 
 Por ejemplo, aquí hay una plantilla para el `HeroListComponent` del tutorial.
 
@@ -68,7 +68,7 @@ Por ejemplo, aquí hay una plantilla para el `HeroListComponent` del tutorial.
 Esta plantilla usa elementos *HTML* típicos como `<h2>` y `<p>`, y también incluye elementos de sintaxis de plantilla *Angular*, `*ngFor`, `{{ hero.name }}`,`(click)`, `[hero]` y `<app-hero-detail>`. Los elementos de sintaxis de plantilla le dicen a *Angular* cómo representar el *HTML* en la pantalla, utilizando la lógica y los datos del programa.
 
 * The `*ngFor` directive tells Angular to iterate over a list.
-* `{{hero.name}}`, `(click)`, and `[hero]` bind program data to and from the DOM, responding to user input. See more about [data binding](#data-binding) below.
+* `{{hero.name}}`, `(click)`, y `[hero]` vincular los datos del programa hacia y desde el *DOM*, respondiendo a la entrada del usuario. Obtén más información sobre la [vinculación de datos](#vinculacion-de-datos) a continuación.
 * The `<app-hero-detail>` tag in the example is an element that represents a new component, `HeroDetailComponent`.
 `HeroDetailComponent` (code not shown) defines the hero-detail child view of `HeroListComponent`.
 Notice how custom components like this mix seamlessly with native HTML in the same layouts.

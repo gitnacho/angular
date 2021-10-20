@@ -29,7 +29,7 @@ The following tabs display the example application and the associated translatio
 
 [*AioGuideI18nOverview*]: guide/i18n-overview "Internacionalización Angular | Angular"  
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

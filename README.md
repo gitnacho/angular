@@ -41,116 +41,116 @@
 
 Comienza con *Angular*, aprende los fundamentos y explora temas avanzados en nuestro sitio web de documentación.
 
-- [inicio rápido][quickstart]
-- [Architecture][architecture]
-- [Components and Templates][componentstemplates]
-- [Forms][forms]
-- [API][api]
+- [inicio rápido][iniciorapido]
+- [Arquitectura][arquitectura]
+- [Componentes y plantillas][componentesplantillas]
+- [Formularios][formularios]
+- [*API*][api]
 
-### Advanced
+### Avanzado
 
-- [Angular Elements][angularelements]
-- [Server Side Rendering][ssr]
-- [Schematics][schematics]
-- [Lazy Loading][lazyloading]
+- [Elementos *Angular*][elementosangular]
+- [Representación del lado del servidor][rls]
+- [Esquemas][esquemas]
+- [Carga diferida][cargadiferida]
 
-## Development Setup
+## Configuración de desarrollo
 
 ### Requisitos previos
 
-- Install [Node.js] which includes [Node Package Manager][npm]
+- Instala [`Node.js`], que incluye [`Node Package Manager`][npm]
 
-### Setting Up a Project
+### Configurar un proyecto
 
-Install the Angular CLI globally:
+Instala la *CLI* de *Angular* globalmente:
 
 ```
 npm install -g @angular/cli
 ```
 
-Create workspace:
+Crea un espacio de trabajo:
 
 ```
-ng new [PROJECT NAME]
+ng new [NOMBRE PROYECTO]
 ```
 
-Run the application:
+Ejecuta la aplicación:
 
 ```
-cd [PROJECT NAME]
+cd [NOMBRE PROYECTO]
 ng serve
 ```
 
-Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
+*Angular* es multiplataforma, rápido, escalable, tiene herramientas increíbles y es amado por millones.
 
-## Quickstart
+## Inicio rápido
 
-[Get started in 5 minutes][quickstart].
+[Comienza en 5 minutos][iniciorapido].
 
-## Ecosystem
+## Ecosistema
 
 <p>
-  <img src="/docs/images/angular-ecosystem-logos.png" alt="angular ecosystem logos" width="500px" height="auto">
+  <img src="/docs/images/angular-ecosystem-logos.png" alt="logos del ecosistema angular" width="500px" height="auto">
 </p>
 
-- [Angular Command Line (CLI)][cli]
-- [Angular Material][angularmaterial]
+- [Línea de comando *Angular* (*CLI*)][cli]
+- [Material *Angular*][materialangular]
 
 ## Registro de cambios
 
-[Learn about the latest improvements][changelog].
+[Más información sobre las últimas mejoras][registrodecambios].
 
-## Upgrading
+## Actualización
 
-Check out our [upgrade guide](https://update.angular.io/) to find out the best way to upgrade your project.
+Consulta nuestra [guía de actualización](https://update.angular.io/) para descubrir la mejor manera de actualizar tu proyecto.
 
 ## Colaborar
 
-### Contributing Guidelines
+### Pautas de colaboración
 
-Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules and more.
+Lee nuestras [pautas de colaboración][colaboracion] para conocer nuestro proceso de envío, reglas de codificación y más.
 
-### Want to Help?
+### ¿Quiero ayudar?
 
-Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/angular/angular/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/angular/angular/labels/good%20first%20issue)</kbd>.
+¿Quieres reportar un error, contribuir con algún código o mejorar la documentación? ¡Excelente! Lee nuestras pautas para [colaborar][colaboracion] y luego consulta uno de nuestros problemas etiquetados como <kbd>[se busca ayuda](https://github.com/angular/angular/labels/help%20wanted)</kbd> o <kbd>[buen primer problema](https://github.com/angular/angular/labels/good%20first%20issue)</kbd>.
 
 ### Código de Conducta
 
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+Ayúdanos a mantener *Angular* abierto e inclusivo. Lee y sigue nuestro [Código de conducta][codigodeconducta].
 
-## Community
+## Comunidad
 
-Join the conversation and help the community.
+Únete a la conversación y ayuda a la comunidad.
 
-- [Twitter][twitter]
-- [Discord][discord]
-- [Gitter][gitter]
-- [YouTube][youtube]
-- [StackOverflow][stackoverflow]
-- Find a Local [Meetup][meetup]
+- [*Twitter*][twitter]
+- [*Discord*][discord]
+- [*Gitter*][gitter]
+- [*YouTube*][youtube]
+- [*StackOverflow*][stackoverflow]
+- Encuentra un [Reunión][meetup] local
 
-[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
+[![Insignia de amar a Angular](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
 
-**Love Angular? Give our repo a star :star: :arrow_up:.**
+**¿Te encanta Angular? Dale una estrella a nuestro repositorio :start: :arrow_up:**.
 
-[contributing]: CONTRIBUTING.md
-[quickstart]: https://angular.io/start
-[changelog]: CHANGELOG.md
+[colaboracion]: CONTRIBUTING.md
+[iniciorapido]: https://angular.io/start
+[registrodecambios]: CHANGELOG.md
 [ng]: https://angular.io
-[documentation]: https://angular.io/docs
-[angularmaterial]: https://material.angular.io/
+[documentacion]: https://angular.io/docs
+[materialangular]: https://material.angular.io/
 [cli]: https://cli.angular.io/
-[architecture]: https://angular.io/guide/architecture
-[componentstemplates]: https://angular.io/guide/displaying-data
-[forms]: https://angular.io/guide/forms-overview
+[arquitectura]: https://angular.io/guide/architecture
+[componentesplantillas]: https://angular.io/guide/displaying-data
+[formularios]: https://angular.io/guide/forms-overview
 [api]: https://angular.io/api
-[angularelements]: https://angular.io/guide/elements
-[ssr]: https://angular.io/guide/universal
-[schematics]: https://angular.io/guide/schematics
-[lazyloading]: https://angular.io/guide/lazy-loading-ngmodules
+[elementosangular]: https://angular.io/guide/elements
+[rls]: https://angular.io/guide/universal
+[esquemas]: https://angular.io/guide/schematics
+[cargadiferida]: https://angular.io/guide/lazy-loading-ngmodules
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
-[codeofconduct]: CODE_OF_CONDUCT.md
+[codigodeconducta]: CODE_OF_CONDUCT.md
 [twitter]: https://www.twitter.com/angular
 [discord]: https://discord.gg/angular
 [gitter]: https://gitter.im/angular/angular

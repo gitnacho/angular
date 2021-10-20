@@ -33,7 +33,7 @@ When you create a library project with `ng generate library`, the library projec
 
 <div class="alert is-helpful">
 
-**NOTE**: The `projects` section of the configuration file does not correspond exactly to the workspace file structure.
+**NOTA**: The `projects` section of the configuration file does not correspond exactly to the workspace file structure.
 
 *   The initial application created by `ng new` is at the top level of the workspace file structure.
 *   Additional applications and libraries go into a `projects` folder in the workspace.
@@ -52,7 +52,7 @@ The following configuration properties are a set of options that customize the A
 | :------------------ | :----------------------------------------------------------------------------------------------- | :------------------------------------------------------- |
 | `analytics`         | Share anonymous [usage data](cli/usage-analytics-gathering) with the Angular Team.               | `boolean` \| `ci`                                        |
 | `analyticsSharing`  | A set of analytics sharing options.                                                              | [Analytics sharing options](#analytics-sharing-options)  |
-| `cache`             | Control [persistent disk cache](cli/cache) used by [Angular CLI Builders](guide/cli-builder).    | [Cache options](#cache-options)                          |
+| `cache`             | Control [persistent disk cache](cli/cache) used by [Angular CLI Builders](guide/cli-builder).    | [Opciones de caché](#opciones-de-cache) |
 | `defaultCollection` | The default schematics collection to use.                                                        | `string`                                                 |
 | `packageManager`    | The prefered package manager tool to use.                                                        | `npm` \| `cnpm` \| `pnpm` \| `yarn`                      |
 | `warnings`          | Control CLI specific console warnings.                                                           | [Warnings options](#warnings-options)                    |
@@ -64,7 +64,7 @@ The following configuration properties are a set of options that customize the A
 | `tracking` | Analytics sharing info tracking ID.                          | `string`   |
 | `uuid`     | Analytics sharing info UUID (Universally Unique Identifier). | `string`   |
 
-### Cache options
+### Opciones de caché
 
 | Property      | Description                                           | Value Type               | Dafault Value    |
 | :------------ | :---------------------------------------------------- | :----------------------- | :--------------- |
@@ -106,7 +106,7 @@ The following top-level configuration properties are available for each project,
 
 {@a schematics}
 
-## Generation schematics
+## Esquemas de generación
 
 Angular generation [schematics](guide/glossary#schematic) are instructions for modifying a project by adding files or modifying existing files.
 Individual schematics for the default Angular CLI `ng generate` sub-commands are collected in the package `@schematics/angular`.
@@ -179,7 +179,7 @@ See the example in [Build target](#build-target) below.
 *   The `architect/app-shell` section configures defaults for creating an application shell for a progressive web application (PWA), using the `ng run <project>:app-shell` command.
 
 In general, the options for which you can configure defaults correspond to the command options listed in the [CLI reference page](cli) for each command.
-**NOTE**: All options in the configuration file must use [camelCase](guide/glossary#case-conventions), rather than dash-case.
+**NOTA**: All options in the configuration file must use [camelCase](guide/glossary#case-conventions), rather than dash-case.
 
 {@a build-target}
 
@@ -189,7 +189,7 @@ The `architect/build` section configures defaults for options of the `ng build` 
 
 | PROPERTY        | DESCRIPTION                                                                                                                                                                                                                                                                                                              |
 |:---             |:---                                                                                                                                                                                                                                                                                                                      |
-| `builder`       | The npm package for the build tool used to create this target. The default builder for an application (`ng build myApp`) is <code class="no-auto-link">@angular-devkit/build-angular:browser</code>, which uses the [webpack](https://webpack.js.org) package bundler. **NOTE**: A different builder is used for building a library (`ng build myLib`). |
+| `builder`       | The npm package for the build tool used to create this target. The default builder for an application (`ng build myApp`) is <code class="no-auto-link">@angular-devkit/build-angular:browser</code>, which uses the [webpack](https://webpack.js.org) package bundler. **NOTA**: A different builder is used for building a library (`ng build myLib`). |
 | `options`       | This section contains default build target options, used when no named alternative configuration is specified. See the [Default build targets](#default-build-targets) section.                                                                                                                                                |
 | `configurations`| This section defines and names alternative configurations for different intended destinations. It contains a section for each named configuration, which sets the default options for that intended environment. See the [Alternate build configurations](#build-configs) section.                                             |
 
@@ -221,9 +221,9 @@ Some additional options can only be set through the configuration file, either b
 | OPTIONS PROPERTIES         | DESCRIPTION                                                                                                                                                                                                                                                                                           |
 |:---                        |:---                                                                                                                                                                                                                                                                                                   |
 | `assets`                   | An object containing paths to static assets to add to the global context of the project. The default paths point to the project's icon file and its `assets` folder. See more in the [Assets configuration](#asset-config) section.                                                                         |
-| `styles`                   | An array of style files to add to the global context of the project. Angular CLI supports CSS imports and all major CSS preprocessors: [sass/scss](https://sass-lang.com) and [less](http://lesscss.org). See more in the [Styles and scripts configuration](#style-script-config) section.               |
-| `stylePreprocessorOptions` | An object containing option-value pairs to pass to style preprocessors. See more in the [Styles and scripts configuration](#style-script-config) section.                                                                                                                                                   |
-| `scripts`                  | An object containing JavaScript script files to add to the global context of the project. The scripts are loaded exactly as if you had added them in a `<script>` tag inside `index.html`. See more in the [Styles and scripts configuration](#style-script-config) section.                                |
+| `styles`                   | An array of style files to add to the global context of the project. Angular CLI supports CSS imports and all major CSS preprocessors: [sass/scss](https://sass-lang.com) and [less](http://lesscss.org). Ve más en la sección [Configuración de estilos y scripts](#configuracion-de-estilos-y-scripts).               |
+| `stylePreprocessorOptions` | Objeto que contiene pares de opciones y valores para pasar a los preprocesadores de estilo. Ve más en la sección [Configuración de estilos y scripts](#configuracion-de-estilos-y-scripts).                                                                                                                                                   |
+| `scripts`                  | An object containing JavaScript script files to add to the global context of the project. The scripts are loaded exactly as if you had added them in a `<script>` tag inside `index.html`. Ve más en la sección [Configuración de estilos y scripts](#configuracion-de-estilos-y-scripts).                                |
 | `budgets`                  | Default size-budget type and thresholds for all or parts of your application. You can configure the builder to report a warning or an error when the output reaches or exceeds a threshold size. See [Configure size budgets](guide/build#configure-size-budgets). (Not available in `test` section.) |
 | `fileReplacements`         | An object containing files and their compile-time replacements. See more in [Configure target-specific file replacements](guide/build#configure-target-specific-file-replacements).                                                                                                                   |
 
@@ -313,16 +313,16 @@ The following example uses the `ignore` field to exclude certain files in the as
 
 </code-example>
 
-{@a style-script-config}
+{@a configuracion-de-estilos-y-scripts}
 
-### Styles and scripts configuration
+### Configuración de estilos y scripts
 
-An array entry for the `styles` and `scripts` options can be a simple path string, or an object that points to an extra entry-point file.
-The associated builder will load that file and its dependencies as a separate bundle during the build.
-With a configuration object, you have the option of naming the bundle for the entry point, using a `bundleName` field.
+Una entrada de arreglo para las opciones de `styles` y `scripts` puede ser una cadena de ruta simple o un objeto que apunta a un archivo de punto de entrada adicional.
+El constructor asociado cargará ese archivo y sus dependencias como un paquete separado durante la construcción.
+Con un objeto de configuración, tienes la opción de nombrar el paquete para el punto de entrada, usando un campo `bundleName`.
 
-The bundle is injected by default, but you can set `inject` to false to exclude the bundle from injection.
-For example, the following object values create and name a bundle that contains styles and scripts, and excludes it from injection:
+El paquete se inyecta de forma predeterminada, pero puedes establecer `inject` en `false` para excluir el paquete de la inyección.
+Por ejemplo, los siguientes valores de objeto crean y nombran un paquete que contiene estilos y scripts, y lo excluye de la inyección:
 
 <code-example language="json">
 
@@ -343,7 +343,7 @@ For example, the following object values create and name a bundle that contains 
 
 </code-example>
 
-You can mix simple and complex file references for styles and scripts.
+Puedes mezclar referencias de archivos simples y complejos para estilos y scripts.
 
 <code-example language="json">
 
@@ -356,13 +356,13 @@ You can mix simple and complex file references for styles and scripts.
 
 </code-example>
 
-{@a style-preprocessor}
+{@a preprocesador-de-estilo}
 
-#### Style preprocessor options
+#### Opciones del preprocesador de estilo
 
-In Sass you can make use of the `includePaths` functionality for both component and global styles, which allows you to add extra base paths that will be checked for imports.
+En *Sass* puedes hacer uso de la funcionalidad `includePaths` tanto para los estilos de componentes como para los estilos globales, lo que te permite agregar rutas de base adicionales que se verificarán para las importaciones.
 
-To add paths, use the `stylePreprocessorOptions` option:
+Para agregar rutas, usa la opción `stylePreprocessorOptions`:
 
 <code-example language="json">
 
@@ -374,51 +374,51 @@ To add paths, use the `stylePreprocessorOptions` option:
 
 </code-example>
 
-Files in that folder, such as `src/style-paths/_variables.scss`, can be imported from anywhere in your project without the need for a relative path:
+Los archivos en ese directorio, como `src/style-path/_variables.scss`, se pueden importar desde cualquier lugar de tu proyecto sin la necesidad de una ruta relativa:
 
 <code-example language="typescript">
 
 // src/app/app.component.scss
-// A relative path works
+// Una ruta relativa funciona
 @import '../style-paths/variables';
-// But now this works as well
+// Pero ahora esto también funciona
 @import 'variables';
 
 </code-example>
 
-**NOTE**: You will also need to add any styles or scripts to the `test` builder if you need them for unit tests.
-See also [Using runtime-global libraries inside your app](guide/using-libraries#using-runtime-global-libraries-inside-your-app).
+**NOTA**: También necesitarás agregar cualquier estilo o scripts al constructor `test` si los necesitas para las pruebas unitarias.
+Consulta también [Uso de bibliotecas `runtime-global` dentro de tu aplicación](guide/using-libraries#using-runtime-global-libraries-inside-your-app).
 
-### Optimization configuration
+### Configuración de optimización
 
-The `optimization` browser builder option can be either a Boolean or an Object for more fine-tune configuration. This option enables various optimizations of the build output, including:
+La opción `optimization` del constructor del navegador puede ser un booleano o un objeto para una configuración más precisa. Esta opción permite varias optimizaciones del resultado de la compilación, que incluyen:
 
-*   Minification of scripts and styles
-*   Tree-shaking
-*   Dead-code elimination
-*   Inlining of critical CSS
-*   Fonts inlining
+*   Minificación de scripts y estilos
+*   Sacudidas de árbol
+*   Eliminación de código muerto
+*   Inserción de *CSS* crítico
+*   Tipos de letra insertados
 
-There are several options that can be used to fine-tune the optimization of an application.
+Hay varias opciones que se pueden utilizar para ajustar la optimización de una aplicación.
 
-| Option    | Description                                                                     | Value Type                                                               | Dafault Value |
+| Opción | Descripción | Tipo de valor | Valor predeterminado |
 |:---       |:---                                                                             |:---                                                                      |:---           |
-| `scripts` | Enables optimization of the scripts output.                                     | `boolean`                                                                | `true`        |
-| `styles`  | Enables optimization of the styles output.                                      | `boolean` \| [Styles optimization options](#styles-optimization-options) | `true`        |
-| `fonts`   | Enables optimization for fonts. <br /> **NOTE**: This requires internet access. | `boolean` \| [Fonts optimization options](#fonts-optimization-options)   | `true`        |
+| `scripts` | Habilita la optimización de la salida de los scripts.                                     | `boolean` | `true` |
+| `styles` | Permite la optimización de la salida de estilos.                                      | `boolean` \| [Opciones de optimización de estilos](#styles-optimization-options) | `true` |
+| `fonts` | Habilita la optimización de los tipos de letra. <br /> **NOTA**: Esto requiere acceso a Internet. | `boolean` \| [Opciones de optimización de tipos de letra](#fonts-optimization-options) | `true` |
 
-#### Styles optimization options
+#### Opciones de optimización de estilos
 
 | Option           | Description                                                                                                              | Value Type | Dafault Value |
 |:---              |:---                                                                                                                      |:---        |:---           |
 | `minify`         | Minify CSS definitions by removing extraneous whitespace and comments, merging identifiers and minimizing values.        | `boolean`  | `true`        |
 | `inlineCritical` | Extract and inline critical CSS definitions to improve [First Contentful Paint](https://web.dev/first-contentful-paint). | `boolean`  | `true`        |
 
-#### Fonts optimization options
+#### Opciones de optimización de tipos de letra
 
-| Option   | Description                                                                                                                                                                                                                          | Value Type | Dafault Value |
+| Opción | Descripción | Tipo de valor | Valor predeterminado |
 |:---      |:---                                                                                                                                                                                                                                  |:---        |:---           |
-| `inline` | Reduce [render blocking requests](https://web.dev/render-blocking-resources) by inlining external Google Fonts and Adobe Fonts CSS definitions in the application's HTML index file. <br /> **NOTE**: This requires internet access. | `boolean`  | `true`        |
+| `inline` | Reduce [render blocking requests](https://web.dev/render-blocking-resources) by inlining external Google Fonts and Adobe Fonts CSS definitions in the application's HTML index file. <br /> **NOTA**: Esto requiere acceso a Internet. | `boolean`  | `true`        |
 
 You can supply a value such as the following to apply optimization to one or the other:
 

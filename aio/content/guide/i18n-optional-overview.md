@@ -46,7 +46,7 @@ To prepare your project for translations, you should have a basic understanding 
 
 [AioApiCoreLocaleId]: api/core/LOCALE_ID "LOCALE_ID | Core - API | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [W3Xml]: https://www.w3.org/XML "Extensible Markup Language (XML) | W3C"
 

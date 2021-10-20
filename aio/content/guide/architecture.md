@@ -144,7 +144,7 @@ Each of these subjects is introduced in more detail in the following pages.
 
   * [Component metadata](guide/architecture-components#component-metadata)
 
-  * [Data binding](guide/architecture-components#data-binding)
+  * [vinculación de datos](guide/architecture-components#vinculacion-de-datos)
 
   * [Directives](guide/architecture-components#directives)
 

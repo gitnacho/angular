@@ -23,15 +23,15 @@ following command:
 yarn test --deleted_packages=//src/dev-app
 ```
 
-### Running tests for individual entry-points
+### Ejecución de pruebas para puntos de entrada individuales
 
-The `yarn test` script from the `components` repository runs all tests in the project.
-This is sometimes not desired because it involves building and testing of all packages
-and entry-points. Running tests for an individual entry-point is possible by explicitly
-selecting a given test target.
+El script `yarn test` del repositorio `components` ejecuta todas las pruebas del proyecto.
+A veces, esto no se desea porque implica la construcción y prueba de todos los paquetes
+y puntos de entrada. Es posible ejecutar pruebas para un punto de entrada individual mediante
+selección explícita un objetivo de prueba dado.
 
-Here is an example of commands that run individual test targets. Note that it is
-**important** to specify the `--config=ivy` flag in order to run tests with Ivy.
+A continuación, se muestra un ejemplo de comandos que ejecutan objetivos de prueba individuales. Ten en cuenta que es
+**importante** especificar el indicador `--config=ivy` para ejecutar pruebas con `Ivy`.
 
 ```bash
 yarn bazel test --config=ivy src/material/slider:unit_tests

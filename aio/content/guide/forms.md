@@ -4,11 +4,11 @@
 
 This tutorial shows you how to create a template-driven form whose control elements are bound to data properties, with input validation to maintain data integrity and styling to improve the user experience.
 
-Template-driven forms use [two-way data binding](guide/architecture-components#data-binding "Intro to 2-way data binding") to update the data model in the component as changes are made in the template and vice versa.
+Los formularios basados ​​en plantillas utilizan [vinculación de datos bidireccional](guide/architecture-components#vinculacion-de-datos "Introducción a la vinculación de datos bidireccional") para actualizar el modelo de datos en el componente a medida que se realizan cambios en la plantilla y viceversa .
 
 <div class="alert is-helpful">
 
-Angular supports two design approaches for interactive forms. You can build forms by writing templates using Angular [template syntax and directives](guide/glossary#template "Definition of template terms") with the form-specific directives and techniques described in this tutorial, or you can use a reactive (or model-driven) approach to build forms.
+*Angular* admite dos enfoques de diseño para formularios interactivos. You can build forms by writing templates using Angular [template syntax and directives](guide/glossary#template "Definition of template terms") with the form-specific directives and techniques described in this tutorial, or you can use a reactive (or model-driven) approach to build forms.
 
 Template-driven forms are suitable for small or simple forms, while reactive forms are more scalable and suitable for complex forms.
 For a comparison of the two approaches, see [Introduction to Forms](guide/forms-overview "Overview of Angular forms.")
@@ -86,8 +86,8 @@ In the course of this tutorial, you bind a sample form to data and handle user i
 1. Build the basic form.
    * Define a sample data model.
    * Include required infrastructure such as the `FormsModule`.
-2. Bind form controls to data properties using the `ngModel` directive and two-way data-binding syntax.
-   * Examine how `ngModel` reports control states using CSS classes.
+2. Vincula controles de formulario a propiedades de datos mediante la directiva `ngModel` y la sintaxis de vinculación de datos bidireccional.
+   * Examina cómo `ngModel` informa los estados del control usando clases *CSS*.
    * Name controls to make them accessible to `ngModel`.
 3. Track input validity and control status using `ngModel`.
    * Add custom CSS to provide visual feedback on the status.
@@ -137,8 +137,8 @@ template using the `<app-hero-form>` tag.
    The **Submit** button has some classes on it for styling.
    At this point, the form  layout is all plain HTML5, with no bindings or directives.
 
-6. The sample form uses some style classes from [Twitter Bootstrap](https://getbootstrap.com/css/): `container`, `form-group`, `form-control`, and `btn`.
-   To use these styles, the application's style sheet imports the library.
+6. The sample form uses some style classes from [Twitter Bootstrap](https://getbootstrap.com/css/): `container`, `form-group`, `form-control` y `btn`.
+   Para usar estos estilos, la hoja de estilo de la aplicación importa la biblioteca.
 
    <code-example path="forms/src/styles.1.css" header="src/styles.css"></code-example>
 
@@ -323,9 +323,9 @@ You use these CSS classes to define the styles for your control based on its sta
 To see how the classes are added and removed by the framework, open the browser's developer tools and inspect the `<input>` element that represents the hero name.
 
 1. Using your browser's developer tools, find the  `<input>` element that corresponds to the **Name** input box.
-   You can see that the element has multiple CSS classes in addition to "form-control".
+   Puedes ver que el elemento tiene varias clases *CSS* además de `"form-control"`.
 
-2. When you first bring it up, the classes indicate that it has a valid value, that the value has not been changed since initialization or reset, and that the control has not been visited since initialization or reset.
+2. Cuando lo muestras por primera vez, las clases indican que tiene un valor válido, que el valor no se ha cambiado desde la iniciación o reinicio, y que el control no se ha visitado desde la iniciación o reinicio.
 
    ```
    <input ... class="form-control ng-untouched ng-pristine ng-valid" ...>

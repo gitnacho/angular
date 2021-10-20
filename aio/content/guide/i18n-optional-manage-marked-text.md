@@ -99,7 +99,7 @@ Both elements now use the same translation (`Bonjour`), because both were define
 
 [AioGuideI18nCommonPrepareHowMeaningsControlTextExtractionAndMerges]: guide/i18n-common-prepare#how-meanings-control-text-extraction-and-merges "How meanings control text extraction and merges - Prepare components for translations | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

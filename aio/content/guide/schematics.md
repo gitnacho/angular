@@ -64,10 +64,10 @@ For example, `@ng-bootstrap/schematics` adds [ng-bootstrap](https://ng-bootstrap
 An add schematic can also update a project with configuration changes, add additional dependencies (such as polyfills), or scaffold package-specific initialization code.
 For example, the `@angular/pwa` schematic turns your application into a PWA by adding an application manifest and service worker, and the `@angular/elements`  schematic adds the `document-register-element.js` polyfill and dependencies for Angular Elements.
 
-### Generation schematics
+### Esquemas de generación
 
-Generation schematics are instructions for the `ng generate` command.
-The documented sub-commands use the default Angular generation schematics, but you can specify a different schematic (in place of a sub-command) to generate an artifact defined in your library.
+Los esquemas de generación son instrucciones para el comando `ng generate`.
+Los subcomandos documentados utilizan los esquemas de generación *Angular* predeterminados, pero puedes especificar un esquema diferente (en lugar de un subcomando) para generar un artefacto definido en tu biblioteca.
 
 Angular Material, for example, supplies generation schematics for the UI components that it defines.
 The following command uses one of these schematics to render an Angular Material `<mat-table>` that is pre-configured with a datasource for sorting and pagination.

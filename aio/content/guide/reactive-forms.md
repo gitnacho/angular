@@ -131,15 +131,15 @@ The form model is the source of truth for the control, so when you click the but
 
 <div class="alert is-helpful">
 
-**Nota**: In this example, you're using a single control. When using the `setValue()` method with a [form group](#grouping-form-controls "Learn more about form groups.") or [form array](#creating-dynamic-forms "Learn more about dynamic forms.") instance, the value needs to match the structure of the group or array.
+**Nota**: En este ejemplo, estás usando un solo control. Cuando utilices el método `setValue()` con un [grupo de formularios](#agrupar-controles-de-formulario "Aprende más sobre grupos de formularios") o [arreglos de formularios](#crear-formularios-dinamicos "Aprende más sobre formularios dinámicos."), el valor debe coincidir con la estructura del grupo o arreglo.
 
 </div>
 
-## Grouping form controls
+## Agrupar controles de formulario
 
-Forms typically contain several related controls. Reactive forms provide two ways of grouping multiple related controls into a single input form.
+Los formularios suelen contener varios controles relacionados. Los formularios reactivos proporcionan dos formas de agrupar varios controles relacionados en un solo formulario de entrada.
 
-* A form *group* defines a form with a fixed set of controls that you can manage together. Form group basics are discussed in this section. You can also [nest form groups](#nested-groups "See more about nesting groups.") to create more complex forms.
+* Un *grupo* de formulario define un formulario con un conjunto fijo de controles que puedes manipular juntos. Los conceptos básicos de los grupos de formulario se analizan en esta sección. También puedes [anidar grupos de formulario](#grupos-anidados "Ve más acerca de los grupos anidados") para crear formularios más complejos.
 * A form *array* defines a dynamic form, where you can add and remove controls at run time. You can also nest form arrays to create more complex forms. For more about this option, see [Creating dynamic forms](#dynamic-forms "See more about form arrays.").
 
 Just as a form control instance gives you control over a single input field, a form group instance tracks the form state of a group of form control instances (for example, a form). Each control in a form group instance is tracked by name when creating the form group. The following example shows how to manage multiple form control instances in a single group.
@@ -220,24 +220,24 @@ To display the `ProfileEditor` component that contains the form, add it to a com
   <img src="generated/images/guide/reactive-forms/profile-editor-1.gif" alt="Profile Editor with labels and inputs for first and last name as well as a submit button">
 </div>
 
-{@a nested-groups}
+{@a grupos-anidados}
 
-### Creating nested form groups
+### Crear grupos de formularios anidados
 
-Form groups can accept both individual form control instances and other form group instances as children. This makes composing complex form models easier to maintain and logically group together.
+Los grupos de formularios pueden aceptar instancias de control de formularios individuales y otras instancias de grupos de formularios como elementos secundarios. Esto hace que la composición de modelos de formularios complejos sea más fácil de mantener y agrupar lógicamente.
 
-When building complex forms, managing the different areas of information is easier in smaller sections. Using a nested form group instance lets you break large forms groups into smaller, more manageable ones.
+Al construir formularios complejos, administrar las diferentes áreas de información es más fácil en secciones más pequeñas. El uso de una instancia de grupo de formularios anidados te permite dividir grupos de formularios grandes en grupos más pequeños y manejables.
 
-To make more complex forms, use the following steps.
+Para hacer formas más complejas, sigue los siguientes pasos.
 
-1. Create a nested group.
-2. Group the nested form in the template.
+1. Crea un grupo anidado.
+2. Agrupa el formulario anidado en la plantilla.
 
-Some types of information naturally fall into the same group. A name and address are typical examples of such nested groups, and are used in the following examples.
+Algunos tipos de información caen naturalmente en el mismo grupo. Un nombre y una dirección son ejemplos típicos de dichos grupos anidados y se utilizan en los siguientes ejemplos.
 
-**Create a nested group**
+**Crea un grupo anidado**
 
-To create a nested group in `profileForm`, add a nested `address` element to the form group instance.
+Para crear un grupo anidado en `profileForm`, agrega un elemento `address` anidado a la instancia del grupo de formulario.
 
 <code-example path="reactive-forms/src/app/profile-editor/profile-editor.component.1.ts" region="nested-formgroup" header="src/app/profile-editor/profile-editor.component.ts (nested form group)"></code-example>
 

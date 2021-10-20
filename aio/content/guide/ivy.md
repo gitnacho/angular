@@ -75,8 +75,8 @@ You can run `ngcc` after each installation of node_modules by adding a `postinst
 
 <div class="alert is-important">
 
-*   The `postinstall` script will run on every installation of `node_modules`, including those performed by `ng update` and `ng add`.
-*   Don't use `--create-ivy-entry-points` as this will cause Node not to resolve the Ivy version of the packages correctly.
+*   El script `postinstall` se ejecutará en cada instalación de `node_modules`, incluidas las realizadas por `ng update` y `ng add`.
+*   No uses `--create-ivy-entry-points` ya que esto hará que *Node* no resuelva adecuadamente la versión `Ivy` de los paquetes.
 
 </div>
 

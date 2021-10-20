@@ -5,7 +5,7 @@ The commands use an internal tool called Architect to run *CLI builders*, which 
 
 With Angular version 8, the CLI Builder API is stable and available to developers who want to customize the Angular CLI by adding or modifying commands. For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
 
-This document explains how CLI builders integrate with the workspace configuration file, and shows how you can create your own builder.
+Este documento explica cómo los constructores de *CLI* se integran con el archivo de configuración del espacio de trabajo y muestra cómo puedes crear tu propio constructor.
 
 <div class="alert is-helpful">
 
@@ -18,7 +18,7 @@ This document explains how CLI builders integrate with the workspace configurati
 The internal Architect tool delegates work to handler functions called [*builders*](guide/glossary#builder).
 A builder handler function receives two arguments; a set of input `options` (a JSON object), and a `context` (a `BuilderContext` object).
 
-The separation of concerns here is the same as with [schematics](guide/glossary#schematic), which are used for other CLI commands that touch your code (such as `ng generate`).
+La separación de preocupaciones aquí es la misma que con [esquemas](guide/glossary#esquema), que se utilizan para otros comandos de la *CLI* que tocan tu código (como `ng generate`).
 
 * The `options` object is provided by the CLI user, while the `context` object is provided by the CLI Builder API.
 
@@ -29,8 +29,8 @@ The return value or values must always be of type `BuilderOutput`.
 This object contains a Boolean `success` field and an optional `error` field that can contain an error message.
 
 Angular provides some builders that are used by the CLI for commands such as `ng build` and `ng test`.
-Default target configurations for these and other built-in CLI builders can be found (and customized) in the "architect" section of the [workspace configuration file](guide/workspace-config), `angular.json`.
-Also, extend and customize Angular by creating your own builders, which you can run using the [`ng run` CLI command](cli/run).
+Las configuraciones de destino predeterminadas para estos y otros constructores de *CLI*s incorporados se pueden encontrar (y personalizar) en la sección *"architect"* del [archivo de configuración del espacio de trabajo](guide/workspace-config), `angular.json`.
+Además, extiende y personaliza *Angular* creando tus propios constructores, que puedes ejecutar usando el [comando *CLI* `ng run`](cli/run).
 
 ### Builder project structure
 
@@ -271,7 +271,7 @@ For the Angular CLI, the overrides object is built from command line arguments.
 Architect validates the resulting options values against the schema of the builder.
 If inputs are valid, Architect creates the context and executes the builder.
 
-For more information see [Workspace Configuration](guide/workspace-config).
+Para obtener más información, consulta [Configuración del espacio de trabajo](guide/workspace-config).
 
 <div class="alert is-helpful">
 

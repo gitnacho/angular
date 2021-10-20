@@ -29,8 +29,8 @@ You may even remove some.
 
 The `package.json` is organized into two groups of packages:
 
-* [Dependencies](guide/npm-packages#dependencies) are essential to *running* applications.
-* [DevDependencies](guide/npm-packages#dev-dependencies) are only necessary to *develop* applications.
+* [Dependencias](guide/npm-packages#dependencias) son esenciales para *ejecutar* aplicaciones.
+* [`DevDependencies`](guide/npm-packages#dev-dependencies) solo son necesarias para *desarrollar* aplicaciones.
 
 <div class="alert is-helpful">
 
@@ -42,7 +42,7 @@ For more information, see the CLI wiki page [Library Support](https://github.com
 {@a dependencies}
 ## Dependencias
 
-The packages listed in the `dependencies` section of `package.json` are essential to *running* applications.
+The packages listed in the `dependencies` section of `package.json` are essential to *running* aplicaciones.
 
 The `dependencies` section of `package.json` contains:
 

@@ -1,30 +1,30 @@
-<h1 class="no-toc">Tour of Heroes app and tutorial</h1>
+<h1 class="no-toc">Tutorial y aplicación <code>Tour of Heroes</code></h1>
 
 <div class="callout is-helpful">
-<header>Getting Started</header>
+<header>Primeros pasos</header>
 
-In this tutorial, you build your own application from the ground up, providing experience with the typical development process, as well as an introduction to basic app-design concepts, tools, and terminology.
+En este tutorial, crearás tu propia aplicación desde cero, proporcionando experiencia con el proceso de desarrollo típico, así como una introducción a los conceptos, herramientas y terminología básicos del diseño de aplicaciones.
 
-If you're completely new to Angular, you might want to try the [**Try it now**](start) quick-start application first.
-It is based on a ready-made  partially-completed project, which you can examine and modify in the StackBlitz interactive development environment, where you can see the results in real time.
+Si eres completamente nuevo en *Angular*, es posible que desees probar primero la aplicación de inicio rápido [**Pruébala ahora**](start).
+Está basada en un proyecto listo para usar y parcialmente completado, que puedes examinar y modificar en el entorno de desarrollo interactivo *StackBlitz*, donde puedes ver los resultados en tiempo real.
 
-The "Try it" tutorial covers the same major topics&mdash;components, template syntax, routing, services, and accessing data using HTTP&mdash;in a condensed format, following the most current best practices.
+El tutorial "Pruébalo" cubre los mismos temas principales (componentes, sintaxis de plantilla, enrutamiento, servicios y acceso a datos mediante *HTTP*) en un formato condensado, siguiendo las mejores prácticas más actuales.
 
 </div>
 
-This _Tour of Heroes_ tutorial shows you how to set up your local development environment and develop an application using the [Angular CLI tool](cli "CLI command reference"), and provides an introduction to the fundamentals of Angular.
+Este tutorial de `Tour of Heroes` te muestra cómo configurar tu entorno de desarrollo local y desarrollar una aplicación usando la [herramienta *CLI* de *Angular*](cli "referencia de comandos CLI"), y proporciona una introducción a los fundamentos de *Angular*.
 
-The _Tour of Heroes_ application that you build helps a staffing agency manage its stable of heroes.
-The application has many of the features you'd expect to find in any data-driven application.
-The finished application acquires and displays a list of heroes, edits a selected hero's detail, and navigates among different views of heroic data.
+La aplicación `Tour of Heroes` que crearás ayuda a una agencia de personal a administrar su establo de héroes.
+La aplicación tiene muchas de las características que esperarías encontrar en cualquier aplicación basada en datos.
+La aplicación terminada adquiere y muestra una lista de héroes, edita el detalle de un héroe seleccionado y navega entre diferentes vistas de datos heroicos.
 
-You will find references to and expansions of this application domain in many of the examples used throughout the Angular documentation, but you don't necessarily need to work through this tutorial to understand those examples.
+Encontrarás referencias y expansiones de este dominio de aplicación en muchos de los ejemplos utilizados en la documentación de *Angular*, pero no es necesario que sigas este tutorial para comprender esos ejemplos.
 
-By the end of this tutorial you will be able to do the following:
+Al final de este tutorial, podrás hacer lo siguiente:
 
-* Use built-in Angular [directives](guide/glossary#directive "Directives definition") to show and hide elements and display lists of hero data.
-* Create Angular [components](guide/glossary#component "Components definition") to display hero details and show an array of heroes.
-* Use one-way [data binding](guide/glossary#data-binding "Data binding definition") for read-only data.
+* Utilizar [directivas *Angular*](guide/glossary#directiva "Definición de directivas")   incorporadas para mostrar y ocultar elementos y mostrar listas de datos del héroe.
+* Crear [componentes *Angular*](guide/glossary#componente "Definición de componentes") para mostrar los detalles del héroe y mostrar un arreglo de héroes.
+* Utilizar [enlace unidireccional de datos](guide/glossary#vinculacion-de-datos "Definición de vinculación de datos") para datos de solo lectura.
 * Add editable fields to update a model with two-way data binding.
 * Bind component methods to user events, like keystrokes and clicks.
 * Enable users to select a hero from a master list and edit that hero in the details view.

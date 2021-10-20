@@ -78,7 +78,7 @@ To prepare your project for translations, you should have a basic understanding 
 [AioGuideGlossaryComponent]: guide/glossary#component "component - Glossary | Angular"
 [AioGuideGlossaryTemplate]: guide/glossary#template "template - Glossary | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [ThinkwithgoogleMarketfinderIntlEnUsGuideHowToApproachI18nOverview]: https://marketfinder.thinkwithgoogle.com/intl/en_us/guide/how-to-approach-i18n#overview "Overview - How to approach internationalization | Market Finder | Think with Google"
 

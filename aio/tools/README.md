@@ -18,7 +18,7 @@ See the [README.md](cli-patches/README.md) for more details.
 
 ## examples
 
-Many of the documentation pages contain snippets of code examples. We extract these snippets from real
+Muchas de las páginas de documentación contienen fragmentos de código de ejemplo. We extract these snippets from real
 working example applications, which are stored in subfolders of the `/aio/content/examples` folder. Each
 example can be built and run independently. Each example also provides e2e specs, which are run as part
 of our CI build tasks, to verify that the examples continue to work as expected, as changes are made

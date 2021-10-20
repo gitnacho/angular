@@ -72,7 +72,7 @@ To change the source locale of your project for the build, complete the followin
 
 [AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 [GithubAngularAngularTreeMasterPackagesCommonLocales]: https://github.com/angular/angular/tree/master/packages/common/locales "angular/packages/common/locales | angular/angular | GitHub"
 

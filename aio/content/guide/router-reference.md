@@ -1,26 +1,26 @@
-# Router Reference
+# Referencia del enrutador
 
-The following sections highlight some core router concepts.
+Las siguientes secciones destacan algunos conceptos básicos del enrutador.
 
 {@a basics-router-imports}
 
-### Router imports
+### Importación de enrutadores
 
-The Angular Router is an optional service that presents a particular component view for a given URL.
-It is not part of the Angular core and thus is in its own library package, `@angular/router`.
+El enrutador *Angular* es un servicio opcional que presenta una vista de componente particular para una determinada *URL*.
+No es parte del núcleo *Angular* y, por lo tanto, está en su propio paquete de biblioteca, `@angular/router`.
 
-Import what you need from it as you would from any other Angular package.
+Importa lo que necesitas de él como lo harías con cualquier otro paquete *Angular*.
 
 <code-example path="router/src/app/app.module.1.ts" header="src/app/app.module.ts (import)" region="import-router"></code-example>
 
 
 <div class="alert is-helpful">
 
-For more on browser URL styles, see [`LocationStrategy` and browser URL styles](guide/router#browser-url-styles).
+Para obtener más información sobre los estilos de *URL* del navegador, consulta [`LocationStrategy` y estilos de *URL* del navegador](guide/router#estilos-de-url-del-navegador).
 
 </div>
 
-{@a basics-config}
+{@a configuracion-basica}
 
 ### Configuración
 
@@ -32,7 +32,7 @@ The following example creates five route definitions, configures the router via 
 
 <code-example path="router/src/app/app.module.0.ts" header="src/app/app.module.ts (excerpt)"></code-example>
 
-{@a example-config}
+{@a configuracion-de-ejemplo}
 
 The `appRoutes` array of routes describes how to navigate.
 Pass it to the `RouterModule.forRoot()` method in the module `imports` to configure the router.

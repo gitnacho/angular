@@ -25,7 +25,7 @@ ng help
 ng generate --help
 </code-example>
 
-To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace use the following commands:
+Para crear, construir y servir un nuevo proyecto básico de *Angular* en un servidor de desarrollo, ve al directorio principal de tu nuevo espacio de trabajo y usa los siguientes comandos:
 
 <code-example language="bash">
 ng new my-first-project
@@ -44,32 +44,32 @@ When you use the [ng serve](cli/serve) command to build an application and serve
 
 </div>
 
-## Workspaces and project files
+## Espacios de trabajo y archivos del proyecto
 
-The [ng new](cli/new) command creates an *Angular workspace* folder and generates a new application skeleton.
-A workspace can contain multiple applications and libraries.
-The initial application created by the [ng new](cli/new) command is at the top level of the workspace.
-When you generate an additional application or library in a workspace, it goes into a `projects/` subfolder.
+El comando [`ng new`](cli/new) crea un directorio como *Espacio de trabajo Angular* y genera un nuevo esqueleto de aplicación.
+Un espacio de trabajo puede contener múltiples aplicaciones y bibliotecas.
+La aplicación inicial creada por el comando [`ng new`] (cli / new) está en el nivel superior del espacio de trabajo.
+Cuando generas una aplicación o biblioteca adicional en un espacio de trabajo, entra en un subdirectorio `projects/`.
 
 A newly generated application contains the source files for a root module, with a root component and template.
 Each application has a `src` folder that contains the logic, data, and assets.
 
 You can edit the generated files directly, or add to and modify them using CLI commands.
 Use the [ng generate](cli/generate) command to add new files for additional components and services, and code for new pipes, directives, and so on.
-Commands such as [add](cli/add) and [generate](cli/generate), which create or operate on applications and libraries, must be executed from within a workspace or project folder.
+Los comandos como [`add`](cli/add) y [`generate`](cli/generate), que crean u operan aplicaciones y bibliotecas, se deben ejecutar desde un espacio de trabajo o directorio de proyecto.
 
-* See more about the [Workspace file structure](guide/file-structure).
+* Obtén más información sobre la [Estructura de archivos del espacio de trabajo](guide/file-structure).
 
-### Workspace and project configuration
+### Configuración del proyecto y el espacio de trabajo
 
-A single workspace configuration file, `angular.json`, is created at the top level of the workspace.
+Se crea un único archivo de configuración del espacio de trabajo, `angular.json`, en el nivel superior del espacio de trabajo.
 This is where you can set per-project defaults for CLI command options, and specify configurations to use when the CLI builds a project for different targets.
 
 The [ng config](cli/config) command lets you set and retrieve configuration values from the command line, or you can edit the `angular.json` file directly.
 Note that option names in the configuration file must use [camelCase](guide/glossary#case-types), while option names supplied to commands can use either camelCase or dash-case.
 
-* See more about [Workspace Configuration](guide/workspace-config).
-* See the [complete schema](https://github.com/angular/angular-cli/wiki/angular-workspace) for `angular.json`.
+* Más información sobre [Configuración del espacio de trabajo](guide/workspace-config).
+* Ve el [esquema completo](https://github.com/angular/angular-cli/wiki/angular-workspace) para `angular.json`.
 
 ## CLI command-language syntax
 
@@ -99,9 +99,9 @@ Boolean options have two forms: `--this-option` sets the flag to `true`, `--no-t
 If neither option is supplied, the flag remains in its default state, as listed in the reference documentation.
 
 
-### Relative paths
+### Caminos relativos
 
-Options that specify files can be given as absolute paths, or as paths relative to the current working directory, which is generally either the workspace or project root.
+Las opciones que especifican archivos se pueden dar como rutas absolutas o como rutas relativas al directorio de trabajo actual, que generalmente es el espacio de trabajo o la raíz del proyecto.
 
 ### Schematics
 

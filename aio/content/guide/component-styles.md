@@ -269,7 +269,7 @@ you can write style files in [sass](https://sass-lang.com/), or [less](http://le
 The CLI build process runs the pertinent CSS preprocessor.
 
 When generating a component file with `ng generate component`, the CLI emits an empty CSS styles file (`.css`) by default.
-Configure the CLI to default to your preferred CSS preprocessor as explained in the [Workspace configuration guide](guide/workspace-config#generation-schematics).
+Configura la *CLI* de manera predeterminada a tu preprocesador *CSS* preferido como se explica en la [Guía de configuración del espacio de trabajo](guide/workspace-config# generation-schematics).
 
 
 <div class="alert is-important">

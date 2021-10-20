@@ -12,34 +12,34 @@ This configuration option is separate from and in addition to other usage analyt
 
 ## Enable access to CLI usage data
 
-To configure access to your own users' CLI usage data, use the `ng config` command to add a key to your global [`angular.json` workspace configuration file](guide/workspace-config).
-The key goes under `cli.analyticsSharing` at the top level of the file, outside the `projects` sections.
-The value of the key is your organization's tracking ID, as assigned by Google Analytics.
-This ID is a string that looks like `UA-123456-12`.
+Para configurar el acceso al uso de datos de la *CLI* de tus propios usuarios, usa el comando `ng config` para agregar una clave a tu [archivo de configuración del espacio de trabajo `angular.json` global](guide/workspace-config).
+La clave se encuentra debajo de `cli.analyticsSharing` en el nivel superior del archivo, fuera de las secciones de `projects`.
+El valor de la clave es el *ID* de seguimiento de tu organización, asignado por *Google Analytics*.
+Este *ID* es una cadena que se parece a `UA-123456-12`.
 
-You can choose to use a descriptive string as the key value, or be assigned a random key when you run the CLI command.
-For example, the following command adds a configuration key named "tracking".
+Puedes optar por utilizar una cadena descriptiva como valor clave o que se te asigne una clave aleatoria cuando ejecutes el comando *CLI*.
+Por ejemplo, el siguiente comando agrega una clave de configuración llamada "tracking".
 
 <code-example language="sh">
 ng config --global cli.analyticsSharing.tracking UA-123456-12
 </code-example>
 
-To turn off this feature, run the following command:
+Para desactivar esta característica, ejecuta el siguiente comando:
 
 <code-example language="sh">
 ng config --global cli.analyticsSharing undefined
 </code-example>
 
-## Per user tracking
+## Seguimiento por usuario
 
-You can add a custom user ID to the global configuration, in order to identify unique usage of commands and flags.
-If that user enables CLI analytics for their own project, your analytics display tracks and labels their individual usage.
+Puedes agregar un *ID* de usuario personalizado a la configuración global para identificar el uso exclusivo de comandos y banderas.
+Si ese usuario habilita *CLI analytics* para su propio proyecto, tu análisis muestra el seguimiento y etiqueta de su uso individual.
 
 <code-example language="sh">
-ng config --global cli.analyticsSharing.uuid SOME_USER_NAME
+ng config --global cli.analyticsSharing.uuid ALGUN_NOMBRE_DE_USUARIO
 </code-example>
 
-To generate a new random user ID, run the following command:
+Para generar un nuevo *ID* de usuario aleatorio, ejecuta el siguiente comando:
 
 <code-example language="sh">
 ng config --global cli.analyticsSharing.uuid ""

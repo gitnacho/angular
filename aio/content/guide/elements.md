@@ -20,14 +20,14 @@ Creating a custom element is simple and straightforward, and automatically conne
 <div class="alert is-helpful">
 
     We are working on custom elements that can be used by web apps built on other frameworks.
-    A minimal, self-contained version of the Angular framework is injected as a service to support the component's change-detection and data-binding functionality.
-    For more about the direction of development, check out this [video presentation](https://www.youtube.com/watch?v=Z1gLFPLVJjY&t=4s).
+    Se inyecta una versión mínima y autónoma del marco *Angular* como servicio para admitir la función de vinculación de datos y detección de cambios del componente.
+    Para obtener más información sobre la dirección del desarrollo, consulta este [video de presentación](https://www.youtube.com/watch?v=Z1gLFPLVJjY&t=4s).
 
 </div>
 
-## Using custom elements
+## Usar elementos personalizados
 
-Custom elements bootstrap themselves - they start automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular terms or usage conventions.
+Los elementos personalizados se inician a sí mismos ⏤ they start automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular terms or usage conventions.
 
 - <b>Easy dynamic content in an Angular application</b>
 

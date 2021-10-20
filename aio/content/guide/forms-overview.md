@@ -57,7 +57,7 @@ Tests are deeply reliant on manual change detection execution to run properly, a
 ## Setting up the form model
 
 Both reactive and template-driven forms track value changes between the form input elements that users interact with and the form data in your component model.
-The two approaches share underlying building blocks, but differ in how you create and manage the common form-control instances.
+Los dos enfoques comparten bloques de construcción subyacentes, pero difieren en cómo se crean y administran las instancias comunes de `form-control`.
 
 ### Common form foundation classes
 

@@ -5,7 +5,7 @@ See the [linker package README](../README.md) for more information.
 
 ## Pruebas unitarias
 
-The unit tests are built and run using Bazel:
+Las pruebas unitarias se crean y ejecutan utilizando *Bazel*:
 
 ```bash
 yarn bazel test //packages/compiler-cli/linker/babel/test

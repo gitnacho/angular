@@ -36,7 +36,7 @@ A locale determines the formatting and parsing of the following details.
 
 <!-- links -->
 
-<!-- external links -->
+<!-- enlaces externos -->
 
 <!-- end links -->
 

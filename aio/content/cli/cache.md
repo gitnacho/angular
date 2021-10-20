@@ -4,8 +4,8 @@ Angular CLI saves a number of cachable operations on disk by default.
 
 When you re-run the same build, the build system restores the state of the previous build and re-uses previously performed operations, which decreases the time taken to build and test your applications and libraries.
 
-To amend the default cache settings, add the `cli.cache` object to your [Workspace Configuration](guide/workspace-config).
-The object goes under `cli.cache` at the top level of the file, outside the `projects` sections.
+Para modificar la configuración de caché predeterminada, agrega el objeto `cli.cache` a tu [Configuración del espacio de trabajo](guide/workspace-config).
+El objeto va debajo de `cli.cache` en el nivel superior del archivo, fuera de las secciones de `projects`.
 
 ```json
 {
@@ -20,7 +20,7 @@ The object goes under `cli.cache` at the top level of the file, outside the `pro
 }
 ```
 
-For more information, see [cache options](guide/workspace-config#cache-options).
+Para obtener más información, consulta [opciones de caché](guide/workspace-config#opciones-de-cache).
 
 ### Enabling and disabling the cache
 Caching is enabled by default. To disable caching run the following command:
@@ -40,7 +40,7 @@ To enable caching for all environments, run the following command:
 ng config cli.cache.environment all
 ```
 
-For more information, see `environment` in [cache options](guide/workspace-config#cache-options).
+Para obtener más información, consulta `environment` en [opciones de caché](guide/workspace-config#opciones-de-cache).
 
 <div class="alert is-helpful">
 

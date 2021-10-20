@@ -16,9 +16,9 @@ Any application developer can use these and other libraries that have been publi
 ## Creating libraries
 
 If you have developed functionality that is suitable for reuse, you can create your own libraries.
-These libraries can be used locally in your workspace, or you can publish them as [npm packages](guide/npm-packages) to share with other projects or other Angular developers.
-These packages can be published to the npm registry, a private npm Enterprise registry, or a private package management system that supports npm packages.
-See [Creating Libraries](guide/creating-libraries).
+Estas bibliotecas se pueden usar localmente en tu espacio de trabajo, o puedes publicarlas como [paquetes `npm`](guide/npm-packages) para compartir con otros proyectos u otros desarrolladores de *Angular*.
+Estos paquetes se pueden publicar en el registro `npm`, un registro `npm` Enterprise privado o un sistema de administración de paquetes privado que admita paquetes `npm`.
+Consulta [Creación de bibliotecas](guide/creating-libraries).
 
 Whether you decide to package functionality as a library is an architectural decision, similar to deciding whether a piece of functionality is a component or a service, or deciding on the scope of a component.
 

@@ -97,12 +97,12 @@ Here are some things to consider in migrating application functionality to a lib
 
 {@a integrating-with-the-cli}
 
-## Integrating with the CLI using code-generation schematics
+## Integración con la *CLI* mediante esquemas de generación de código
 
-A library typically includes *reusable code* that defines components, services, and other Angular artifacts (pipes, directives) that you import into a project.
-A library is packaged into an npm package for publishing and sharing.
-This package can also include [schematics](guide/glossary#schematic) that provide instructions for generating or transforming code directly in your project, in the same way that the CLI creates a generic new component with `ng generate component`.
-A schematic that is packaged with a library can, for example, provide the Angular CLI with the information it needs to generate a component that configures and uses a particular feature, or set of features, defined in that library.
+Una biblioteca generalmente incluye *código reutilizable* que define componentes, servicios y otros artefactos *Angular* (tuberías, directivas) que importas a un proyecto.
+Una biblioteca está empaquetada en un paquete `npm` para publicar y compartir.
+Este paquete también puede incluir [esquemas](guide/glossary#esquema) que brindan instrucciones para generar o transformar código directamente en tu proyecto, de la misma manera que la *CLI* crea un nuevo componente genérico con `ng generate component`.
+Un esquema que está empaquetado con una biblioteca puede, por ejemplo, proporcionar a la *CLI* de *Angular* la información que necesita para generar un componente que configura y usa una característica particular, o un conjunto de características, definido en esa biblioteca.
 One example of this is [Angular Material's navigation schematic](https://material.angular.io/guide/schematics#navigation-schematic) which configures the CDK's [BreakpointObserver](https://material.angular.io/cdk/layout/overview#breakpointobserver) and uses it with Material's [MatSideNav](https://material.angular.io/components/sidenav/overview) and [MatToolbar](https://material.angular.io/components/toolbar/overview) components.
 
 Create and include the following kinds of schematics:
@@ -328,7 +328,7 @@ If you use the library in a View Engine application, you must compile the librar
 
 Ivy applications can still consume the View Engine format because the Angular compatibility compiler, or `ngcc`, can convert it to Ivy in the Angular CLI.
 
-If you've never published a package in npm before, you must create a user account. Read more in [Publishing npm Packages](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+If you've never published a package in npm before, you must create a user account. Lee más en [Publicación de paquetes `npm`](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
 
 ## Consuming partial-Ivy code outside the Angular CLI

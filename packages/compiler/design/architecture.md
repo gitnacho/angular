@@ -19,17 +19,17 @@ Going forward, this will be the model by which Angular code will be compiled, sh
 
 Existing Angular libraries exist on NPM today and are distributed in the Angular Package Format, which details the artifacts shipped. Today this includes compiled `.js` files in both ES2015 and ESM (ES5 + ES2015 modules) flavors, `.d.ts` files, and `.metadata.json` files. The `.js` files have the Angular decorator information removed, and the `.metadata.json` files preserve the decorator metadata in an alternate format.
 
-### High Level Proposal
+### Propuesta de alto nivel
 
-We will produce two compiler entry-points, `ngtsc` and `ngcc`.
+Produciremos dos puntos de entrada del compilador, `ngtsc` y `ngcc`.
 
-`ngtsc` will be a Typescript-to-Javascript transpiler that reifies Angular decorators into static properties. It is a minimal wrapper around `tsc` which includes a set of Angular transforms. While Ivy is experimental, `ngc` operates as `ngtsc` when the `angularCompilerOption` `enableIvy` flag is set to `true` in the `tsconfig.json` file for the project.
+`ngtsc` será un transpilador de *TypeScript* a *JavaScript* que materializa los decoradores *Angular* en propiedades estáticas. Es una envoltura mínima alrededor de `tsc` que incluye un conjunto de transformaciones *Angular*. While Ivy is experimental, `ngc` operates as `ngtsc` when the `angularCompilerOption` `enableIvy` flag is set to `true` in the `tsconfig.json` file for the project.
 
 `ngcc` (which stands for Angular compatibility compiler) is designed to process code coming from NPM and produce the equivalent Ivy version, as if the code was compiled with `ngtsc`. It will operate given a `node_modules` directory and a set of packages to compile, and will produce an equivalent directory from which the Ivy equivalents of those modules can be read. `ngcc` is a separate script entry point to `@angular/compiler-cli`.
 
-`ngcc` can also be run as part of a code loader (e.g. for Webpack) to transpile packages being read from `node_modules` on-demand.
+`ngcc` también se puede ejecutar como parte de un cargador de código (por ejemplo, para *Webpack*) para transpilar paquetes que se leen desde `node_modules` bajo demanda.
 
-## Detailed Design
+## Diseño detallado
 
 ### Ivy Compilation Model
 
@@ -370,7 +370,7 @@ If a particular library was not compiled with `ngtsc`, it does not have reified 
 
 Since Ivy code can only be linked against other Ivy code, to build the application all pre-Ivy dependencies from NPM must be converted to Ivy dependencies. This transformation must happen as a precursor to running `ngtsc` on the application, and future compilation and linking operations need to be made against this transformed version of the dependencies.
 
-It is possible to transpile non-Ivy code in the Angular Package Format (v6) into Ivy code, even though the `.js` files no longer contain the decorator information. This works because the Angular Package Format includes `.metadata.json` files for each `.js` file. These metadata files contain information that was present in the Typescript source but was removed during transpilation to Javascript, and this information is sufficient to generate patched `.js` files which add the Ivy static properties to decorated classes.
+Es posible transpilar código que no sea *Ivy* en el formato de paquete *Angular* (v6) en código *Ivy*, aunque los archivos `.js` ya no contienen la información del decorador. Esto funciona porque el formato de paquete *Angular* incluye archivos `.metadata.json` para cada archivo `.js`. These metadata files contain information that was present in the Typescript source but was removed during transpilation to Javascript, and this information is sufficient to generate patched `.js` files which add the Ivy static properties to decorated classes.
 
 #### Metadata from APF
 
@@ -403,9 +403,9 @@ The `.metadata.json` files currently being shipped to NPM includes, among other 
 
 Alternatively, `ngcc` can be initiated by passing the name of a single NPM package. It will begin converting that package, and recurse into any dependencies of that package that it discovers which have not yet been converted.
 
-The output of `ngcc` is a directory called `ngcc_node_modules` by default, but can be renamed based on an option. Its structure mirrors that of `node_modules`, and the packages that are converted have the non-transpiled files copied verbatim - `package.json`, etc are all preserved in the output. Only the `.js` and `.d.ts` files are changed, and the `.metadata.json` files are removed.
+The output of `ngcc` is a directory called `ngcc_node_modules` by default, but can be renamed based on an option. Su estructura refleja la de `node_modules`, y los paquetes que se convierten tienen los archivos no transpilados copiados literalmente ⏤ `package.json`, etc. se conservan en la salida. Solo se modifican los archivos `.js` y `.d.ts` y se eliminan los archivos `.metadata.json`.
 
-An example directory layout would be:
+Un ejemplo de diseño de directorio sería:
 
 ```
 # input

@@ -153,7 +153,7 @@ In the following example, the property takes an enumerated value, so the schemat
 <code-example language="json" header="schema.json">
 
     "style": {
-      "description": "The file extension or preprocessor to use for style files.",
+      "description": "La extensión de archivo o el preprocesador que se utilizará para los archivos de estilo.",
       "type": "string",
       "default": "css",
       "enum": [
@@ -184,13 +184,13 @@ In this form, the `x-prompt` field value is a JSON object with subfields that cu
 | items   |	string and/or label/value object pair (only valid with type `list`) |
 
 The following example of the long form is from the JSON schema for the schematic that the CLI uses to [generate applications](https://github.com/angular/angular-cli/blob/ba8a6ea59983bb52a6f1e66d105c5a77517f062e/packages/schematics/angular/application/schema.json#L56).
-It defines the prompt that lets users choose which style preprocessor they want to use for the application being created.
-By using the long form, the schematic can provide more explicit formatting of the menu choices.
+Define el mensaje que permite a los usuarios elegir qué preprocesador de estilo desean utilizar para la aplicación que se está creando.
+Al utilizar la forma larga, el esquema puede proporcionar un formato más explícito de las opciones del menú.
 
 <code-example language="json" header="package/schematics/angular/application/schema.json">
 
     "style": {
-      "description": "The file extension or preprocessor to use for style files.",
+      "description": "La extensión de archivo o el preprocesador que se utilizará para los archivos de estilo.",
       "type": "string",
       "default": "css",
       "enum": [
@@ -200,7 +200,7 @@ By using the long form, the schematic can provide more explicit formatting of th
         "less"
       ],
       "x-prompt": {
-        "message": "Which stylesheet format would you like to use?",
+        "message": "¿Qué formato de hoja de estilo te gustaría usar?",
         "type": "list",
         "items": [
           { "value": "css",  "label": "CSS" },
