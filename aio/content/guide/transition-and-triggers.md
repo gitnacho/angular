@@ -279,7 +279,7 @@ The code snippet for this animation might look like this.
 ### Animatable properties and units
 
 Angular animations support builds on top of web animations, so you can animate any property that the browser considers animatable.
-This includes positions, sizes, transforms, colors, borders, and more. The W3C maintains a list of animatable properties on its [CSS Transitions](https://www.w3.org/TR/css-transitions-1/) page.
+Esto incluye posiciones, tamaños, transformaciones, colores, bordes y más. El *W3C* mantiene una lista de propiedades animables en su página de [Transiciones *CSS*](https://www.w3.org/TR/css-transitions-1/).
 
 For properties with a numeric value, define a unit by providing the value as a string, in quotes, with the appropriate suffix:
 
@@ -307,11 +307,11 @@ The animation takes whatever height the element has before it leaves, and animat
 
 The `keyframes()` function in Angular allows you to specify multiple interim styles within a single transition, with an optional `offset` to define the point in the animation where each style change should occur.
 
-## More on Angular animations
+## Más sobre animaciones *Angular*
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 * [Introduction to Angular animations](guide/animations)
-* [Complex animation sequences](guide/complex-animation-sequences)
-* [Reusable animations](guide/reusable-animations)
-* [Route transition animations](guide/route-animations)
+* [Secuencias de animación complejas](guide/complex-animation-sequences)
+* [Animaciones reutilizables](guide/reusable-animations)
+* [Animaciones de transición de ruta](guide/route-animations)

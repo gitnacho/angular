@@ -80,14 +80,14 @@ Once the initial triage is done, the ng-bot automatically adds the milestone `ne
 
 Detailed triage can be done by anyone familiar with the issue subject matter.
 
-### Step 1: Does the issue have enough information?
+### Paso 1: Does the issue have enough information?
 
 Gauge whether the issue has enough information to act upon. This typically includes a test case
 via StackBlitz or GitHub and steps to reproduce. If the issue may be legitimate but needs more
 information, add the "needs clarification" label. These labels can be revisited if the author can
 provide further clarification. If the issue does have enough information, move on to step 2.
 
-### Step 2: Bug, feature, or discussion?
+### Paso 2: Bug, feature, or discussion?
 
 By default, all issues are considered bugs. Bug reports require only a priority label.
 
@@ -100,7 +100,7 @@ whether this discussion belongs on GitHub. Discussions here should pertain to th
 implementation details of Angular. Redirect requests for debugging help or advice to a more
 appropriate channel unless they're capturing a legitimate bug.
 
-### Step 3: Set a Priority
+### Paso 3: Set a Priority
 
 For bug reports, set a priority label.
 

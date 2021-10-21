@@ -64,7 +64,7 @@ Cuando es `true`, el compilador no verifica la versión de *TypeScript* y no inf
 ### `enableI18nLegacyMessageIdFormat`
 
 Indica al compilador de plantillas *Angular* que genere identificadores heredados para mensajes que están etiquetados en plantillas por el atributo `i18n`.
-See [Mark text for translations][AioGuideI18nCommonPrepareMarkTextInComponentTemplate] for more information about marking messages for localization.
+Consulta [Marcar texto para traducciones][AioGuideI18nCommonPrepareMarkTextInComponentTemplate] para obtener más información sobre cómo marcar mensajes para su localización.
 
 Establece esta opción en `false` a menos que tu proyecto se base en traducciones que se generaron previamente con *ID*s heredados. El valor predeterminado es `true`.
 
@@ -203,7 +203,7 @@ Además del archivo de configuración, también puedes usar [opciones de línea 
 
 <!-- links -->
 
-[AioGuideI18nCommonPrepareMarkTextInComponentTemplate]: guide/i18n-common-prepare#mark-text-in-component-template "Mark text in component template - Prepara plantillas para traducciones | *Angular*"
+[AioGuideI18nCommonPrepareMarkTextInComponentTemplate]: guide/i18n-common-prepare#mark-text-in-component-template "Marcar texto en la plantilla de componente ⏤ Prepara plantillas para traducciones | *Angular*"
 
 <!-- end links -->
 

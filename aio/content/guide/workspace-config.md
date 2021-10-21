@@ -179,7 +179,7 @@ See the example in [Build target](#build-target) below.
 *   The `architect/app-shell` section configures defaults for creating an application shell for a progressive web application (PWA), using the `ng run <project>:app-shell` command.
 
 In general, the options for which you can configure defaults correspond to the command options listed in the [CLI reference page](cli) for each command.
-**NOTA**: All options in the configuration file must use [camelCase](guide/glossary#case-conventions), rather than dash-case.
+**NOTA**: Todas las opciones en el archivo de configuración deben usar [`camelCase`]​​(guide/glossary#convenciones-de-casos), en lugar de guiones.
 
 {@a build-target}
 

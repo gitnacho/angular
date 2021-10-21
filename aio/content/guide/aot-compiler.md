@@ -1,67 +1,67 @@
-# Ahead-of-time (AOT) compilation
+# Compilación anticipada (`Ahead-of-time` ⏤ *AOT*)
 
-An Angular application consists mainly of components and their HTML templates. Because the components and templates provided by Angular cannot be understood by the browser directly, Angular applications require a compilation process before they can run in a browser.
+Una aplicación *Angular* consta principalmente de componentes y sus plantillas *HTML*. Debido a que el navegador no puede comprender directamente los componentes y las plantillas proporcionados por *Angular*, las aplicaciones *Angular* requieren un proceso de compilación antes de que se puedan ejecutar en un navegador.
 
-The Angular [ahead-of-time (AOT) compiler](guide/glossary#aot) converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase _before_ the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
+La [compilación anticipada (*AOT*)](guide/glossary#aot) de *Angular* convierte tu código *HTML Angular* y *TypeScript* en código *JavaScript* eficiente durante la fase de compilación *antes* que el navegador descargue y ejecute ese código. La compilación de tu aplicación durante el proceso de compilación proporciona una representación más rápida en el navegador.
 
-This guide explains how to specify metadata and apply available compiler options to compile your applications efficiently using the AOT compiler.
+Esta guía explica cómo especificar metadatos y aplicar las opciones del compilador disponibles para compilar tus aplicaciones de manera eficiente utilizando la compilación *AOT*.
 
 <div class="alert is-helpful">
 
-  <a href="https://www.youtube.com/watch?v=anphffaCZrQ">Watch Alex Rickabaugh explain the Angular compiler</a> at AngularConnect 2019.
+  <a href="https://www.youtube.com/watch?v=anphffaCZrQ">Ve a Alex Rickabaugh explicar el compilador Angular</a> en AngularConnect 2019.
 
 </div>
 
-{@a why-aot}
+{@a porque-aot}
 
-Here are some reasons you might want to use AOT.
+Estas son algunas de las razones por las que podrías querer usar *AOT*.
 
-* *Faster rendering*
-   With AOT, the browser downloads a pre-compiled version of the application.
-   The browser loads executable code so it can render the application immediately, without waiting to compile the application first.
+* *Representación más rápida*
+   Con *AOT*, el navegador descarga una versión precompilada de la aplicación.
+   El navegador carga el código ejecutable para que pueda procesar la aplicación inmediatamente, sin esperar a primero compilar la aplicación.
 
-* *Fewer asynchronous requests*
-   The compiler _inlines_ external HTML templates and CSS style sheets within the application JavaScript,
-   eliminating separate ajax requests for those source files.
+* *Menos solicitudes asincrónicas*
+   El compilador `inlines` plantillas *HTML* externas y hojas de estilo *CSS* dentro de la aplicación *JavaScript*,
+   eliminando solicitudes *ajax* separadas para esos archivos fuente.
 
-* *Smaller Angular framework download size*
-   There's no need to download the Angular compiler if the application is already compiled.
-   The compiler is roughly half of Angular itself, so omitting it dramatically reduces the application payload.
+* *Tamaño de descarga del marco *Angular* más pequeño*
+   No es necesario descargar el compilador *Angular* si la aplicación ya está compilada.
+   El compilador es aproximadamente la mitad de *Angular*, por lo que omitirlo reduce drásticamente la carga útil de la aplicación.
 
-* *Detect template errors earlier*
-   The AOT compiler detects and reports template binding errors during the build step
-   before users can see them.
+* *Detecta errores de plantilla antes*
+   La compilación *AOT* detecta e informa errores de enlace de plantilla durante el paso de compilación
+   antes de que los usuarios puedan verlos.
 
-* *Better security*
-   AOT compiles HTML templates and components into JavaScript files long before they are served to the client.
-   With no templates to read and no risky client-side HTML or JavaScript evaluation,
-   there are fewer opportunities for injection attacks.
+* *Mejor seguridad*
+   *AOT* compila plantillas y componentes *HTML* en archivos *JavaScript* mucho antes de que se sirvan al cliente.
+   Sin plantillas para leer y sin riesgosas evaluaciones de *JavaScript* o *HTML* del lado del cliente,
+   hay menos oportunidades de ataques por inyección.
 
-{@a overview}
+{@a descripcion}
 
-## Choosing a compiler
+## Elegir un compilador
 
-Angular offers two ways to compile your application:
+*Angular* ofrece dos formas de compilar tu aplicación:
 
-* **_Just-in-Time_ (JIT)**, which compiles your application in the browser at runtime. This was the default until Angular 8.
-* **_Ahead-of-Time_ (AOT)**, which compiles your application and libraries at build time. This is the default since Angular 9.
+* **`Just-in-Time` (*JIT*)**, que compila tu aplicación en el navegador en el entorno de ejecución. Este fue el predeterminado hasta *Angular 8*.
+* **`Ahead-of-Time` (*AOT*)**, que compila tu aplicación y bibliotecas en el momento de la construcción. Este es el valor predeterminado desde *Angular 9*.
 
-When you run the [`ng build`](cli/build) (build only) or [`ng serve`](cli/serve) (build and serve locally) CLI commands, the type of compilation (JIT or AOT) depends on the value of the `aot` property in your build configuration specified in `angular.json`. By default, `aot` is set to `true` for new CLI applications.
+Cuando ejecutas los comandos *CLI* [`ng build`](cli/build) (solo compilación) o [`ng serve`](cli/serve) (compila y sirve localmente), el tipo de compilación (*JIT* o *AOT*) depende en el valor de la propiedad `aot` en tu configuración de compilación especificada en `angular.json`. De forma predeterminada, `aot` se establece en `true` para las nuevas aplicaciones *CLI*.
 
-See the [CLI command reference](cli) and [Building and serving Angular apps](guide/build) for more information.
+Consulta la [Referencia de comandos *CLI*](cli) y [Creación y servicio de aplicaciones *Angular*](guide/build) para obtener más información.
 
-## How AOT works
+## Cómo trabaja *AOT*
 
-The Angular AOT compiler extracts **metadata** to interpret the parts of the application that Angular is supposed to manage.
-You can specify the metadata explicitly in **decorators** such as `@Component()` and `@Input()`, or implicitly in the constructor declarations of the decorated classes.
-The metadata tells Angular how to construct instances of your application classes and interact with them at runtime.
+El compilador *AOT* de *Angular* extrae **metadatos** para interpretar las partes de la aplicación que se supone que administra *Angular*.
+Puedes especificar los metadatos explícitamente en **decoradores** como `@Component()` e `@Input()`, o implícitamente en las declaraciones del constructor de las clases decoradas.
+Los metadatos le dicen a *Angular* cómo construir instancias de tus clases de aplicación e interactuar con ellas en el entorno de ejecución.
 
-In the following example, the `@Component()` metadata object and the class constructor tell Angular how to create and display an instance of `TypicalComponent`.
+En el siguiente ejemplo, el objeto metadatos de `@Component()` y el constructor de la clase le dicen a *Angular* cómo crear y mostrar una instancia de `TypicalComponent`.
 
 ```typescript
 @Component({
   selector: 'app-typical',
-  template: '<div>A typical component for {{data.name}}</div>'
+  template: '<div>Un componente típico de {{data.name}}</div>'
 })
 export class TypicalComponent {
   @Input() data: TypicalData;
@@ -69,29 +69,29 @@ export class TypicalComponent {
 }
 ```
 
-The Angular compiler extracts the metadata _once_ and generates a _factory_ for `TypicalComponent`.
-When it needs to create a `TypicalComponent` instance, Angular calls the factory, which produces a new visual element, bound to a new instance of the component class with its injected dependency.
+El compilador de *Angular* extrae los metadatos *una vez* y genera un `factory` para `TypicalComponent`.
+Cuando necesita crear una instancia de `TypicalComponent`, *Angular* llama a la fábrica, que produce un nuevo elemento visual, vinculado a una nueva instancia de la clase componente con su dependencia inyectada.
 
-### Compilation phases
+### Fases de compilación
 
-There are three phases of AOT compilation.
-* Phase 1 is *code analysis*.
-   In this phase, the TypeScript compiler and  *AOT collector* create a representation of the source. The collector does not attempt to interpret the metadata it collects. It represents the metadata as best it can and records errors when it detects a metadata syntax violation.
+Hay tres fases de compilación *AOT*.
+* La fase 1 es *análisis de código*.
+   En esta fase, el compilador *TypeScript* y el *colector AOT* crean una representación de la fuente. El colector no intenta interpretar los metadatos que recolecta. Representa los metadatos lo mejor que puede y registra los errores cuando detecta una violación de la sintaxis de los metadatos.
 
-* Phase 2 is *code generation*.
-    In this phase, the compiler's `StaticReflector` interprets the metadata collected in phase 1, performs additional validation of the metadata, and throws an error if it detects a metadata restriction violation.
+* La fase 2 es *generación de código*.
+    En esta fase, el `StaticReflector` del compilador interpreta los metadatos recopilados en la fase 1, realiza una validación adicional de los metadatos y arroja un error si detecta una infracción de restricción de metadatos.
 
-* Phase 3 is *template type checking*.
-   In this optional phase, the Angular *template compiler* uses the TypeScript compiler to validate the binding expressions in templates. Puedes habilitar esta fase explícitamente configurando la opción de configuración `fullTemplateTypeCheck`; consulta [Opciones del compilador *Angular*](guide/angular-compiler-options).
+* La fase 3 es *comprobación del tipo de plantilla*.
+   En esta fase opcional, el compilador de plantillas *Angular* utiliza el compilador de *TypeScript* para validar las expresiones vinculantes en las plantillas. Puedes habilitar esta fase explícitamente configurando la opción de configuración `fullTemplateTypeCheck`; consulta [Opciones del compilador *Angular*](guide/angular-compiler-options).
 
 
-### Metadata restrictions
+### Restricciones de metadatos
 
-You write metadata in a _subset_ of TypeScript that must conform to the following general constraints:
+Escribe metadatos en un *subconjunto* de *TypeScript* que debe cumplir con las siguientes restricciones generales:
 
-* Limit [expression syntax](#expression-syntax) to the supported subset of JavaScript.
-* Only reference exported symbols after [code folding](#code-folding).
-* Only call [functions supported](#supported-functions) by the compiler.
+* [Restricción de sintaxis de expresión](#sintaxis-de-expresion) al subconjunto de *JavaScript* admitido.
+* Solo haz referencia a los símbolos exportados después del [plegado de código](#plegado-de-codigo).
+* Solo llama a [funciones admitidas](#funciones-admitidas) por el compilador.
 * Decorated and data-bound class members must be public.
 
 For additional guidelines and instructions on preparing an application for AOT compilation, see [Angular: Writing AOT-friendly applications](https://medium.com/sparkles-blog/angular-writing-aot-friendly-applications-7b64c8afbe3f).
@@ -121,8 +121,8 @@ describes the JSON format as a collection of TypeScript interfaces.
 
 </div>
 
-{@a expression-syntax}
-### Expression syntax limitations
+{@a sintaxis-de-expresion}
+### Limitaciones de la sintaxis de expresión
 
 The AOT collector only understands a subset of JavaScript.
 Define metadata objects with the following limited syntax:
@@ -260,8 +260,8 @@ export function serverFactory() {
 In version 5 and later, the compiler automatically performs this rewriting while emitting the `.js` file.
 
 {@a exported-symbols}
-{@a code-folding}
-### Code folding
+{@a plegado-de-codigo}
+### Plegado de código
 
 The compiler can only resolve references to **_exported_** symbols.
 The collector, however, can evaluate an expression during collection and record the result in the `.metadata.json`, rather than the original expression.
@@ -417,7 +417,7 @@ If an expression is not foldable, the collector writes it to `.metadata.json` as
 ## Phase 2: code generation
 
 The collector makes no attempt to understand the metadata that it collects and outputs to `.metadata.json`.
-It represents the metadata as best it can and records errors when it detects a metadata syntax violation.
+Representa los metadatos lo mejor que puede y registra los errores cuando detecta una violación de la sintaxis de los metadatos.
 It's the compiler's job to interpret the `.metadata.json` in the code generation phase.
 
 The compiler understands all syntax forms that the collector supports, but it may reject _syntactically_ correct metadata if the _semantics_ violate compiler rules.
@@ -436,13 +436,13 @@ The compiler can only reference _exported symbols_.
   template: '<h1>{{title}}</h1>'
 })
 export class AppComponent {
-  private title = 'My App'; // Bad
+  private title = 'My App'; // Mal
 }
 ```
 
-{@a supported-functions}
+{@a funciones-admitidas}
 
-### Supported classes and functions
+### Funciones y clases compatibles
 
 The collector can represent a function call or object creation with `new` as long as the syntax is valid.
 The compiler, however, can later refuse to generate a call to a _particular_ function or creation of a _particular_ object.

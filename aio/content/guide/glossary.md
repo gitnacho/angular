@@ -121,7 +121,7 @@ The [workspace configuration](guide/workspace-config) file, `angular.json`, cont
 
 {@a C}
 
-{@a case-conventions}
+{@a convenciones-de-casos}
 {@a dash-case}
 {@a camelcase}
 {@a kebab-case}

@@ -5,7 +5,7 @@ This page provides a conceptual overview of how to create and publish new librar
 If you find that you need to solve the same problem in more than one application (or want to share your solution with other developers), you have a candidate for a library.
 A simple example might be a button that sends users to your company website, that would be included in all applications that your company builds.
 
-## Getting started
+## Primeros pasos
 
 Use the Angular CLI to generate a new library skeleton in a new workspace with the following commands.
 

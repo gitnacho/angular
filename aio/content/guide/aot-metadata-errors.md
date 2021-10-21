@@ -24,16 +24,16 @@ The following are metadata errors you may encounter, with explanations and sugge
 
 </div>
 
-Language features outside of the compiler's [restricted expression syntax](guide/aot-compiler#expression-syntax)
-can produce this error, as seen in the following example:
+Características del lenguaje fuera de la [sintaxis de expresión restringida](guide/aot-compiler#sintaxis-de-expresion) del compilador
+puede producir este error, como se ve en el siguiente ejemplo:
 
 ```ts
 // ERROR
 export class Fooish { ... }
 ...
-const prop = typeof Fooish; // typeof is not valid in metadata
+const prop = typeof Fooish; // typeof no es válido en metadatos
   ...
-  // bracket notation is not valid in metadata
+  // la notación entre corchetes no es válida en los metadatos
   { provide: 'token', useValue: { [prop]: 'value' } };
   ...
 ```
@@ -41,7 +41,7 @@ const prop = typeof Fooish; // typeof is not valid in metadata
 You can use `typeof` and bracket notation in normal application code.
 You just can't use those features within expressions that define Angular metadata.
 
-Avoid this error by sticking to the compiler's [restricted expression syntax](guide/aot-compiler#expression-syntax)
+Evita este error al ceñirte a la [sintaxis de expresión restringida](guide/aot-compiler#sintaxis-de-expresion) del compilador
 when writing Angular metadata
 and be wary of new or unusual TypeScript features.
 
@@ -79,7 +79,7 @@ You could fix the problem by initializing `foo`.
 let foo = 42; // initialized
 ```
 
-The compiler will [fold](guide/aot-compiler#code-folding) the expression into the provider as if you had written this.
+El compilador [plegará](guide/aot-compiler#plegado-de-codigo) la expresión en el proveedor como si la hubieras escrito.
 
 ```ts
   providers: [
@@ -87,11 +87,11 @@ The compiler will [fold](guide/aot-compiler#code-folding) the expression into th
   ]
 ```
 
-Alternatively, you can fix it by exporting `foo` with the expectation that `foo` will be assigned at runtime when you actually know its value.
+Alternativamente, puedes solucionarlo exportando `foo` con la expectativa de que se asigne `foo` en el entorno de ejecución cuando realmente sepas su valor.
 
 ```ts
-// CORRECTED
-export let foo: number; // exported
+// CORREGIDO
+export let foo: number; // exportado
 
 @Component({
   selector: 'my-component',
@@ -171,7 +171,7 @@ instructions for building the element based on the template.
 To correct this error, provide the initial value of the variable in an initializer clause _on the same line_.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 export let someTemplate = '<h1>Greetings from Angular</h1>';
 
 @Component({
@@ -211,7 +211,7 @@ factory [can only access exported classes](guide/aot-compiler#exported-symbols).
 To correct this error, export the referenced class.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 export abstract class MyStrategy { }
 
   ...
@@ -248,7 +248,7 @@ factory [can only access exported functions](guide/aot-compiler#exported-symbols
 To correct this error, export the function.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 export function myStrategy() { ... }
 
   ...
@@ -295,7 +295,7 @@ import { calculateValue } from './utilities';
 To correct this error, export a function from the module and refer to the function in a `useFactory` provider instead.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 import { calculateValue } from './utilities';
 
 export function myStrategy() { ... }
@@ -342,7 +342,7 @@ const {foo, bar} = configuration;
 To correct this error, refer to non-destructured values.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 import { configuration } from './configuration';
   ...
   providers: [
@@ -392,7 +392,7 @@ you can finesse the problem in four steps:
 Here's an illustrative example.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 import { Inject } from '@angular/core';
 
 export const WINDOW = new InjectionToken('Window');
@@ -443,7 +443,7 @@ provider: [{ provide: Foo, useValue: { 0: 'test' } }]
 Change the name of the property to something non-numeric.
 
 ```ts
-// CORRECTED
+// CORREGIDO
 provider: [{ provide: Foo, useValue: { '0': 'test' } }]
 ```
 

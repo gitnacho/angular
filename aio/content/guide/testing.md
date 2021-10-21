@@ -152,9 +152,9 @@ This article explains how to configure your project to run Circle CI and Travis 
 
 ### Configure project for Circle CI
 
-Step 1: Create a folder called `.circleci` at the project root.
+Paso 1: Create a folder called `.circleci` at the project root.
 
-Step 2: In the new folder, create a file called `config.yml` with the following content:
+Paso 2: In the new folder, create a file called `config.yml` with the following content:
 
 ```
 version: 2
@@ -178,7 +178,7 @@ jobs:
 This configuration caches `node_modules/` and uses [`npm run`](https://docs.npmjs.com/cli/run-script) to run CLI commands, because `@angular/cli` is not installed globally.
 The double dash (`--`) is needed to pass arguments into the `npm` script.
 
-Step 3: Commit your changes and push them to your repository.
+Paso 3: Commit your changes and push them to your repository.
 
 Step 4: [Sign up for Circle CI](https://circleci.com/docs/2.0/first-steps/) and [add your project](https://circleci.com/add-projects).
 Your project should start building.
@@ -187,7 +187,7 @@ Your project should start building.
 
 ### Configure project for Travis CI
 
-Step 1: Create a file called `.travis.yml` at the project root, with the following content:
+Paso 1: Create a file called `.travis.yml` at the project root, with the following content:
 
 ```
 language: node_js
@@ -210,16 +210,16 @@ script:
 
 This does the same things as the CircleCI configuration, except that Travis doesn't come with Chrome, so use Chromium instead.
 
-Step 2: Commit your changes and push them to your repository.
+Paso 2: Commit your changes and push them to your repository.
 
-Step 3: [Sign up for Travis CI](https://travis-ci.org/auth) and [add your project](https://travis-ci.org/profile).
+Paso 3: [Sign up for Travis CI](https://travis-ci.org/auth) and [add your project](https://travis-ci.org/profile).
 You'll need to push a new commit to trigger a build.
 
 * Learn more about Travis CI testing from [Travis CI documentation](https://docs.travis-ci.com/).
 
 ### Configure project for GitLab CI
 
-Step 1: Create a file called `.gitlab-ci.yml` at the project root, with the following content:
+Paso 1: Create a file called `.gitlab-ci.yml` at the project root, with the following content:
 
 ```
 image: node:14.15-stretch
@@ -262,18 +262,18 @@ test:
 
 This configuration caches `node_modules/` in the `install` job and re-uses the cached `node_modules/` in the `test` job.
 
-Step 2: [Sign up for GitLab CI](https://gitlab.com/users/sign_in) and [add your project](https://gitlab.com/projects/new).
+Paso 2: [Sign up for GitLab CI](https://gitlab.com/users/sign_in) and [add your project](https://gitlab.com/projects/new).
 You'll need to push a new commit to trigger a build.
 
-Step 3: Commit your changes and push them to your repository.
+Paso 3: Commit your changes and push them to your repository.
 
 * Learn more about GitLab CI testing from [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/).
 
 ### Configure project for GitHub Actions
 
-Step 1: Create a folder called `.github/workflows` at root of your project
+Paso 1: Create a folder called `.github/workflows` at root of your project
 
-Step 2: In the new folder, create a file called `main.yml` with the following content:
+Paso 2: In the new folder, create a file called `main.yml` with the following content:
 
 ```yml
 name: CI Angular app through Github Actions
@@ -296,7 +296,7 @@ jobs:
           npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 ```
 
-Step 3: [Sign up for GitHub](https://github.com/join) and [add your project](https://github.com/new). You'll need to push a new commit to trigger a build.
+Paso 3: [Sign up for GitHub](https://github.com/join) and [add your project](https://github.com/new). You'll need to push a new commit to trigger a build.
 
 Step 4: Commit your changes and push them to your repository.
 

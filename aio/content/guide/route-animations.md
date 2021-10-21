@@ -5,8 +5,8 @@
 A basic understanding of the following concepts:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
-* [Reusable animations](guide/reusable-animations)
+* [Transición y disparadores](guide/transition-and-triggers)
+* [Animaciones reutilizables](guide/reusable-animations)
 
 <hr>
 
@@ -124,11 +124,11 @@ The animation code does the following after styling the views:
 
 You now have a basic routable animation that animates routing from one view to another.
 
-## More on Angular animations
+## Más sobre animaciones *Angular*
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
-* [Complex animation sequences](guide/complex-animation-sequences)
-* [Reusable animations](guide/reusable-animations)
+* [Transición y disparadores](guide/transition-and-triggers)
+* [Secuencias de animación complejas](guide/complex-animation-sequences)
+* [Animaciones reutilizables](guide/reusable-animations)

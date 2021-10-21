@@ -5,7 +5,7 @@
 A basic understanding of the following concepts:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
+* [Transición y disparadores](guide/transition-and-triggers)
 
 <hr>
 
@@ -92,11 +92,11 @@ For each change:
 
 Angular functions for animating multiple elements start with `query()` to find inner elements, for example gathering all images within a `<div>`. The remaining functions, `stagger()`, <code>[group](api/animations/group)()</code>, and `sequence()`, apply cascades or lets you control how multiple animation steps are applied.
 
-## More on Angular animations
+## Más sobre animaciones *Angular*
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
-* [Reusable animations](guide/reusable-animations)
-* [Route transition animations](guide/route-animations)
+* [Transición y disparadores](guide/transition-and-triggers)
+* [Animaciones reutilizables](guide/reusable-animations)
+* [Animaciones de transición de ruta](guide/route-animations)

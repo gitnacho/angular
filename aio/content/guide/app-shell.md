@@ -7,7 +7,7 @@ This gives users a meaningful first paint of your application that appears quick
 
 Learn more in [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell).
 
-## Step 1: Prepare the application
+## Paso 1: Prepare the application
 
 Do this with the following CLI command:
 <code-example language="bash">
@@ -16,7 +16,7 @@ ng new my-app --routing
 
 For an existing application, you have to manually add the `RouterModule` and defining a `<router-outlet>` within your application.
 
-## Step 2: Create the app shell
+## Paso 2: Create the app shell
 
 Use the CLI to automatically create the application shell.
 
@@ -73,7 +73,7 @@ After running this command you can see that the `angular.json` configuration fil
 }
 </code-example>
 
-## Step 3: Verify the app is built with the shell content
+## Paso 3: Verify the app is built with the shell content
 
 Use the CLI to build the `app-shell` target.
 

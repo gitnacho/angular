@@ -2,7 +2,7 @@ Implements a domain-specific language (DSL) for defining web animation sequences
 multiple transformations over time.
 
 Use this API to define how an HTML element can move, change color, grow or shrink, fade, or slide off
-the page. These changes can occur simultaneously or sequentially. You can control the timing of each
+the page. Estos cambios pueden ocurrir de forma simultánea o secuencial. You can control the timing of each
 of these transformations. The function calls generate the data structures and metadata that enable Angular
 to integrate animations into templates and run them based on application states.
 

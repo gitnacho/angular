@@ -117,7 +117,7 @@ The `Admin` and `Login` buttons illustrate other router capabilities covered lat
 
 {@a getting-started}
 
-## Milestone 1: Getting started
+## Milestone 1: Primeros pasos
 
 Begin with a basic version of the application that navigates between two empty views.
 

@@ -363,6 +363,6 @@ techniques ([Fail-safe](#fail-safe) or [Safety Worker](#safety-worker)).
 
 ## More on Angular service workers
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 * [Service Worker Configuration](guide/service-worker-config).
 

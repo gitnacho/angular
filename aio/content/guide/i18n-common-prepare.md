@@ -471,7 +471,7 @@ The following code example shows nested clauses based on the `gender` and `minut
 [AioGuideI18nCommonPrepareMarkAlternatesAndNestedExpressions]: guide/i18n-common-prepare#mark-alternates-and-nested-expressions "Mark alternates and nested expressions - Prepare templates for translation | Angular"
 [AioGuideI18nCommonPrepareMarkElementAttributesForTranslations]: guide/i18n-common-prepare#mark-element-attributes-for-translations "Mark element attributes for translations - Prepara plantillas para traducciones | *Angular*"
 [AioGuideI18nCommonPrepareMarkPlurals]: guide/i18n-common-prepare#mark-plurals "Mark plurals - Prepare component for translation | Angular"
-[AioGuideI18nCommonPrepareMarkTextInComponentTemplate]: guide/i18n-common-prepare#mark-text-in-component-template "Mark text in component template - Prepara plantillas para traducciones | *Angular*"
+[AioGuideI18nCommonPrepareMarkTextInComponentTemplate]: guide/i18n-common-prepare#mark-text-in-component-template "Marcar texto en la plantilla de componente ⏤ Prepara plantillas para traducciones | *Angular*"
 
 [AioGuideI18nCommonTranslationFiles]: guide/i18n-common-translation-files "Work with translation files | Angular"
 

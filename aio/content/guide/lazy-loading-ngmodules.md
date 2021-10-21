@@ -360,7 +360,7 @@ For more information on Angular Modules, see [NgModules](guide/ngmodules).
 
 ## More on NgModules and routing
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 * [Routing and Navigation](guide/router).
 * [Providers](guide/providers).
 * [Types of Feature Modules](guide/module-types).

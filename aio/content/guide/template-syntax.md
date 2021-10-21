@@ -55,7 +55,7 @@ For more information, see the [Security](guide/security) page.
 
 ## More on template syntax
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 * [Interpolation](guide/interpolation)&mdash;learn how to use interpolation and expressions in HTML.
 * [Template statements](guide/template-statements)&mdash;respond to events in your templates.

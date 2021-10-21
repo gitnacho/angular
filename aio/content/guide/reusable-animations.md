@@ -7,7 +7,7 @@ This topic provides some examples of how to create reusable animations.
 Before continuing with this topic, you should be familiar with the following:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
+* [Transición y disparadores](guide/transition-and-triggers)
 
 ## Creating reusable animations
 
@@ -30,11 +30,11 @@ From this point, you can import reusable animation variables in your component c
 
 <code-example path="animations/src/app/open-close.component.3.ts" header="src/app/open-close.component.ts" region="reusable" language="typescript"></code-example>
 
-## More on Angular animations
+## Más sobre animaciones *Angular*
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 * [Introduction to Angular animations](guide/animations)
-* [Transition and triggers](guide/transition-and-triggers)
+* [Transición y disparadores](guide/transition-and-triggers)
 * [Complex animation Sequences](guide/complex-animation-sequences)
-* [Route transition animations](guide/route-animations)
+* [Animaciones de transición de ruta](guide/route-animations)

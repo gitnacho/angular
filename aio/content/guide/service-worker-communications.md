@@ -95,5 +95,5 @@ Subscribe to `SwUpdate#unrecoverable` to be notified and handle these errors.
 
 ## More on Angular service workers
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 * [Service Worker Notifications](guide/service-worker-notifications).

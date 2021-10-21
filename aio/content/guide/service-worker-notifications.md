@@ -101,6 +101,6 @@ In addition, using the `onActionClick` property on the `data` object, you can ti
 
 ## More on Angular service workers
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 
 - [Service Worker in Production](guide/service-worker-devops).

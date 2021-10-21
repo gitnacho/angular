@@ -619,7 +619,7 @@ The lazy algorithm used by the `TemplateTypeChecker` is as follows.
 
 To enable the most flexibility for integrating the template type checking engine into various compilation workflows, steps 2 and 4 are abstracted behind interfaces.
 
-### Step 2: template information
+### Paso 2: template information
 
 To answer most queries, the `TemplateTypeChecker` will require the TCB for a specific component. If not already generated, this involves generating a TCB for that component, and incorporating that TCB somehow into a new `ts.Program`.
 

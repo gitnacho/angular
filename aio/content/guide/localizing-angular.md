@@ -6,7 +6,7 @@ One way to contribute to Angular's documentation is to localize it into another 
 
 Before you start localizing the Angular documentation, first check to see if a localized version already exists. See [Localized documentation](guide/localized-documentation) for a current list of localized versions of Angular documentation.
 
-## Getting started
+## Primeros pasos
 
 To have a localized version of Angular documentation listed on [angular.io](https://angular.io), you must either:
 

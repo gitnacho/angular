@@ -164,6 +164,6 @@ Now look at how the browser and service worker handle the updated application.
 
 ## More on Angular service workers
 
-You might also be interested in the following:
+También puedes estar interesado en lo siguiente:
 * [App Shell](guide/app-shell).
 * [Communicating with service workers](guide/service-worker-communications).
